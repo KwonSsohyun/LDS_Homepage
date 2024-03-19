@@ -8,7 +8,7 @@
 
 <br>
 
-## ⚙ 개발환경
+## ⚙ 개발 환경
 - OS : Windows 10 Pro (64bit)
 - IDE : SpringToolSuite (4.21.1)
 - Framework : Spring Boot (3.2.3)
