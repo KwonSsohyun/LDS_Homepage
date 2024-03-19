@@ -1,4 +1,4 @@
-<img src="https://github.com/KwonSsohyun/LDS_Homepage/assets/90014589/80b06e49-9972-4c42-8a56-fe01cac5f06b" width="300"/>
+<img src="https://github.com/KwonSsohyun/LDS_Homepage/assets/90014589/5e48f177-ed83-4ddb-a8e9-674ff2d422da" width="300"/>
 
 # LEAD DATA SYSTEMS
 
