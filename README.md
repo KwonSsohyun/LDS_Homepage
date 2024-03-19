@@ -8,11 +8,11 @@
 <br>
 
 ## ⚙ 개발환경
-- HTML5 & CSS3
-- JavaScript
-- ajax
-- jQuery
-- OracleDB
-- Eclipse (java11)
-- tomcat9
+- OS : Windows 10 Pro (64bit)
+- IDE : SpringToolSuite (4.21.1)
+- Framework : Spring Boot (3.2.3)
+- JDK : Java 21
+- Database : MariaDB 10.11
+- Dependency : JDBC
+- Build Tool : Gradle 8.6
 <br>
