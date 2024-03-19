@@ -1,0 +1,21 @@
+#mo_main_loan{background: #F7F8FA; min-height: 650px; }
+#mo_main_loan .mo_main_loan .wrap{padding: 40px 0px; min-height: 650px}
+#mo_main_loan .mo_main_loan .wrap h2{font-size: 24px; font-weight: 700; display: block; margin-bottom: 26px}
+#mo_main_loan .mo_main_loan .wrap .grid{display: grid; grid-template-columns: 1fr 1fr; gap:12px}
+#mo_main_loan .mo_main_loan .wrap .grid .item{background: #fff; text-align: center; border-radius: 10px; }
+#mo_main_loan .mo_main_loan .wrap .grid .item a{display: block;display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 14px; padding: 30px 15px}
+#mo_main_loan .mo_main_loan .wrap h5{font-size: 16px; font-weight: 700; width: 100%}
+#mo_main_loan .mo_main_loan .wrap img{width: 60px; display: block}
+#mo_main_loan #footer{background: #fff}
+
+
+#mo_main_loan .loan_li{margin-bottom: 40px}
+#mo_main_loan .loan_li h4{font-size: 18px ; font-weight: 700; margin-bottom: 12px}
+#mo_main_loan .loan_li .view_item{background: #fff; border-radius: 10px; padding: 20px 15px; display: flex; justify-content: flex-start; align-items: center; gap: 25px;     margin-bottom: 16px;}
+#mo_main_loan .loan_li .view_item p{color: #A4A4A4; margin-top: 6px;font-size: 12px}
+#mo_main_loan .loan_li .view_item img{width:60px}
+#mo_main_loan .loan_li .view_item a{padding: 6px 12px; display: block; background: #0090E3; color:#fff; border-radius: 100px; width: fit-content; display: flex; justify-content: center; align-items: center; font-size: 12px; font-weight: 700; margin-top: 20px}
+#mo_main_loan .loan_li .view_item i{margin-left: 10px}
+
+/* 240201 추가 */
+#mo_main_loan #footer .ft_top{display: none}

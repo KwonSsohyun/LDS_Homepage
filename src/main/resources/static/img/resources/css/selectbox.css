@@ -1,0 +1,126 @@
+
+/*수정된 셀렉트박스*/
+::-webkit-scrollbar { width: 3px; } /* 스크롤 바 */
+::-webkit-scrollbar-track { background-color:#fff; } /* 스크롤 바 밑의 배경 */
+::-webkit-scrollbar-thumb { background: #ddd; border-radius: 10px; } /* 실질적 스크롤 바 */
+::-webkit-scrollbar-thumb:hover { background: #0090E3; } /* 실질적 스크롤 바 위에 마우스를 올려다 둘 때 */
+::-webkit-scrollbar-thumb:active { background: #0090E3; }
+::-webkit-scrollbar-button { display: none; }
+
+/*#loan_wrap.credit_info .info_form table tr td:nth-child(2) input,
+#loan_wrap.credit_info .info_form table tr td.inputtype_1 .select-dropdown,
+#loan_wrap.credit_info .info_form table tr td.inputtype_1 .select-dropdown+span,
+#loan_wrap.credit_info .info_form table tr td.inputtype_2 .select-dropdown,
+#loan_wrap.credit_info .info_form table tr td.inputtype_3 .select-dropdown{display: inline-flex;}*/
+#loan_wrap .select-dropdown { position: relative; display: inline-block;}
+#loan_wrap .select-dropdown .slt-btn {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url('../images/select_icon.svg') no-repeat right 10px center;
+  background-size: 17px 16px;
+  min-width: inherit;
+  margin: 0 ;
+  text-align: left;
+  background-color: #fff;
+  transition: 0.5s ease-in-out;
+  border: 1px solid #D9D9D9;
+  padding: 17px;
+  border-radius: 8px;
+  color: #a4a4a4;
+  font-size: 14px;
+  font-weight: normal;
+}
+#loan_wrap .select-dropdown .slt-btn:focus,
+#loan_wrap .select-dropdown .slt-btn:hover { outline: 0; border: 1px solid #0090E3; color:#111111 }
+#loan_wrap .select-dropdown .slt-btn.on { }
+#loan_wrap .select-dropdown .slt-btn.on + #loan_wrap .select-dropdown .ul-language { display: block; }
+#loan_wrap .select-dropdown ul.ul-language {
+  min-width: inherit;
+  display: none;
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #f5f5f5;
+  box-sizing: border-box;
+  box-shadow: 4px 4px 14px rgb(0 0 0 / 8%);
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 4px 0;
+  max-height: 350px;
+  overflow-y: scroll;
+  position: absolute;
+  width: auto;
+  z-index: 9;
+  top: 54px;
+  width: -webkit-fill-available;
+}
+#loan_wrap .select-dropdown .ul-language.on {
+    display: block;
+}
+#loan_wrap .select-dropdown .btn-language {
+  min-width: 150px;
+  width: 100%;
+  color: #a4a4a4;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 14px;
+  margin: 0;
+  background-color: inherit;
+  max-width: 100%;
+  border-radius: 0;
+  text-align: left;
+  font-weight: normal ;
+  padding: 11px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; height: auto;
+  letter-spacing: -0.3px;
+}
+#loan_wrap .select-dropdown .btn-language:hover { background-color: #f8fcff; position: relative; outline: 0px; border-radius: 0px; border:0; color: #0090E3; }
+#loan_wrap .select-dropdown .btn-language:hover:after {content:'\e929'; font-family: 'xeicon'; }
+
+#loan_wrap.credit_info .info_form table tr td.inputtype_1 .select-dropdown{ min-width: 460px; width: auto;  }
+#loan_wrap.credit_info .info_form table tr td.inputtype_1.txt .select-dropdown{ min-width: 420px; width: auto; }
+#loan_wrap.credit_info .info_form table tr td.inputtype_2 .select-dropdown{ width: 200px }
+#loan_wrap.credit_info .info_form table tr td.inputtype_3 .select-dropdown.disabled button{background-color: #f8f8f8; cursor: auto;}
+#loan_wrap.credit_info .info_form table tr td.inputtype_3 .select-dropdown.disabled button + .on{display: none}
+#loan_wrap.credit_info .info_form table tr td.inputtype_3 .select-dropdown{ width: 105px; min-width: 150px; }
+#loan_wrap.credit_info .info_form table tr td.inputtype_2 #directInput { width: 200px;min-width: inherit; max-width: fit-content; }
+
+/*230122 추가*/
+.custom-select { position: relative;}
+.custom-select select { display: none; padding: 0 }
+.select-selected {}
+.select-selected:after { position: absolute; content: ""; top: 14px; right: 10px; width: 0; height: 0; border: 6px solid transparent; border-color: #fff transparent transparent transparent; }
+.select-selected.select-arrow-active:after { border-color: transparent transparent #fff transparent; top: 7px; }
+.select-selected { padding: 17px; border-radius: 8px;border: 1px solid #DEDEDE; color:#BBBBBB; cursor: pointer; background: url(../images/select_icon.svg) no-repeat right 10px center; background-size: 17px 16px;}
+.select-items {position: absolute; background-color: #fff; bottom: 100%; left: 0; right: 0; z-index: 100; min-width: inherit; width: 100%; border: 1px solid #f5f5f5; box-sizing: border-box; box-shadow: 4px 4px 14px rgb(0 0 0 / 8%); border-radius: 10px; overflow: hidden;max-height: 350px; overflow-y: scroll; position: absolute; width: auto; top: 55px; width: -webkit-fill-available; height: min-content;}
+.select-items div{ color: #a4a4a4; font-weight: 600; font-size: 14px; line-height: 14px; margin: 0; background-color: inherit; max-width: 100%; border-radius: 0; text-align: left; font-weight: normal; padding: 11px 16px; display: flex; justify-content: space-between; align-items: center; height: auto; letter-spacing: -0.3px; }
+.select-hide { display: none; }
+.select-items div:hover, .same-as-selected { background-color: rgba(0, 0, 0, 0.1); }
+.select-items div:hover { background-color: #f8fcff; position: relative; outline: 0px; border-radius: 0px; border:0; color: #0090E3; }
+.select-items div:hover:after {content:'\e929'; font-family: 'xeicon'; }
+.select-arrow-active{border: 1px solid #0090E3; color: #111}
+
+
+@media screen and (max-width: 1200px){
+
+}
+
+@media screen and (max-width: 768px){
+  #loan_wrap .select-dropdown .slt-btn{ background-position: right 4px center;; font-size: 13px; padding: 14px 8px;}
+  #loan_wrap .select-dropdown .slt-btn *{font-size: 13px}
+  #loan_wrap.credit_info .info_form table tr td.inputtype_1 .select-dropdown { min-width: auto; width: 100%; }
+  #loan_wrap.credit_info .info_form table tr td.inputtype_1.txt .select-dropdown { min-width: 84%; width: auto; }
+  #loan_wrap.credit_info .info_form table tr td.inputtype_1.txt input { width: 126px !important; }
+  #loan_wrap.credit_info .info_form table tr td.inputtype_3 .select-dropdown { width: auto; min-width: auto; background: url(../images/select_icon.svg) no-repeat right 1px center; min-width: 27%; max-width: 31%; }
+  #loan_wrap.credit_info .info_form table tr td.inputtype_2 .select-dropdown { width: 39%; }
+  #loan_wrap.credit_info .info_form table tr td.inputtype_2 #directInput { width: 100%; margin-top: 6px; }
+  .input_caption.red{font-size: 12px}
+  .select-selected{ padding: 13px 8px;}
+}
+
+
+@media screen and (max-width: 320px){
+  #loan_wrap .select-dropdown .slt-btn{height: 45px ;}
+}

@@ -1,0 +1,687 @@
+input::placeholder{color: #A4A4A4}
+input, select{ padding: 17px; max-height: 50px; border-radius: 8px !important; font-size: 14px; border: 1px solid #D9D9D9}
+textarea{ padding: 17px; height: 280px; border-radius: 8px !important; font-size: 14px; border: 1px solid #D9D9D9;}
+textarea:focus{ border-color: #0090e3 !important; outline: none !important}
+textarea::placeholder{color:#A4A4A4}
+input.form-control.field-1 { width: 50px; max-width: 50px; border-radius: 8px !important }
+.input-group{ align-items: center; gap: 8px}
+.form-control:focus{ border-color: #0090e3 !important; }
+input:focus{border-color: #0090e3 !important; outline: none}
+
+
+
+#customer #subtitle{background: transparent linear-gradient(98deg, #159FE2 0%, #3F76C1 100%) 0% 0% no-repeat padding-box;color:#fff}
+#customer #subtitle{color:#fff; background: linear-gradient(129deg, rgba(21,159,226,1) 0%, rgba(63,118,193,1) 100%); padding: 20px 0 0; text-align: center;}
+#customer #subtitle.customer .btn_li { margin-bottom: 0; margin-top: 20px; justify-content: center; gap: 15px; }
+#customer #subtitle .navigation{ justify-content: flex-end; text-align: right ; width: 100%}
+#customer #subtitle .navigation p{font-size: 12px;}
+#customer #subtitle .navigation p a{color:#fff}
+#customer #subtitle .navigation p:nth-child(1):after { font-family: 'xeicon'; content: "\e940"; padding: 0px 10px;}
+#customer #subtitle .navigation p:nth-child(3):before { font-family: 'xeicon'; content: "\e940"; padding: 0px 10px; }
+#customer #subtitle .navigation p:nth-child(4):before { font-family: 'xeicon'; content: "\e940"; padding: 0px 10px; }
+#customer #subtitle .tit{padding: 80px 0 90px}
+#customer .pagenation{ display: flex; justify-content: center ; align-items: center ; width: auto; margin-top: 60px}
+#customer .pagenation.mo{display: none}
+#customer .pagenation a{ color: #505054; font-weight: 300; padding: 16px; display: block;}
+#customer .pagenation p.active a{ color: #333333; font-weight: 700}
+
+#customer p.results_txt{font-size: 16px; margin-bottom: 20px}
+#customer p.results_txt span.score{color: #0090E3}
+#customer .no_result{text-align: center; padding: 80px 0}
+#customer .no_result img.no_result_img{ width: 70px; margin-bottom: 24px}
+#customer .no_result button.return_btn{background: #F1F1F1; line-height: 50px; height: 50px; width: 200px; margin: 0 auto; text-align: center; margin-top: 180px; border-radius: 8px; font-weight: 600; font-size: 18px}
+
+
+/****************/
+/*    공지/뉴스   */
+/****************/
+#customer.notice{}
+#customer.notice #subtitle{}
+#customer.notice #subtitle{}
+
+/*게시판 리스트*/
+#customer #customer_wrap{width: 1200px; margin: 0 auto; max-width: 100%; padding: 80px 0}
+#customer #customer_wrap .wrap{width: 860px; /*max-width: fit-content*/}
+#customer #customer_wrap .wrap .results{width: 100%}
+#customer #customer_wrap .wrap .search{width: 330px; height: 33px; display: flex; justify-content: center ; align-items: center; position: relative; margin: 0 auto; margin-bottom: 80px; margin-top: 60px}
+#customer #customer_wrap .wrap .search_tit{text-align: center; margin-bottom: 80px; margin-top: 60px}
+#customer #customer_wrap .wrap .search_tit h2{font-size: 24px; }
+#customer #customer_wrap .wrap .search_tit h2 .blue_txt{color:#0090E3}
+#customer #customer_wrap .wrap .search_tit p{font-size: 18px; font-weight: 300; margin-top: 10px}
+#customer #customer_wrap .wrap .search input{border: 0; border-bottom: 2px solid #000102; padding: 10px 10px 10px 30px; width: 100%; font-size: 16px; border-radius: 0 !important}
+#customer #customer_wrap .wrap .search input:focus{outline: none;}
+#customer #customer_wrap .wrap .search .icon{position: absolute; left:0 ;}
+#customer #customer_wrap .wrap .search .reset_icon{position: absolute; right:0 ; margin-right: 40px;}
+#customer #customer_wrap .notice_list_board { width: 860px; border-top: 2px solid #212126; color: #505054; max-width: 100%; margin: 0 auto; max-width: 100%;table-layout: fixed;}
+#customer #customer_wrap .notice_list_board tr{border-bottom: 1px solid #EAEAEA; }
+#customer #customer_wrap .notice_list_board tr:last-child{ border-bottom: 1px solid #212126;}
+#customer #customer_wrap .notice_list_board tr td{padding: 20px 30px; font-size: 16px }
+#customer #customer_wrap .notice_list_board tr td a{font-size: 16px; display: block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; word-break: break-all;}
+#customer #customer_wrap .notice_list_board tr td p{font-size: 16px}
+#customer #customer_wrap .notice_list_board tr td.notice { font-weight: 700; width:70px; padding: 20px 0 20px 30px; }
+#customer #customer_wrap .notice_list_board tr td.notice+.bo_tit{font-weight: 700; max-width: 650px; overflow: hidden; padding-left: 15px; padding-right:0}
+#customer #customer_wrap .notice_list_board tr td.bo_tit{font-weight: 300; max-width: 650px; overflow: hidden;}
+#customer #customer_wrap .notice_list_board tr td.notice+.bo_tit p{}
+#customer #customer_wrap .notice_list_board tr td.bo_tit p{ font-size: 16px; display: block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; width: 100%; word-break: break-all; }
+#customer #customer_wrap .notice_list_board tr td.date{width: 140px; font-weight: 300;}
+#customer #customer_wrap .notice_list_board tr:hover{opacity: .8; background: #FCFCFC}
+
+/*게시판 글보기*/
+#customer .notice_list_board_view{text-align: left; width: 860px; max-width: 100%; margin: 0 auto;}
+#customer .notice_list_board_view h2{font-weight: 700; font-size: 24px; padding-bottom:18px; margin-bottom: 20px; border-bottom: 2px solid #212126; width: 100%}
+#customer .notice_list_board_view .bo_discription{align-items: center; justify-content: space-between;}
+#customer .notice_list_board_view .bo_discription li{color: #505054; font-size: 14px; font-weight: 300}
+#customer .notice_list_board_view .bo_discription li.file{display: flex; align-items: center; gap: 3px}
+#customer .notice_list_board_view .bo_discription li.file a:hover{opacity: .8}
+#customer .notice_list_board_view .bo_detail{padding: 70px 0; border-bottom: 1px solid #a4a4a4;line-height: 1.5; font-size: 16px}
+#customer .notice_list_board_view .bo_detail p{font-size: 16px; color: #212126}
+#customer .notice_list_board_view .bo_bottom{margin-top: 20px}
+#customer .notice_list_board_view .bo_bottom a{font-size: 14px}
+#customer .notice_list_board_view .bo_bottom .left p i{margin-right: 10px}
+#customer .notice_list_board_view .bo_bottom .right{gap:10px; align-items: center}
+#customer .notice_list_board_view .bo_bottom .right p.prev + span{content:''; width: 1px ; height :10px; background: #DDDDDD; display: block}
+#customer .notice_list_board_view .bo_bottom .right p i{margin: 0 8px}
+#customer .notice_list_board_view .bo_bottom .right p.next i{margin-right:0}
+#customer .notice_list_board_view .bo_bottom .right p:hover{opacity: .8}
+#customer .notice_list_board_view .bo_bottom .right .desable *{opacity: .4}
+#customer .notice_list_board_view p.file{display: none}
+
+
+/****************/
+/*    자료실      */
+/****************/
+#customer #customer_wrap .reference_list_board{width: 860px; border-top: 2px solid #212126; color: #505054; max-width: 100%; margin: 0 auto; max-width: 100%;table-layout: fixed;}
+#customer #customer_wrap .reference_list_board tr{border-bottom: 1px solid #EAEAEA; }
+#customer #customer_wrap .reference_list_board tr:last-child{ border-bottom: 1px solid #EAEAEA;}
+#customer #customer_wrap .reference_list_board tr td, .reference_list_board tr th{padding: 20px 30px; font-size: 16px }
+#customer #customer_wrap .reference_list_board tr td a{font-size: 16px; display: block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; word-break: break-all;}
+#customer #customer_wrap .reference_list_board tr td p{font-size: 16px}
+#customer #customer_wrap .reference_list_board th:nth-child(1){width: 12%}
+#customer #customer_wrap .reference_list_board th:nth-child(2){width: 55%}
+#customer #customer_wrap .reference_list_board tr td.bo_tit p{ font-size: 16px; display: block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; width: 100%; word-break: break-all; }
+#customer #customer_wrap .reference_list_board tr td.date{width: 140px; font-weight: 300;}
+#customer #customer_wrap .reference_list_board tr:hover{opacity: .8; background: #FCFCFC}
+#customer #customer_wrap .reference_list_board th{text-align: left;}
+
+/*게시판 글보기*/
+#customer .reference_list_board_view{text-align: left; width: 860px; max-width: 100%; margin: 0 auto;}
+#customer .reference_list_board_view h2{font-weight: 700; font-size: 24px; padding-bottom:18px; margin-bottom: 20px; border-bottom: 2px solid #212126; width: 100%}
+#customer .reference_list_board_view .bo_discription{align-items: center; justify-content: space-between;}
+#customer .reference_list_board_view .bo_discription li{color: #505054; font-size: 14px; font-weight: 300}
+#customer .reference_list_board_view .bo_discription li.file{display: flex; align-items: center; gap: 3px}
+#customer .reference_list_board_view .bo_discription li.file a:hover{opacity: .8}
+#customer .reference_list_board_view .bo_detail{padding: 70px 0; border-bottom: 1px solid #a4a4a4;line-height: 1.5; font-size: 16px}
+#customer .reference_list_board_view .bo_detail p{font-size: 16px; color: #212126}
+#customer .reference_list_board_view .bo_bottom{margin-top: 20px}
+#customer .reference_list_board_view .bo_bottom a{font-size: 14px}
+#customer .reference_list_board_view .bo_bottom .left p i{margin-right: 10px}
+#customer .reference_list_board_view .bo_bottom .right{gap:10px; align-items: center}
+#customer .reference_list_board_view .bo_bottom .right p.prev + span{content:''; width: 1px ; height :10px; background: #DDDDDD; display: block}
+#customer .reference_list_board_view .bo_bottom .right p i{margin: 0 8px}
+#customer .reference_list_board_view .bo_bottom .right p.next i{margin-right:0}
+#customer .reference_list_board_view .bo_bottom .right p:hover{opacity: .8}
+#customer .reference_list_board_view .bo_bottom .right .desable *{opacity: .4}
+#customer .reference_list_board_view p.file{display: none}
+
+
+
+/************************/
+/*     자주묻는 질문       */
+/************************/
+#customer #customer_wrap .faq {padding: 0 15px}
+#customer #customer_wrap .faq .wrap{max-width: -webkit-fill-available;}
+#customer #customer_wrap .faq .faq_list{}
+#customer #customer_wrap .faq .wrap h2{display: flex; width: 100%; justify-content: space-between; align-items: center}
+#customer #customer_wrap .faq .wrap h2:hover{opacity: .8}
+#customer #customer_wrap .faq .wrap h2 .accordion_link{ font-size: 24px; font-weight: 600; padding: 0; padding: 35px 0; box-shadow: none;}
+#customer #customer_wrap .faq .faq_list.active h2 i{transform: rotate(-180deg); transition: all .3s linear}
+#customer #customer_wrap .faq .faq_list.active h2 .accordion_link{padding-bottom: 30px}
+#customer #customer_wrap .faq .accordion_content{display: none ; font-size: 16px; background: #F9F9F9; padding: 30px 22px; border-radius: 10px; line-height: 1.5}
+#customer #customer_wrap .faq .faq_list.active .accordion_content{display: block}
+#customer #customer_wrap .faq .accordion_content *{font-size: 16px; line-height: 1.5; color:#5C575B}
+
+
+/************************/
+/*        서류발급         */
+/************************/
+#customer #customer_wrap .issued_cont{text-align: center}
+#customer #customer_wrap .issued_cont h2{font-size: 24px; font-weight: 700; margin-bottom: 86px}
+#customer #customer_wrap .issued_cont ul.issued_item{gap: 30px}
+#customer #customer_wrap .issued_cont ul.issued_item li{ width: 50%; border-radius: 22px;border: 1px solid #DEE2E6; transition: background .3s linear}
+#customer #customer_wrap .issued_cont ul.issued_item li a{padding: 76px 0; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+#customer #customer_wrap .issued_cont ul.issued_item li img{margin-bottom: 34px}
+#customer #customer_wrap .issued_cont ul.issued_item li h2{margin-bottom: 0; font-weight: 300}
+#customer #customer_wrap .issued_cont ul.issued_item li:hover{background: #E9F5FE; border: 1px solid #0090E3}
+
+#customer #customer_wrap .issued_cont form.issued_form1{ text-align: left}
+#customer #customer_wrap .issued_cont form.issued_form1 h3{margin-bottom:26px; font-weight: 700}
+#customer #customer_wrap .issued_cont form.issued_form1 .issued_graybox{background: #FCFCFC; border-radius: 8px; font-size: 14px; color: #5C575B; padding: 40px}
+#customer #customer_wrap .issued_cont form.issued_form1 .issued_graybox .pc{display: inline-block;}
+#customer #customer_wrap .issued_cont form.issued_form1 .agree_terms_input{ justify-content: flex-end; margin-bottom: 80px; margin-top: 20px}
+#customer #customer_wrap .issued_cont form.issued_form1 .agree_terms_input input[type=radio]{ display: none; }
+#customer #customer_wrap .issued_cont form.issued_form1 .agree_terms_input input[type=radio]+label { cursor: pointer; text-align: left; font-size: 14px; display: inline-flex; align-items: center; margin-left: 13px; }
+#customer #customer_wrap .issued_cont form.issued_form1 .agree_terms_input input[type=radio]+label:before { content: ''; width: 16px; height: 16px; background-image: url('../images/radio_icon_unchecked.png'); background-size: 100%; margin-right:6px;  display: inline-flex; background-size: 100%; align-content: center; align-items: center; }
+#customer #customer_wrap .issued_cont form.issued_form1 .agree_terms_input input[type=radio]+label{ }
+#customer #customer_wrap .issued_cont form.issued_form1 .agree_terms_input input[type=radio]:checked+label:before { background-image: url('../images/radio_icon_checked.png'); }
+#customer #customer_wrap .btn_wrap button{ background-color: #0090E3; width: 100%; max-width: 330px; margin: 0 auto; text-align: center; display: block; border-radius: 8px; height: 50px; color: #fff; font-size: 18px; margin-top: 70px; font-weight: 700;}
+#customer #customer_wrap .issued_cont form.issued_form1 table{border-top: 1px solid #6C6C6C; width: 100%}
+#customer #customer_wrap .issued_cont form.issued_form1 table tr{border-bottom: 1px solid #F2F2F2}
+#customer #customer_wrap .issued_cont form.issued_form1 table tr td:nth-child(1){background: #FCFCFC; width: 200px}
+#customer #customer_wrap .issued_cont form.issued_form1 table tr td.required{}
+#customer #customer_wrap .issued_cont form.issued_form1 table tr td.required:after{content:'*'; color: #E85C53}
+#customer #customer_wrap .issued_cont form.issued_form1 table tr td{padding: 12px 19px}
+#customer #customer_wrap .issued_cont form.issued_form1 table tr td .row .col {max-width: 460px}
+#customer #customer_wrap .issued_cont form.issued_form1 table tr td .row .col input{width: -webkit-fill-available;}
+#customer #customer_wrap .issued_cont form.issued_form1 table tr td .col .input-group{display: flex; align-items: center; justify-content: flex-start ; gap: 4px}
+#customer #customer_wrap .issued_cont form.issued_form1 table tr td .col .input-group input{width: auto}
+
+#customer #customer_wrap .issued_print_cont{width: 100%; text-align: center}
+#customer #customer_wrap .issued_print_cont .no_data{padding: 163px 0 0}
+#customer #customer_wrap .issued_print_cont .available_data{padding: 163px 0 0}
+#customer #customer_wrap .issued_print_cont .btn{max-width: 100%; width: 200px; font-size: 18px ; font-weight: 600; background: #0090E3; color: #fff; padding: 15px; border-radius: 8px}
+#customer #customer_wrap .issued_print_cont .btn.disabled{max-width: 100%; width: 200px; font-size: 18px ; font-weight: 600; background: #F1F1F1; color: #111213}
+#customer #customer_wrap .issued_print_cont img{margin-bottom:20px; width:102px}
+#customer #customer_wrap .issued_print_cont h4{font-weight: 400; padding-bottom: 203px}
+#customer #customer_wrap #print_modal{position: fixed; width: 100%; height: calc(var(--vh, 1vh) * 100); background: rgba(0, 0, 0, 0.5); z-index: 99999; top: 0; left: 0; display: flex; justify-content: center; align-items: center; }
+#customer #customer_wrap #print_modal .modal-content{width: 860px; max-width: 100%; }
+#customer #customer_wrap #print_modal .modal-header{background: #27282C; border-radius: 10px 10px 0 0; padding: 8px 15px 8px 30px ; position: relative;}
+#customer #customer_wrap #print_modal .modal-header .flex{align-items: center; }
+#customer #customer_wrap #print_modal .modal-header ul.left{gap: 26px}
+#customer #customer_wrap #print_modal .modal-header ul.left li img{height: 18px}
+#customer #customer_wrap #print_modal .modal-header ul.left li p{font-size: 12px ; color:#fff; margin-top: 4px}
+#customer #customer_wrap #print_modal .modal-header ul.center { gap: 13px; justify-content: center; align-items: center; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); }
+#customer #customer_wrap #print_modal .modal-header ul.center li img{height: 12px}
+#customer #customer_wrap #print_modal .modal-header ul.center p{color:#fff; font-size: 14px ; letter-spacing: 4px}
+#customer #customer_wrap #print_modal .modal-header .close{color: #fff; font-size: 20px}
+#customer #customer_wrap #print_modal .modal-body{background: #fff; height: 80vh; padding: 20px}
+#customer #customer_wrap #print_modal .modal-body .print_view{border: 1px solid #DFDFDF; height: -webkit-fill-available; background: #FCFCFC}
+#customer #customer_wrap #print_modal .modal-body .print_view img { height: inherit; width: 100%; object-fit: contain; margin: 60px 0; display: block; }
+
+
+/************************/
+/*   계약서 안내 및 출력     */
+/************************/
+#customer #customer_wrap .customer_table_cont{min-height: 700px}
+#customer #customer_wrap .customer_table_board{width: 860px; border-top: 2px solid #212126; color: #505054; max-width: 100%; margin: 0 auto; max-width: 100%;table-layout: fixed; text-align: left; font-weight: 300}
+#customer #customer_wrap .customer_table_board tr{border-bottom: 1px solid #EAEAEA; }
+#customer #customer_wrap .customer_table_board tr:last-child{ border-bottom: 1px solid #EAEAEA;}
+#customer #customer_wrap .customer_table_board tr td, .customer_table_board tr th{padding: 20px 30px; font-size: 16px }
+#customer #customer_wrap .customer_table_board tr td a{font-size: 16px; display: block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; word-break: break-all;}
+#customer #customer_wrap .customer_table_board tr td p{font-size: 16px}
+#customer #customer_wrap .customer_table_board th:nth-child(1){width: 15%}
+#customer #customer_wrap .customer_table_board th:nth-child(2){width: 55%}
+#customer #customer_wrap .customer_table_board tr td.bo_tit p{ font-size: 16px; display: block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; width: 100%; word-break: break-all; }
+#customer #customer_wrap .customer_table_board tr td.date{width: 140px; font-weight: 300;}
+#customer #customer_wrap .customer_table_board tr:hover{opacity: .8; background: #FCFCFC}
+
+
+/************************/
+/*       지점안내         */
+/************************/
+#customer #customer_wrap .customer_table_cont{min-height: 700px}
+#customer #customer_wrap .map_table_board{width: 860px; border-top: 2px solid #212126; color: #505054; max-width: 100%; margin: 0 auto; max-width: 100%;table-layout: fixed; text-align: left;font-weight: 300}
+#customer #customer_wrap .map_table_board tr{border-bottom: 1px solid #EAEAEA; }
+#customer #customer_wrap .map_table_board tbody tr:last-child{ border-bottom: 1px solid #212126;}
+#customer #customer_wrap .map_table_board tr td, .map_table_board tr th{ word-break: keep-all; padding: 20px 10px; font-size: 16px }
+#customer #customer_wrap .map_table_board tr td a{font-size: 16px; display: block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; word-break: break-all; color: #212126}
+#customer #customer_wrap .map_table_board tr td p{font-size: 16px}
+#customer #customer_wrap .map_table_board th:nth-child(1){ width: 8%; }
+#customer #customer_wrap .map_table_board th:nth-child(2){width: 15%}
+#customer #customer_wrap .map_table_board th:nth-child(3){width: 17%}
+#customer #customer_wrap .map_table_board th:nth-child(4){width:25%}
+#customer #customer_wrap .map_table_board th:nth-child(5){width: 9%}
+#customer #customer_wrap .map_table_board tr:hover{opacity: .8; background: #FCFCFC}
+
+/*지점안내 모달*/
+#customer #customer_wrap #map_modal{position: fixed; width: 100%; height: calc(var(--vh, 1vh) * 100); background: rgba(0, 0, 0, 0.5); z-index: 99999; top: 0; left: 0; display: flex; justify-content: center; align-items: center; }
+#customer #customer_wrap #map_modal .modal-content { width: 860px; max-width: 100%; background: #fff; position: relative; text-align: left; border-radius: 10px}
+#customer #customer_wrap #map_modal .modal-header{justify-content: center; padding-top: 34px; padding: 34px 34px 19px;}
+#customer #customer_wrap #map_modal .modal-header h4{text-align: left; font-weight: 500; font-size: 20px}
+#customer #customer_wrap #map_modal .modal-content #map{width: 100%; height: 210px; overflow: hidden; border-radius: 10px}
+#customer #customer_wrap #map_modal .modal-content table.map_modal_table{width: 100%; border-top: 1px solid #222222; margin-top: 34px}
+#customer #customer_wrap #map_modal .modal-content table.map_modal_table tr {border-bottom: 1px solid #F2F2F2}
+#customer #customer_wrap #map_modal .modal-content table.map_modal_table tr td{padding: 16px; font-size: 16px}
+#customer #customer_wrap #map_modal .modal-content table.map_modal_table tr td.title{background: #FCFCFC; text-align: center}
+
+/************************/
+/*본인정보 이용·제공 사실 조회*/
+/************************/
+#customer #customer_wrap .issued_cont form.chk_personal{ text-align: left}
+#customer #customer_wrap .issued_cont form.chk_personal h3{margin-bottom:26px; font-weight: 700}
+#customer #customer_wrap .issued_cont form.chk_personal .issued_graybox{background: #FCFCFC; border-radius: 8px; font-size: 14px; color: #5C575B; padding: 40px}
+#customer #customer_wrap .issued_cont form.chk_personal .issued_graybox .pc{display: inline-block;}
+#customer #customer_wrap .issued_cont form.chk_personal .agree_terms_input{ justify-content: flex-end; margin-bottom: 80px; margin-top: 20px}
+#customer #customer_wrap .issued_cont form.chk_personal .agree_terms_input input[type=radio]{ display: none; }
+#customer #customer_wrap .issued_cont form.chk_personal .agree_terms_input input[type=radio]+label { cursor: pointer; text-align: left; font-size: 14px; display: inline-flex; align-items: center; margin-left: 13px; }
+#customer #customer_wrap .issued_cont form.chk_personal .agree_terms_input input[type=radio]+label:before { content: ''; width: 16px; height: 16px; background-image: url('../images/radio_icon_unchecked.png'); background-size: 100%; margin-right:6px;  display: inline-flex; background-size: 100%; align-content: center; align-items: center; }
+#customer #customer_wrap .issued_cont form.chk_personal .agree_terms_input input[type=radio]+label{ }
+#customer #customer_wrap .issued_cont form.chk_personal .agree_terms_input input[type=radio]:checked+label:before { background-image: url('../images/radio_icon_checked.png'); }
+#customer #customer_wrap .btn_wrap button{ background-color: #0090E3; width: 100%; max-width: 330px; margin: 0 auto; text-align: center; display: block; border-radius: 8px; height: 50px; color: #fff; font-size: 18px; margin-top: 70px; font-weight: 700;}
+#customer #customer_wrap .issued_cont form.chk_personal table{border-top: 1px solid #6C6C6C; width: 100%}
+#customer #customer_wrap .issued_cont form.chk_personal table tr{border-bottom: 1px solid #F2F2F2}
+#customer #customer_wrap .issued_cont form.chk_personal table tr td:nth-child(1){background: #FCFCFC; width: 200px}
+#customer #customer_wrap .issued_cont form.chk_personal table tr td.required{}
+#customer #customer_wrap .issued_cont form.chk_personal table tr td.required:after{content:'*'; color: #E85C53}
+#customer #customer_wrap .issued_cont form.chk_personal table tr td{padding: 12px 19px}
+#customer #customer_wrap .issued_cont form.chk_personal table tr td .row .col {max-width: 460px}
+#customer #customer_wrap .issued_cont form.chk_personal table tr td .row .col input{width: -webkit-fill-available;}
+#customer #customer_wrap .issued_cont form.chk_personal table tr td .col .input-group{display: flex; align-items: center; justify-content: flex-start ; gap: 4px}
+#customer #customer_wrap .issued_cont form.chk_personal table tr td .col .input-group input{width: auto}
+#customer #customer_wrap .issued_cont form.chk_personal .graybox{padding: 30px 38px; background: #FCFCFC; border-radius: 8px; margin-bottom: 60px}
+#customer #customer_wrap .issued_cont form.chk_personal .graybox p{font-size: 16px; line-height: 26px; color: #111111}
+#customer #customer_wrap .issued_cont .search_wrap{text-align: left; display: flex; width: 100%; align-items: center; justify-content: center;}
+#customer #customer_wrap .issued_cont .search_wrap .input-group {position: relative;}
+#customer #customer_wrap .issued_cont .search_wrap .input-group label{display: block; position: absolute; top: -20px; color: #A4A4A4; font-size: 12px; margin-bottom: 8px}
+#customer #customer_wrap .issued_cont .search_wrap span{display: block; padding: 0 4px; font-size: 20px}
+#customer #customer_wrap .issued_cont .search_wrap .search_btn{height: 100%}
+#customer #customer_wrap .issued_cont .search_wrap .search_btn button{background: #0090E3; color: #fff; display: flex; align-items: center; padding: 16px 27px; border-radius: 8px !important; font-size: 18px; margin-left: 20px; max-height: 50px;}
+#customer #customer_wrap .issued_cont .search_wrap .search_btn button img{ margin-right: 6px}
+#customer #customer_wrap .chk_personal_cont{width: 100%; text-align: center}
+#customer #customer_wrap .chk_personal_cont .no_data{padding: 163px 0 0}
+#customer #customer_wrap .chk_personal_cont .available_data{padding: 163px 0 0}
+#customer #customer_wrap .chk_personal_cont .btn{max-width: 100%; width: 200px; font-size: 18px ; font-weight: 600; background: #0090E3; color: #fff; padding: 15px; border-radius: 8px}
+#customer #customer_wrap .btn.disabled{max-width: 100%; width: 200px; font-size: 18px ; font-weight: 600; background: #F1F1F1; color: #111213; padding: 15px; border-radius: 8px;}
+#customer #customer_wrap .chk_personal_cont img{margin-bottom:20px; width:102px}
+#customer #customer_wrap .chk_personal_cont h4{font-weight: 400; padding-bottom: 203px}
+#customer #customer_wrap .chk_personal_table_cont{margin-top: 70px}
+
+#customer #customer_wrap .chk_personal_list_board1{width: 860px; border-top: 2px solid #212126; color: #505054; max-width: 100%; margin: 0 auto; max-width: 100%;table-layout: auto;}
+#customer #customer_wrap .chk_personal_list_board1 tr{border-bottom: 1px solid #EAEAEA; }
+#customer #customer_wrap .chk_personal_list_board1 tr th:nth-child(1){ width: 16%;}
+#customer #customer_wrap .chk_personal_list_board1 tr th:nth-child(2) { width: 18%; }
+#customer #customer_wrap .chk_personal_list_board1 tr th:nth-child(3){width:14%}
+#customer #customer_wrap .chk_personal_list_board1 tr th:nth-child(4){width:20%}
+#customer #customer_wrap .chk_personal_list_board1 tr th:nth-child(5) { width: 22%; }
+#customer #customer_wrap .chk_personal_list_board1 tr:last-child{ border-bottom: 1px solid #EAEAEA;}
+#customer #customer_wrap .chk_personal_list_board1 tr td, .chk_personal_list_board1 tr th{padding: 20px 20px; font-size: 16px ; text-align: left;}
+#customer #customer_wrap .chk_personal_list_board1 tr td{line-height: 1.8}
+#customer #customer_wrap .chk_personal_list_board1 tr td a{font-size: 16px; display: block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; word-break: break-all;}
+#customer #customer_wrap .chk_personal_list_board1 tr td p{font-size: 16px;}
+#customer #customer_wrap .chk_personal_list_board1 tr td.bo_tit p{ font-size: 16px; display: block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; width: 100%; word-break: break-all; }
+#customer #customer_wrap .chk_personal_list_board1 tr td.date{width: 140px; font-weight: 300;}
+#customer #customer_wrap .chk_personal_list_board1 tr:hover{opacity: .8; background: #FCFCFC}
+
+#customer #customer_wrap .chk_personal_list_board2{width: 860px; border-top: 2px solid #212126; color: #505054; max-width: 100%; margin: 0 auto; max-width: 100%;table-layout: auto;}
+#customer #customer_wrap .chk_personal_list_board2 tr{border-bottom: 1px solid #EAEAEA; }
+#customer #customer_wrap .chk_personal_list_board2 tr th:nth-child(1){ width: 13%;}
+#customer #customer_wrap .chk_personal_list_board2 tr th:nth-child(2) { width: 14%; }
+#customer #customer_wrap .chk_personal_list_board2 tr th:nth-child(3){width:20%}
+#customer #customer_wrap .chk_personal_list_board2 tr th:nth-child(4){}
+#customer #customer_wrap .chk_personal_list_board2 tr th:nth-child(5) { width: 21%; }
+#customer #customer_wrap .chk_personal_list_board2 tr th:nth-child(6){ width: 21%;}
+#customer #customer_wrap .chk_personal_list_board2 tr:last-child{ border-bottom: 1px solid #EAEAEA;}
+#customer #customer_wrap .chk_personal_list_board2 tr td, .chk_personal_list_board2 tr th{padding: 20px 20px; font-size: 16px ; text-align: left;}
+#customer #customer_wrap .chk_personal_list_board2 tr td{line-height: 1.8}
+#customer #customer_wrap .chk_personal_list_board2 tr td a{font-size: 16px; display: block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; word-break: break-all;}
+#customer #customer_wrap .chk_personal_list_board2 tr td p{font-size: 16px;}
+#customer #customer_wrap .chk_personal_list_board2 tr td.bo_tit p{ font-size: 16px; display: block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; width: 100%; word-break: break-all; }
+#customer #customer_wrap .chk_personal_list_board2 tr td.date{width: 140px; font-weight: 300;}
+#customer #customer_wrap .chk_personal_list_board2 tr:hover{opacity: .8; background: #FCFCFC}
+#customer #customer_wrap .btn_bt_r_wrap { width: 100%; margin: 0 auto; text-align: right; margin-top: 55px; display: flex; justify-content: flex-end; }
+#customer #customer_wrap .btn_bt_r_wrap .btn{width: 200px; height: 50px; display: flex; align-items: center; justify-content: center; background: #0090E3; color: #fff; border-radius: 8px; font-size: 18px; font-weight: 600}
+#customer #customer_wrap .chk_personal_list_board_mo{display: none}
+
+
+/************************/
+/*       고객의 소리       */
+/************************/
+#customer #customer_wrap .complaints_cont{width: 100%; text-align: center}
+#customer #customer_wrap .complaints_cont .ok{padding: 123px 0 0}
+#customer #customer_wrap .complaints_cont .available_data{padding: 163px 0 0}
+#customer #customer_wrap .complaints_cont .btn{max-width: 100%; width: 200px; font-size: 18px ; font-weight: 600; background: #0090E3; color: #fff; padding: 15px; border-radius: 8px}
+#customer #customer_wrap .complaints_cont .btn.disabled{max-width: 100%; width: 200px; font-size: 18px ; font-weight: 600; background: #F1F1F1; color: #111213}
+#customer #customer_wrap .complaints_cont img{margin-bottom:20px; width:102px}
+#customer #customer_wrap .complaints_cont h4{font-weight: 400; padding-bottom: 203px}
+#customer #customer_wrap .complaints_cont{width: 100%; text-align: center}
+#customer #customer_wrap .complaints_cont .no_data{padding: 163px 0 0}
+#customer #customer_wrap .complaints_cont .available_data{padding: 163px 0 0}
+#customer #customer_wrap .complaints_cont .btn{max-width: 100%; width: 200px; font-size: 18px ; font-weight: 600; background: #0090E3; color: #fff; padding: 15px; border-radius: 8px}
+#customer #customer_wrap .complaints_cont .btn.disabled{max-width: 100%; width: 200px; font-size: 18px ; font-weight: 600; background: #F1F1F1; color: #111213}
+#customer #customer_wrap .complaints_cont img{margin-bottom:20px; width:102px}
+#customer #customer_wrap .complaints_cont h4{font-weight: 400; padding-bottom: 203px}
+#customer #customer_wrap .complaints_cont{margin-top: 70px}
+#customer #customer_wrap .complaints_list_board{width: 860px; border-top: 2px solid #212126; color: #505054; max-width: 100%; margin: 0 auto; max-width: 100%;table-layout: auto;}
+#customer #customer_wrap .complaints_list_board tr{border-bottom: 1px solid #EAEAEA; }
+#customer #customer_wrap .complaints_list_board tr:last-child{ border-bottom: 1px solid #EAEAEA;}
+#customer #customer_wrap .complaints_list_board tr td, .complaints_list_board tr th{padding: 20px 20px; font-size: 16px ; text-align: left;}
+#customer #customer_wrap .complaints_list_board tr th:nth-child(3){width: 40%}
+#customer #customer_wrap .complaints_list_board tr td.bo_tit{ font-weight: 300; max-width: 380px; overflow: hidden;}
+#customer #customer_wrap .complaints_list_board tr td{line-height: 1.8}
+#customer #customer_wrap .complaints_list_board tr td a{font-size: 16px; display: block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; word-break: break-all;}
+#customer #customer_wrap .complaints_list_board tr td span.praise{color: #0090E3}
+#customer #customer_wrap .complaints_list_board tr td span.hate{color: #B74747}
+#customer #customer_wrap .complaints_list_board tr td span.reply{color: #00AF35; font-weight: 600}
+#customer #customer_wrap .complaints_list_board tr td span.wait{color: #8E8E8E}
+#customer #customer_wrap .complaints_list_board tr td p{font-size: 16px;}
+#customer #customer_wrap .complaints_list_board tr td.bo_tit p{ font-size: 16px; display: block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; width: 100%; word-break: break-all; }
+#customer #customer_wrap .complaints_list_board tr td.date{width: 140px; font-weight: 300;}
+#customer #customer_wrap .complaints_list_board tr:hover{opacity: .8; background: #FCFCFC}
+#customer #customer_wrap .complaints_cont{width: 100%; text-align: center}
+#customer #customer_wrap .complaints_cont .no_data{padding: 163px 0 0}
+#customer #customer_wrap .complaints_cont .available_data{padding: 163px 0 0}
+#customer #customer_wrap .complaints_cont .btn{max-width: 100%; width: 200px; font-size: 18px ; font-weight: 600; background: #0090E3; color: #fff; padding: 15px; border-radius: 8px}
+#customer #customer_wrap .complaints_cont .btn.disabled{max-width: 100%; width: 200px; font-size: 18px ; font-weight: 600; background: #F1F1F1; color: #111213}
+#customer #customer_wrap .complaints_cont img{margin-bottom:20px; width:102px}
+#customer #customer_wrap .complaints_cont h4{font-weight: 400; padding-bottom: 203px}
+#customer #customer_wrap .mycomplaints_list_board{width: 860px; border-top: 2px solid #212126; color: #505054; max-width: 100%; margin: 0 auto; max-width: 100%;table-layout: auto;}
+#customer #customer_wrap .mycomplaints_list_board tr{border-bottom: 1px solid #EAEAEA; }
+#customer #customer_wrap .mycomplaints_list_board tr:last-child{ border-bottom: 1px solid #EAEAEA;}
+#customer #customer_wrap .mycomplaints_list_board tr td, .mycomplaints_list_board tr th{padding: 20px 20px; font-size: 16px ; text-align: left;}
+#customer #customer_wrap .mycomplaints_list_board tr th:nth-child(1){ width: 10%;}
+#customer #customer_wrap .mycomplaints_list_board tr th:nth-child(3){width: 15%}
+#customer #customer_wrap .mycomplaints_list_board tr th:nth-child(4){width: 15%}
+#customer #customer_wrap .mycomplaints_list_board tr td.bo_tit{ font-weight: 300; max-width: 380px; overflow: hidden;}
+#customer #customer_wrap .mycomplaints_list_board tr td{line-height: 1.8}
+#customer #customer_wrap .mycomplaints_list_board tr td a{font-size: 16px; display: block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; word-break: break-all;}
+#customer #customer_wrap .mycomplaints_list_board tr td span.praise{color: #0090E3}
+#customer #customer_wrap .mycomplaints_list_board tr td span.hate{color: #B74747}
+#customer #customer_wrap .mycomplaints_list_board tr td span.reply{color: #00AF35; font-weight: 600}
+#customer #customer_wrap .mycomplaints_list_board tr td span.wait{color: #8E8E8E}
+#customer #customer_wrap .mycomplaints_list_board tr td p{font-size: 16px;}
+#customer #customer_wrap .mycomplaints_list_board tr td.bo_tit p{ font-size: 16px; display: block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; width: 100%; word-break: break-all; }
+#customer #customer_wrap .mycomplaints_list_board tr td.date{width: 140px; font-weight: 300;}
+#customer #customer_wrap .mycomplaints_list_board tr:hover{opacity: .8; background: #FCFCFC}
+
+/*고객의 소리 입력폼*/
+#customer #customer_wrap {}
+#customer #customer_wrap .complaints_write_cont form.complaints_write_form{ justify-content: flex-end; margin-bottom: 80px; margin-top: 20px}
+#customer #customer_wrap .complaints_write_cont form.complaints_write_form input[type=radio]{ display: none; }
+#customer #customer_wrap .complaints_write_cont form.complaints_write_form input[type=radio]+label { cursor: pointer; text-align: left; font-size: 14px; display: inline-flex; align-items: center; margin-right: 13px; }
+#customer #customer_wrap .complaints_write_cont form.complaints_write_form input[type=radio]+label:before { content: ''; width: 16px; height: 16px; background-image: url('../images/radio_icon_unchecked.png'); background-size: 100%; margin-right:6px;  display: inline-flex; background-size: 100%; align-content: center; align-items: center; }
+#customer #customer_wrap .complaints_write_cont form.complaints_write_form input[type=radio]:checked+label:before { background-image: url('../images/radio_icon_checked.png'); }
+#customer #customer_wrap .complaints_write_cont form.complaints_write_form table{border-top: 1px solid #6C6C6C; width: 100%}
+#customer #customer_wrap .complaints_write_cont form.complaints_write_form table tr{border-bottom: 1px solid #F2F2F2}
+#customer #customer_wrap .complaints_write_cont form.complaints_write_form table tr td:nth-child(1){background: #FCFCFC; width: 200px}
+#customer #customer_wrap .complaints_write_cont form.complaints_write_form table tr td.required{}
+#customer #customer_wrap .complaints_write_cont form.complaints_write_form table tr td.required:after{content:'*'; color: #E85C53}
+#customer #customer_wrap .complaints_write_cont form.complaints_write_form table tr td{padding: 12px 19px; height: 70px;}
+#customer #customer_wrap .complaints_write_cont form.complaints_write_form table tr td .row .col {max-width: 460px}
+#customer #customer_wrap .complaints_write_cont form.complaints_write_form table tr td .row .col input{width: -webkit-fill-available;}
+#customer #customer_wrap .complaints_write_cont form.complaints_write_form table tr td .col .input-group{display: flex; align-items: center; justify-content: flex-start ; gap: 4px}
+#customer #customer_wrap .complaints_write_cont form.complaints_write_form table tr td .col .input-group input{width: auto}
+#customer #customer_wrap .complaints_write_cont form.complaints_write_form table tr td textarea{width: 100%}
+#customer #customer_wrap .complaints_write_cont form.complaints_write_form table tr td.inputtype_3 input,
+#customer #customer_wrap .complaints_write_cont form.complaints_write_form table tr td.inputtype_3 .custom-select{width: 31% !important}
+#customer #customer_wrap .complaints_write_cont form.complaints_write_form table tr td.inputtype_3 .col .input-group{justify-content: space-between;}
+#customer #customer_wrap .complaints_write_cont form.complaints_write_form table tr td.inputtype_3 .col .input-group span{color: #A4A4A4; font-size: 11px}
+#customer #customer_wrap .complaints_write_cont form.complaints_write_form .btn_wrap{display: flex; justify-content: center; margin-top: 70px; gap: 10px}
+#customer #customer_wrap .complaints_write_cont form.complaints_write_form .btn_wrap button{margin: 0; max-width: 340px}
+#customer #customer_wrap .complaints_write_cont form.complaints_write_form .btn_wrap.btn_wrap2{display: flex; justify-content: center; margin-top: 70px; gap: 10px}
+#customer #customer_wrap .complaints_write_cont form.complaints_write_form .btn_wrap.btn_wrap2 button{margin: 0; max-width: 200px}
+#customer #customer_wrap .complaints_write_cont form.complaints_write_form .btn_wrap.btn_wrap2 button.bd_btn{background-color:#fff; color:#B2B2B2; border: 1px solid #E2E2E2}
+
+
+/* 게시판 글보기 - 어드민 */
+#customer .complaints_list_board_view{text-align: left; width: 860px; max-width: 100%; margin: 0 auto;}
+#customer .complaints_list_board_view h2{font-weight: 700; font-size: 24px; padding-bottom:18px; margin-bottom: 20px; border-bottom: 2px solid #212126; width: 100%}
+#customer .complaints_list_board_view .bo_discription_admin{align-items: center; justify-content: flex-start;}
+#customer .complaints_list_board_view .bo_discription_admin li{color: #505054; font-size: 14px; font-weight: 300}
+#customer .complaints_list_board_view .bo_discription_admin li.name:after{ content: ''; width: 1px; height: 11px; display: inline-flex; background: #ddd; margin: 0 8px;}
+#customer .complaints_list_board_view .bo_detail{padding: 50px 0 90px; line-height: 1.8; font-size: 16px;}
+#customer .complaints_list_board_view .bo_detail p{font-size: 16px; color: #212126; line-height: 1.8;}
+#customer .bo_bottom .bo_comment{}
+#customer .bo_bottom .bo_comment .comment_tit{ border-bottom: 1px solid #DDDDDD; padding-bottom: 12px; font-size: 16px; margin-bottom: 30px;}
+#customer .bo_bottom .bo_comment .comment_tit .score{color: #0090E3}
+#customer .bo_bottom .bo_comment .no_comment{color: #B2B2B2; min-height: 100px;  font-size: 16px}
+#customer .bo_bottom .bo_comment .comment_detail{width: 100%}
+#customer .bo_bottom .bo_comment .comment_detail .comment_hd{ width: 100%; justify-content: space-between;}
+#customer .bo_bottom .bo_comment .comment_detail .comment_hd .comment_hd_info{width: 50%; justify-content: flex-start; align-items: center;}
+#customer .bo_bottom .bo_comment .comment_detail .comment_hd .comment_hd_info img.comment_img{width: 20px}
+#customer .bo_bottom .bo_comment .comment_detail .comment_hd .comment_hd_info p.comment_name{font-weight: 700; margin-right: 18px; margin-left: 6px; font-size: 16px}
+#customer .bo_bottom .bo_comment .comment_detail .comment_hd .comment_hd_info p.comment_date{font-size: 16px; color: #999999}
+#customer .bo_bottom .bo_comment .comment_detail .comment_hd .comment_hd_menu{position: relative;}
+#customer .bo_bottom .bo_comment .comment_detail .comment_hd .comment_hd_menu .comment_hd_menu_modal{position: absolute; right:0; width: 106px; border-radius: 10px; box-shadow: 0 4px 10px #ddd; overflow: hidden; z-index: 10; }
+#customer .bo_bottom .bo_comment .comment_detail .comment_hd .comment_hd_menu .comment_hd_menu_modal li{padding : 9px 13px;background: #fff}
+#customer .bo_bottom .bo_comment .comment_detail .comment_hd .comment_hd_menu .comment_hd_menu_modal li:hover{background: #0090E3; color: #fff}
+#customer .bo_bottom .bo_comment .comment_detail .comment_hd .comment_hd_menu .comment_hd_menu_modal li:hover a{color: #fff; display: block; width: 100%}
+#customer .bo_bottom .bo_comment .comment_content{font-size: 16px; min-height: 100px; margin-top: 23px; color: #222222}
+#customer .bo_bottom .bo_comment .comment_field{position: relative; width: 100%; height: auto}
+#customer .bo_bottom .bo_comment .comment_field textarea{width: 100%; height: 120px; border-radius: 10px; border: 2px solid #E4E4E4; padding: 28px}
+#customer .bo_bottom .bo_comment .comment_field textarea:focus{outline: none; border: 2px solid #0090E3}
+#customer .bo_bottom .bo_comment .comment_field button{position: absolute; bottom: 1em ; right: 1em}
+/* 게시판 글보기 - 유저 */
+#customer .complaints_list_board_view .bo_discription{align-items: center; justify-content: space-between; }
+#customer .complaints_list_board_view .bo_discription li{color: #505054; font-size: 14px; font-weight: 300}
+#customer .complaints_list_board_view .bo_discription li.re .reply{font-weight: 600 ; color: #00AF35}
+
+/* 전화권유판매원 검색 */
+#customer #customer_wrap .sales_list_board{width: 860px; border-top: 2px solid #212126; color: #505054; max-width: 100%; margin: 0 auto; max-width: 100%;table-layout: auto;}
+#customer #customer_wrap .sales_list_board tr{border-bottom: 1px solid #EAEAEA; }
+#customer #customer_wrap .sales_list_board tr:last-child{ border-bottom: 1px solid #EAEAEA;}
+#customer #customer_wrap .sales_list_board tr td, .sales_list_board tr th{padding: 20px 20px; font-size: 16px ; text-align: left;}
+#customer #customer_wrap .sales_list_board tr td{line-height: 1.8; width :33%}
+#customer #customer_wrap .sales_list_board tr td:nth-child(2){width :40%}
+
+
+
+
+@media (max-width: 1200px){
+  #customer #customer_wrap{}
+  #customer #customer_wrap .wrap{ width: 100%; max-width: 100%; margin: 0; }
+  #customer #customer_wrap .wrap .results {padding: 0 15px;}
+  #customer #customer_wrap .notice_list_board{width: 100%}
+  #customer #customer_wrap .notice_list_board tr td.date { width: 100px; }
+  #customer .notice_list_board_view{width: 100%; margin: 0 auto; padding: 0 15px}
+}
+
+@media (max-width: 1200px) and (min-width:769px){
+  #customer p.results_txt{text-align: center}
+}
+@media (max-width: 768px){
+
+  #customer #subtitle h1{font-size: 24px; font-weight: 500}
+  #customer #customer_wrap{padding: 60px 15px}
+  #customer #customer_wrap .btn_wrap button{max-width: 100%}
+  #customer #customer_wrap .wrap .search{width: 235px; margin-bottom: 65px}
+  #customer #customer_wrap .notice_list_board tr td{padding: 17px 15px; font-size: 14px }
+  #customer #customer_wrap .notice_list_board tr td a{font-size: 14px }
+  #customer #customer_wrap .notice_list_board tr td p{font-size: 12px}
+  #customer #customer_wrap .notice_list_board tr td.notice{padding: 17px 0 17px 15px; width: 40px;}
+  #customer p.results_txt{font-size: 14px; margin-bottom: 10px}
+  #customer .no_result button.return_btn{margin-top: 56px}
+  #customer .no_result{ padding:0 0;}
+  #customer .notice_list_board_view .bo_discription li.file{display: none}
+  #customer .notice_list_board_view p.file{display: flex; align-items: center; gap:10px; margin-top: 37px;}
+  #customer .notice_list_board_view p.file a{font-size: 14px ; color: #505054; word-break: keep-all;}
+  #customer .notice_list_board_view p.file a:hover{opacity: .8}
+  #customer .notice_list_board_view h2{ font-size: 20px; padding-bottom: 16px; margin-bottom: 16px;}
+  #customer .notice_list_board_view .bo_detail{ padding: 48px 0 37px;}
+
+  #customer #customer_wrap .faq{padding: 0}
+  #customer #customer_wrap .faq .wrap h2 span{padding: 20px 0 ; font-size: 16px}
+  #customer #customer_wrap .faq .wrap h2 span.accordion-button:not(.collapsed){padding-bottom: 20px; }
+  #customer #customer_wrap .faq .accordion-body {font-size: 14px; padding: 26px 15px;}
+  #customer #customer_wrap .faq .accordion-body *{font-size: 14px; }
+
+  #customer #customer_wrap .reference_list_board tr td,
+  #customer #customer_wrap .reference_list_board tr th { padding: 18px 0px; font-size: 12px; }
+  #customer #customer_wrap .reference_list_board th:nth-child(1){ width: 12%;}
+  #customer #customer_wrap .reference_list_board th:nth-child(2){width: 50%; text-align: left}
+  #customer #customer_wrap .reference_list_board th:nth-child(3){text-align: left}
+  #customer #customer_wrap .reference_list_board tr td a{font-size: 14px; line-height: 1;}
+  #customer #customer_wrap .reference_list_board tr td.date{font-size: 12px}
+  #customer #customer_wrap .reference_list_board tr td.download img{width: 16px}
+  #customer .reference_list_board_view .bo_discription li.file{display: none}
+  #customer .reference_list_board_view p.file{display: flex; align-items: center; gap:10px; margin-top: 37px;}
+  #customer .reference_list_board_view p.file a{font-size: 14px ; color: #505054; word-break: keep-all;}
+  #customer .reference_list_board_view p.file a:hover{opacity: .8}
+  #customer .reference_list_board_view h2{ font-size: 20px; padding-bottom: 16px; margin-bottom: 16px;}
+  #customer .reference_list_board_view .bo_detail{ padding: 48px 0 37px;}
+  #customer .pagenation.mo{display: flex}
+  #customer .pagenation{margin-top: 30px}
+  #customer .pagenation p{font-size: 16px;}
+  #customer .pagenation a{ padding: 7px 13px}
+  #customer #customer_wrap .issued_cont form.issued_form1 table tr td.required{width: 110px; padding: 29px 15px;}
+  #customer #customer_wrap .issued_cont form.issued_form1 table tr td .row .col{    max-width: -webkit-fill-available;}
+  #customer #customer_wrap .issued_cont form.issued_form1 table tr td .col input{width: -webkit-fill-available; padding:17px 5px}
+  #customer #customer_wrap .issued_cont form.issued_form1 table tr td .col .input-group input{width: 48%}
+  #customer #customer_wrap .issued_cont form.issued_form1 table tr td .col .input-group input.field-1{width: 20%}
+  #customer #customer_wrap .issued_cont form.issued_form1 table tr td .col .input-group input+span{font-size: 6px}
+  #customer #customer_wrap .issued_cont ul.issued_item { gap: 14px; flex-direction: column; }
+  #customer #customer_wrap .issued_cont ul.issued_item li{width: 100%;}
+  #customer #customer_wrap .issued_cont ul.issued_item li a{padding: 30px 0 }
+  #customer #customer_wrap .issued_cont ul.issued_item li img{margin-bottom:10px; width: auto; height: 70px}
+  #customer #customer_wrap .issued_cont h2{font-size: 18px; margin-bottom: 40px}
+  #customer #customer_wrap .issued_cont ul.issued_item li h2{font-size: 16px}
+  #customer #customer_wrap .issued_cont form.issued_form1 h3{margin-bottom:20px; font-size: 18px}
+  #customer #customer_wrap .issued_cont form.issued_form1 .issued_graybox{padding:26px 15px}
+  #customer #customer_wrap .issued_cont form.issued_form1 .issued_graybox .pc{display: none}
+  #customer #customer_wrap .issued_cont form.issued_form1 .agree_terms_input{margin-top: 28px; margin-bottom: 60px}
+  #customer #customer_wrap .issued_cont form.issued_form1 table tr td input::placeholder{color:#fff}
+
+  #customer #customer_wrap .issued_print_cont{padding-bottom: 200px}
+  #customer #customer_wrap .issued_print_cont .no_data { padding: 60px 0 0; }
+  #customer #customer_wrap .issued_print_cont .available_data { padding: 60px 0 0; }
+  #customer #customer_wrap .issued_print_cont img{width: 72px}
+  #customer #customer_wrap .issued_print_cont h4{padding-bottom: 66px}
+  #customer #customer_wrap #print_modal .modal-dialog{width: 100%; margin: 15px}
+  #customer #customer_wrap #print_modal .modal-content { width: 100%;  }
+  #customer #customer_wrap #print_modal .modal-header{padding: 12px 20px}
+  #customer #customer_wrap #print_modal .modal-header ul.left{display: none}
+  #customer #customer_wrap #print_modal .modal-header ul.center{gap: 24px}
+  #customer #customer_wrap #print_modal .modal-header .flex { justify-content: flex-end; }
+  #customer #customer_wrap #print_modal .modal-body { height: 70vh; border-radius: 0 0 10px 10px; }
+  #customer #customer_wrap #print_modal .modal-body .print_view img { margin: 30px auto; height: -webkit-fill-available;}
+  #customer #customer_wrap #print_modal .modal-footer .btn{display: block; width: 200px; margin: 0 auto; text-align: center; padding: 15px; background: #27282C; border-radius: 8px; color: #fff; font-weight: 600; font-size: 18px; margin-top: 40px}
+  #customer #customer_wrap .customer_table_cont{min-height: 400px}
+  #customer #customer_wrap .customer_table_board tr td,
+  #customer #customer_wrap .customer_table_board tr th { padding: 18px 0px; font-size: 12px; }
+  #customer #customer_wrap .customer_table_board th:nth-child(1),
+  #customer #customer_wrap .customer_table_board td:nth-child(1){ width: 10%; text-align: center}
+  #customer #customer_wrap .customer_table_board th:nth-child(2){width: 50%}
+  #customer #customer_wrap .customer_table_board tr td a{font-size: 14px; line-height: 1; color: #212126}
+  #customer #customer_wrap .customer_table_board tr td.date{font-size: 12px}
+  #customer #customer_wrap .customer_table_board tr td.download img{width: 16px}
+
+  #customer #customer_wrap .map_table_board tr td,
+  #customer #customer_wrap .map_table_board tr th{ padding: 18px 3px; font-size: 12px; }
+  #customer #customer_wrap .map_table_board th:nth-child(1){width: 10%}
+  #customer #customer_wrap .map_table_board th:nth-child(2){width: 20%}
+  #customer #customer_wrap .map_table_board th:nth-child(3){width: 23%}
+  #customer #customer_wrap .map_table_board th:nth-child(4){width: 30%}
+  #customer #customer_wrap .map_table_board tr td:nth-child(4) br{display: none}
+  #customer #customer_wrap .map_table_board tr td:nth-child(1),
+  #customer #customer_wrap .map_table_board tr td:nth-child(2){font-size: 14px}
+  #customer #customer_wrap .map_table_board th:nth-child(5){width:16%}
+  #customer #customer_wrap .map_table_board tr td a img{height: 17px}
+
+  #customer #customer_wrap #map_modal{}
+  #customer #customer_wrap #map_modal .modal-dialog{margin: 15px}
+  #customer #customer_wrap #map_modal .modal-content { width: 100%; }
+  #customer #customer_wrap #map_modal .modal-body { padding: 0px 15px 15px; }
+  #customer #customer_wrap #map_modal .modal-header{ padding: 34px 15px 19px;}
+  #customer #customer_wrap #map_modal .modal-header h4{text-align: center;}
+  #customer #customer_wrap #map_modal .modal-content #map{width: 100%; height: 210px; overflow: hidden; border-radius: 10px}
+  #customer #customer_wrap #map_modal .modal-content table.map_modal_table{width: 100%; border-top: 1px solid #222222; margin-top: 34px;  overflow-x: scroll;}
+  #customer #customer_wrap #map_modal .modal-content table.map_modal_table tr td{padding: 16px; font-size: 14px; letter-spacing: -0.2px}
+  #customer #customer_wrap #map_modal .modal-content table.map_modal_table tr td.title{width: 39%}
+
+  #customer #customer_wrap .issued_cont form.chk_personal .issued_graybox{padding: 26px 15px}
+  #customer #customer_wrap .issued_cont form.chk_personal table tr td.required{width: 110px; padding: 29px 15px;}
+  #customer #customer_wrap .issued_cont form.chk_personal table tr td .row .col{max-width: -webkit-fill-available;}
+  #customer #customer_wrap .issued_cont form.chk_personal table tr td .col input{width: -webkit-fill-available; padding:17px 5px}
+  #customer #customer_wrap .issued_cont form.chk_personal table tr td .col .input-group input{width: 40%}
+  #customer #customer_wrap .issued_cont form.chk_personal table tr td .col .input-group input.field-1{width: 20%}
+  #customer #customer_wrap .issued_cont form.chk_personal table tr td .col .input-group input+span{font-size: 8px}
+  #customer #customer_wrap .issued_cont form.chk_personal .graybox{padding: 26px 15px;}
+  #customer #customer_wrap .issued_cont form.chk_personal .graybox p{font-size: 14px; color: #5C575B}
+  #customer #customer_wrap .issued_cont form.chk_personal .graybox b{font-weight: normal;}
+  #customer #customer_wrap .issued_cont form.chk_personal h3{margin-bottom:20px; font-size: 18px}
+  #customer #customer_wrap .issued_cont form.chk_personal .issued_graybox{padding:26px 15px}
+  #customer #customer_wrap .issued_cont form.chk_personal .issued_graybox .pc{display: none}
+  #customer #customer_wrap .issued_cont form.chk_personal .agree_terms_input{margin-top: 28px; margin-bottom: 60px}
+  #customer #customer_wrap .issued_cont form.chk_personal table tr td input::placeholder{color:#fff}
+  #customer #customer_wrap .chk_personal_cont{padding-bottom: 200px}
+  #customer #customer_wrap .chk_personal_cont .no_data { padding: 60px 0 0; }
+  #customer #customer_wrap .chk_personal_cont .available_data { padding: 60px 0 0; }
+  #customer #customer_wrap .chk_personal_cont img{width: 72px}
+  #customer #customer_wrap .chk_personal_cont h4{padding-bottom: 66px}
+  #customer #customer_wrap .chk_personal_list_board{display: none}
+  #customer #customer_wrap .chk_personal_list_board_mo{display: block; border-top: 1px solid #111}
+  #customer #customer_wrap .chk_personal_list_board_mo li{padding: 30px 0; border-bottom: 1px solid #EAEAEA}
+  #customer #customer_wrap .chk_personal_list_board_mo li .listcont{margin-bottom: 24px}
+  #customer #customer_wrap .chk_personal_list_board_mo li .listcont:last-child{margin-bottom: 0}
+  #customer #customer_wrap .chk_personal_list_board_mo li p.tit { font-size: 14px; color: #6D6D6D; margin-bottom: 10px; line-height: 1; }
+  #customer #customer_wrap .chk_personal_list_board_mo li p.txt{font-size: 16px;}
+
+  #customer #customer_wrap .issued_cont .search_wrap{flex-wrap: wrap}
+  #customer #customer_wrap .issued_cont .search_wrap .input-group { width: 47%; }
+  #customer #customer_wrap .issued_cont .search_wrap .search_btn button{margin-left: 0 ; margin-top: 20px; width: 150px; justify-content: center}
+  #customer #customer_wrap .chk_personal_table_cont { margin-top: 40px; }
+  #customer #customer_wrap .chk_personal_list_board{width: 100%}
+  #customer #customer_wrap .chk_personal_list_board tr td,
+  #customer #customer_wrap .chk_personal_list_board tr th { padding: 18px 4px; font-size: 12px; word-break: normal; line-height: 1.4}
+  #customer #customer_wrap .chk_personal_list_board tr td br{display: none}
+  #customer #customer_wrap .chk_personal_list_board tr th:nth-last-child(1) { width: 19%; }
+  #customer #customer_wrap .chk_personal_list_board tr th:nth-last-child(2) { width: 19%; }
+  #customer #customer_wrap .chk_personal_list_board tr th:nth-child(1) { width: 18%; }
+  #customer #customer_wrap .chk_personal_list_board tr th:nth-child(2) { width: 22%; }
+  #customer #customer_wrap .chk_personal_list_board tr th:nth-child(3) { width: 19%; }
+  #customer #customer_wrap .chk_personal_list_board tr th:nth-child(4) { width: 15%; }
+  #customer #customer_wrap .chk_personal_list_board tr td a{font-size: 14px; line-height: 1;}
+  #customer #customer_wrap .chk_personal_list_board tr td.date{font-size: 12px}
+  #customer #customer_wrap .chk_personal_list_board1, #customer #customer_wrap .chk_personal_list_board2{display: none}
+
+
+  #customer #customer_wrap .btn_bt_r_wrap{justify-content: center;}
+  #customer #customer_wrap .complaints_cont{padding-bottom: 200px; margin-top:0}
+  #customer #customer_wrap .complaints_cont .ok { padding: 60px 0 0; }
+  #customer #customer_wrap .complaints_cont .available_data { padding: 60px 0 0; }
+  #customer #customer_wrap .complaints_cont img{width: 72px}
+  #customer #customer_wrap .complaints_cont h4{padding-bottom: 66px}
+
+  #customer #customer_wrap .sales_list_board tr td:nth-child(1){width :30%}
+  #customer #customer_wrap .sales_list_board tr td:nth-child(2){width :40%}
+  #customer #customer_wrap .sales_list_board{width: 100%}
+  #customer #customer_wrap .sales_list_board tr td,
+  #customer #customer_wrap .sales_list_board tr th { padding: 18px 4px; font-size: 12px; word-break: break-all; line-height: 1.4}
+
+  #customer #customer_wrap .complaints_write_cont form.complaints_write_form table tr td:nth-child(1){ width: 95px; padding: 0px 14px; padding-right: 0; font-size: 13px;}
+  #customer #customer_wrap .complaints_write_cont form.complaints_write_form table tr td .row .col input{    padding: 10px 11px; height: 50px;}
+  #customer #customer_wrap .complaints_write_cont form.complaints_write_form table tr td .row .col .select-selected { padding: 10px 8px; height: 50px; line-height: 25px; }
+  #customer #customer_wrap .complaints_write_cont form.complaints_write_form table tr td{ padding: 10px 10px; }
+  #customer #customer_wrap .complaints_write_cont form.complaints_write_form .btn_wrap { margin-top: 60px; gap: 10px; flex-direction: column-reverse; align-items: center; }
+  #customer #customer_wrap .complaints_write_cont form.complaints_write_form .btn_wrap button{max-width: 100%}
+  #customer #customer_wrap .complaints_write_cont form.complaints_write_form .btn_wrap.btn_wrap2 { margin-top: 60px; gap: 10px; flex-direction: column-reverse; align-items: center; }
+  #customer #customer_wrap .complaints_write_cont form.complaints_write_form .btn_wrap.btn_wrap2 button{max-width: 100%}
+  #customer #customer_wrap .complaints_write_cont form.complaints_write_form table tr td.inputtype_3.email .col .input-group{flex-wrap:wrap; gap: 13px 4px}
+  #customer #customer_wrap .complaints_write_cont form.complaints_write_form table tr td.inputtype_3.email .col .input-group input { width: 44.9% !important; }
+  #customer #customer_wrap .complaints_write_cont form.complaints_write_form table tr td.inputtype_3.email .col .input-group .custom-select{width: 100% !important}
+
+  #customer #customer_wrap .complaints_list_board{width: 100%; table-layout: fixed;}
+  #customer #customer_wrap .complaints_list_board th, #customer #customer_wrap .complaints_list_board tr td{font-size: 12px; padding: 20px 4px; word-break: break-word;}
+  #customer #customer_wrap .complaints_list_board tr td:nth-child(2){font-size: 12px}
+  #customer #customer_wrap .complaints_list_board tr td a{font-size: 12px;}
+  #customer #customer_wrap .complaints_list_board tr th:nth-child(1){ width: 40px;}
+  #customer #customer_wrap .complaints_list_board tr th:nth-child(2){ width: 34px;}
+  #customer #customer_wrap .complaints_list_board tr th:nth-child(3) { width: 33%; }
+  #customer #customer_wrap .complaints_list_board tr th:nth-child(4){ width: 40px;}
+  #customer #customer_wrap .complaints_list_board tr th:nth-child(5){    width: 66px;}
+  #customer #customer_wrap .complaints_list_board tr td:nth-child(5){ word-break: break-all; }
+  #customer #customer_wrap .complaints_list_board tr th:nth-child(6){ width: 50px;}
+
+  #customer #customer_wrap .mycomplaints_list_board{width: 100%; table-layout: fixed;}
+  #customer #customer_wrap .mycomplaints_list_board th, #customer #customer_wrap .mycomplaints_list_board tr td{font-size: 12px; padding: 20px 4px; word-break: break-word;}
+  #customer #customer_wrap .mycomplaints_list_board tr td:nth-child(2){font-size: 12px}
+  #customer #customer_wrap .mycomplaints_list_board tr td a{font-size: 12px;}
+  #customer #customer_wrap .mycomplaints_list_board tr th:nth-child(1){}
+  #customer #customer_wrap .mycomplaints_list_board tr th:nth-child(2){}
+  #customer #customer_wrap .mycomplaints_list_board tr th:nth-child(3){width: 23%;}
+  #customer #customer_wrap .mycomplaints_list_board tr th:nth-child(4){ width: 18%;}
+
+}
+
+
+
+@media (max-width: 600px){
+  #customer #customer_wrap .issued_cont form.issued_form1 table tr td .col input{width: -webkit-fill-available; padding:16px 8px}
+
+}
+@media (max-width: 320px){
+    #customer #customer_wrap .issued_cont form.issued_form1 table tr td .col .input-group input+span{font-size: 5px}
+    #customer #customer_wrap .faq .wrap h2 span{padding: 20px 0 ; font-size: 14px}
+    #customer #customer_wrap .issued_cont form.chk_personal table tr td.required,
+    #customer #customer_wrap .issued_cont form.issued_form1 table tr td.required{ padding: 29px 9px; font-size: 12px;}
+    #customer #customer_wrap .map_table_board tr td:nth-child(1),
+    #customer #customer_wrap .map_table_board tr td:nth-child(2){font-size: 12px}
+}

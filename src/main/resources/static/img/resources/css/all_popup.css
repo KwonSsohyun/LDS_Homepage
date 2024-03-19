@@ -1,0 +1,189 @@
+/***************/
+/*  230122 ver */
+/***************/
+
+
+/*팝업*/
+#overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); /* 어두운 배경을 표현하는 불투명한 배경색 */ align-items: center; justify-content: center; z-index: 99 }
+#modal{ display: none; background-color: #fff; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); width: 375px }
+#modal .modalContent{padding: 30px 34px; }
+#modal h5{font-size: 16px; margin-top: 0; line-height: 24px; margin: auto 34px; color: #27282C; font-weight: 600}
+#modal p{font-size: 14px; margin: 16px 0; justify-content: center;}
+#openModalBtn { cursor: pointer; }
+#modal .btn {  align-items: center; background-color: #0090E3; width: 100%; max-width: 100%; margin: 0 auto; text-align: center; display: flex; justify-content: center; border-radius: 6px; height: 50px; color: #fff; font-size: 18px; margin-top: 30px;}
+#modal .btn, #modal button{ background-color: #0090E3; width: 100%; max-width: 100%; margin: 0 auto; text-align: center; display: block; border-radius: 6px; height: 50px; color: #fff; font-size: 18px; margin-top: 30px; display: flex; justify-content: center; align-items: center; cursor:pointer;}
+#modal .btn:hover, #modal button:hover{background-color: #fff; border: 1px solid #0090E3; color:#0090E3; transition: 0.2s; box-shadow: border-box}
+#modal .btn.btn_gray{}
+#modal .btn_wrap .btn_gray{border: 1px solid #F7F8FA ; background-color: #F7F8FA;  color: #0090E3; }
+
+/*보이스피싱 예방 팝업*/
+.fraudprevention_check_modal {text-align: center;}
+.fraudprevention_check_modal p.flex{justify-content: center;}
+.fraudprevention_check_modal p.customer_center{color: #0090E3; font-weight: 500;}
+.fraudprevention_check_modal p img{margin-right: 7px}
+
+/*약관팝업*/
+#modal.agreement_modal{width: 500px}
+#modal.agreement_modal h5{text-align: center; font-size: 20px ; padding-bottom:1em}
+#modal.agreement_modal .agreement_box_in{max-height: 340px; overflow: scroll; overflow-x: hidden; font-size: 14px; line-height: 1.5; opacity: .8; background: #FCFCFC; padding: 16px; }
+
+/*정보입력팝업*/
+#termsModal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); align-items: center; justify-content: center; z-index: 99 }
+#termsModal .modal_wrap{border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); width: 500px; }
+#termsModal .modal_wrap > #modal { border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); width: 100%; }
+#termsModal .modal_wrap > #modal h5{text-align: center; font-size: 20px ; padding-bottom:1em}
+#termsModal .modal_wrap .zip_iframe{}
+
+#zipModal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); align-items: center; justify-content: center; z-index: 99 }
+#zipModal .modal_wrap{border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); width: 500px; }
+#zipModal .modal_wrap > #modal { border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); width: 100%; }
+#zipModal .modal_wrap > #modal h5{text-align: center; font-size: 20px ; padding-bottom:1em}
+#zipModal .modal_wrap .zip_iframe{}
+
+#overlay .fraudprevention_check_modal,
+#modal.agreement_modal,
+#zipModal .modal_wrap,
+#termsModal .modal_wrap{animation: slider 0.3s;}
+@keyframes slider {
+  0% {
+    transform: translateY(100%);
+    opacity: 0
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1
+  }
+}
+
+/* 메인 앱 다운로드 팝업(모바일 only)*/
+#appdown{ background: #00000047; position: fixed; width: 100%; height: 100%; top: 0; left: 0; z-index: 100; display: none}
+#appdown .modal-dialog-centered {max-width: 100%; width: 100%; margin: 0; align-items: flex-end;height: inherit; }
+#appdown .modal-content { border-radius: 30px 30px 0 0; margin-bottom: 0; border: 0; position: absolute; width: 100%; bottom: 0; background: #fff; }
+#appdown .modal-footer p.close-modal{padding: 10px 0; font-size: 14px; text-decoration: underline; color: #757573; cursor: pointer;}
+#appdown .modal-body{padding: 0; text-align: center;}
+#appdown .modal-footer{padding-top: 0}
+.modal-footer>*{margin: 0}
+
+
+/* 메인 비디오 팝업 */
+#banner_video{ background: #00000047; position: fixed; width: 100%; height: 100%; top: 0; left: 0; z-index: 100;}
+#banner_video .modal-dialog-centered { transform: none; width: 100%; max-width: 860px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); }
+#banner_video .modal-content .btn-close{ top: -30px;}
+#banner_video .iframebox { position: relative; width: 100%; height: 0; padding-bottom: 56.25%; }
+#banner_video iframe {   position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+
+
+
+/******공통팝업*****/
+
+/*간편상담신청 팝업**/
+#contactform{width: 100%; background: #00000047;  height: -webkit-fill-available; position: fixed; top: 0; left: 0; z-index: 100;  display: flex; flex-direction: column; align-items: center; justify-content: center}
+#contactform .modal-dialog{width: 500px; height: auto;background: #fff;border-radius: 10px; position: relative;}
+#contactform .modal-content{}
+#contactform .row{margin-bottom: 18px}
+#contactform label{ display: block; margin-bottom: 12px}
+#contactform input{width: 100%; border: 1px solid #DFDFDF}
+#contactform select { border: 1px solid #DFDFDF; width: 114px; max-width: -webkit-fill-available; }
+#contactform .invalid-feedback{color:#E85C53; margin-top: 10px; font-size: 13px}
+#contactform .invalid{border: 1px solid #E85C53;}
+#contactform .input-group{display: flex;}
+#contactform .custom-select {max-width: -webkit-fill-available; width: 114px; }
+#contactform .input-group-text{padding-left: 0; color: #BBBBBB}
+#contactform label[for="checkbox-18"]{margin-bottom: 0}
+#contactform .checkbox-wrapper-18{display: flex; justify-content: flex-start; align-items: center; margin-top: 10px; width: 100%}
+#contactform .checkbox-wrapper-18 .round { position: relative; }
+#contactform .checkbox-wrapper-18 .round label { background-color: #fff; border: 1px solid #ccc; border-radius: 50%; cursor: pointer; height:20px; width: 20px; display: block; }
+#contactform .checkbox-wrapper-18 .round label:after{border: 1px solid #939393; border-top: none; border-right: none; content: ""; height: 5px; left: 4px; left: 5px; y: 1; position: absolute; top: 5px; transform: rotate(-45deg); width: 8px;}
+#contactform .checkbox-wrapper-18 .round input[type="checkbox"] { visibility: hidden; display: none; opacity: 1; }
+#contactform .checkbox-wrapper-18 .round input[type="checkbox"]:checked + label { background-color: #0090E3; border-color: #0090E3; }
+#contactform .checkbox-wrapper-18 .round input[type="checkbox"]:checked + label:after { opacity: 1; border: 2px solid #fff;  border-top: none; border-right: none;}
+#contactform .checkbox-wrapper-18 .round label span { position: absolute; left: 25px; width: max-content; top: 50%; transform: translate(0, -50%); font-weight: 600;font-weight: normal; color: #757573;}
+#contactform .checkbox-wrapper-18 .round.big_check label{ background-color: #fff; border: 1px solid #ccc; border-radius: 50%; cursor: pointer; height: 25px; width:25px; display: block; }
+#contactform .checkbox-wrapper-18 .round.big_check label:after { border: 1px solid #939393; border-top: none; border-right: none; content: ""; height: 5px;  width: 8px; left: 6px; opacity: 1; position: absolute; top: 9px; left: 9px; transform: rotate(-45deg); }
+#contactform .checkbox-wrapper-18 .round.big_check label span { position: absolute; left: 33px; width: 40px; top: 50%; transform: translate(0%, -50%); margin-top: 0; font-weight: 600; font-size: 16px; line-height: initial; }
+
+/* 240201 수정 + 추가 */
+#modal_accodian {}
+#modal_accodian .accordion-button{background: url('../images/select_icon.svg') no-repeat right 10px center; font-size: 14px; color: #757573; display: block; width: 100%; text-align: left; padding: 1rem 0.75rem; position: relative;    display: block;}
+#modal_accodian .accordion-button::after { content: '자세히보기'; display: block; position: absolute; right: 27px; top: 50%; width: auto; height: auto; transform: translate(0%, -50%); font-size: 12px; color: #757573; }
+#modal_accodian .accordion-item{ border-radius: 9px; overflow: hidden; border: 1px solid #e8e8e8;}
+#modal_accodian p{ font-size: 11px; color: #757573; padding: 17px 13px; border-top: 1px solid #e8e8e8;}
+#appdown{ display: none}
+@media (max-width: 320px){
+  #modal_accodian .accordion-button::after{ font-size: 10px;}
+}
+
+/* 240201 추가 */
+#contactform .select-items{ height: 140px;}
+#contactform .modal-dialog-scrollable .modal-body{ overflow-y: initial;}
+#contactform .input_caption.red{ font-size: 12px; align-items: center; justify-content: flex-start;}
+#contactform .input_caption.red img { margin-right: 4px; display: block; }
+
+/*230122 footer 모달 */
+.ft-modal{width: 100%; background: #00000047;  height: -webkit-fill-available; position: fixed; top: 0; left: 0; z-index: 100;  display: flex; flex-direction: column; align-items: center; justify-content: center}
+.ft-modal .modal-header{display: flex; justify-content: space-between; padding: 34px 34px 15px;}
+.ft-modal .modal-header .modal-title{font-weight: 500}
+.ft-modal .modal-header .modal-select{display: flex; justify-content: center; align-items: center}
+.ft-modal .modal-header .modal-select p{font-weight: 700; font-size: 14px; margin-right: 8px; }
+.ft-modal .modal-header .modal-select .select-selected { text-align: left; padding: 7px 15px; border-radius: 10px; cursor: pointer; background: url(../images/select_icon.svg) no-repeat right 10px center; background-size: 17px 16px; font-size: 14px; width: 180px; border: 1px solid #DEDEDE; color: #363636 }
+.ft-modal .modal-header .modal-select .select-items{top: 35px;}
+.ft-modal .modal-dialog{max-width: 860px; background: #fff; border-radius: 10px;position: relative;}
+/*230201 수정*/
+.ft-modal .modal-body{overflow: visible; height: 54vh}
+.ft-modal .modal-footer{border: 0; padding: 0}
+.ft-modal .pravicybox { padding: 15px; overflow-y: scroll; border: 1px solid #F0F0F0; color: #757573; border-radius: 7px; height: 100%; padding-bottom: 0; line-height: 1.6 /*230201 수정*/}
+.ft-modal .pravicybox p{font-size: 14px; line-height: 1.5}
+.ft-modal .pravicybox h4{color:#0090E3; font-size: 14px;font-weight: 700; margin-bottom: 10px;}
+.ft-modal .pravicybox h4+table{margin-top: 0px; }
+.ft-modal .pravicybox table{ font-size: 13px; width: 100%;border: 1px solid #F2F2F2; border-top: 1px solid #6C6C6C; margin-top: 24px; line-height: 1.5}
+.ft-modal .pravicybox table tr:nth-child(1) td{padding: 12px; text-align: left; background: #FCFCFC; color:#111111;}
+.ft-modal .pravicybox table tr:nth-child(1) th{padding: 12px ; text-align: left ; background: #FCFCFC; color:#111111;}
+.ft-modal .pravicybox table thead + tbody tr:nth-child(1) td{background: #fff}
+.ft-modal .pravicybox table td { padding: 12px ; border-left: 1px solid #F2F2F2; border-bottom: 1px solid #f2f2f2; color: #111111}
+.ft-modal .pravicybox table strong{font-size: inherit}
+
+
+
+
+@media (max-width: 768px){
+
+  #main .main_popup .layerBox { width: 100%; transform: inherit; animation: slideUp 0.5s ease-out; position: inherit ; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; }
+  #main .main_popup .layerBox .cont { width: 100%; height:auto; border-radius: 24px 24px 0 0;}
+  #main .main_popup .layerBox .cont img{width: 100%}
+  #main .main_popup .popup_swiper img{width:100%}
+  #main .main_popup .layerBox{ animation: slideUp 0.5s ease-out; top: inherit; bottom: 0; left:0; }
+  @keyframes slideUp {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  #main .main_popup .swiper-button-next, #main .main_popup .swiper-button-prev{display: none}
+  #main .main_popup .btn_wrap { padding: 12px 0; width: 100%; background: #fff; }
+  #main .main_popup .btn_wrap .btn_today_close span, #main .main_popup .btn_wrap .btn_close{color:#111; text-decoration: none;padding: 0 2.5em}
+  /* 240201 */
+  #main .modal-content {border-radius: 30px; margin-bottom: -606px; transition: 0.2s ease-in-out; }
+  #main .modal.show .modal-content { margin-bottom: 0}
+  .modal.show .modal-dialog { transform: none; align-items: flex-end; margin: 0; height: inherit; }
+  .modal-body { overflow-y: auto; padding: 0px 15px 28px; }
+  #modal_accodian .accordion-button{font-size: 12px}
+
+  #appdown{ display: block;}
+  #banner_video .modal-dialog-centered{justify-content: center; align-items: center; width: 100%; max-width: 100% }
+  #banner_video .modal-content{width: auto; margin: 0 15px}
+  #banner_video .iframebox { position: relative; width: 100%; height: auto; padding-bottom: 56.25%; }
+
+  #contactform{justify-content: flex-end;}
+  #contactform .checkbox-wrapper-18 .round label span{font-size: 12px;}
+  #contactform .modal-dialog{width: 100%; min-height: 530px;}
+
+  .ft-modal{justify-content: center;}
+  .ft-modal .modal-header{padding: 34px 15px 15px;}
+  .ft-modal .modal-content{background: #fff}
+  .ft-modal .modal-body {padding: 15px 15px 20px;  }
+  .ft-modal .modal-dialog { width: -webkit-fill-available; margin: 15px; max-width: 100%; height: 80vh; border-radius: 20px}
+
+}

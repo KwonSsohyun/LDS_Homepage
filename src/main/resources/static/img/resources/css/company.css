@@ -1,0 +1,34 @@
+/*******************************
+  회사소개 서브페이지 타이틀
+  -> 요고 완료되면 sub.css로 뺄 예정!!!!
+  PC만 작업해놨으니 모바일 작업 별도 부탁드려유
+******************************/
+#subtitle.type2 { color: #111; background: #fff; padding: 20px 0 0; text-align: left;; }
+#subtitle.type2 .navigation { justify-content: flex-start; text-align: right; width: 100%; }
+#subtitle.type2 .navigation p a{color:#111}
+#subtitle.type2 .tit {padding:0;}
+#subtitle.type2 .tit h1{padding: 100px 0 40px; font-size: 50px}
+#subtitle.type2 .tit p{font-size: 16px; margin-top: 10px}
+#subtitle.type2 .tit ul.title_tab{justify-content: flex-start; gap: 13px}
+#subtitle.type2 .tit ul.title_tab li{padding:10px 20px; border-radius: 100px;}
+#subtitle.type2 .tit ul.title_tab li a{font-size: 16px; font-weight: 500}
+#subtitle.type2 .tit ul.title_tab li.active{background: #111;}
+#subtitle.type2 .tit ul.title_tab li.active a{ color:#fff; }
+#subtitle.type2 .tit ul.title_tab li:hover{background: #f5f5f5;}
+#subtitle.type2 .tit ul.title_tab li:hover a{color:inherit;}
+
+
+/*내용*/
+#company{}
+
+
+
+@media (max-width: 1200px){
+  /*내용*/
+}
+@media (max-width: 768px){
+  /*내용*/
+}
+@media (max-width: 320px){
+  /*내용*/
+}

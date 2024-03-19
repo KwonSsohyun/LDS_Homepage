@@ -1,0 +1,801 @@
+
+
+
+/********* 공통 ***********/
+::-webkit-scrollbar { width: 3px; } /* 스크롤 바 */
+::-webkit-scrollbar-track { background-color:#fff; } /* 스크롤 바 밑의 배경 */
+::-webkit-scrollbar-thumb { background: #ddd; border-radius: 10px; } /* 실질적 스크롤 바 */
+::-webkit-scrollbar-thumb:hover { background: #0090E3; } /* 실질적 스크롤 바 위에 마우스를 올려다 둘 때 */
+::-webkit-scrollbar-thumb:active { background: #0090E3; }
+::-webkit-scrollbar-button { display: none; }
+* {font-family: 'Pretendard', Noto Sans KR , Apple SD Gothic Neo, arial, sans-serif;}
+i{ font-family: 'xeicon';}
+.flex{display: flex; justify-content: space-between;}
+.wrap{width: 100%; max-width: 1200px; margin: 0 auto;}
+.bold{font-weight: 600}
+body{width:100%; overflow-x: hidden;}
+h1{font-size: 34px;}
+h2{}
+h3{}
+h4{font-size: 24px}
+p{font-size: 18px; line-height: 1.4; margin-bottom: 0}
+.pc{display: inherit;}
+.mo{display: none}
+.redtxt{ color: #E85C53}
+.bold{font-weight: 600;}
+
+
+
+/* 서브페이지 타이틀 */
+#subtitle{color:#fff; background: linear-gradient(129deg, rgba(21,159,226,1) 0%, rgba(63,118,193,1) 100%); padding: 20px 0 0; text-align: center;}
+#subtitle .navigation{ justify-content: flex-end; text-align: right ; width: 100%}
+#subtitle .navigation p{font-size: 12px;}
+#subtitle .navigation p a{color:#fff}
+#subtitle .navigation p:nth-child(1):after { font-family: 'xeicon'; content: "\e940"; padding: 0px 10px;}
+#subtitle .navigation p:nth-child(3):before { font-family: 'xeicon'; content: "\e940"; padding: 0px 10px; }
+#subtitle .navigation p:nth-child(4):before { font-family: 'xeicon'; content: "\e940"; padding: 0px 10px; }
+
+#subtitle .tit{padding: 50px 0 30px}
+#subtitle .tit p{font-size: 16px; margin-top: 10px}
+#subtitle .btn_li{margin-bottom: 80px; justify-content: center; gap:15px}
+#subtitle .btn_li .btn {}
+#subtitle .btn_li .btn a { padding: 9px 0; width: 115px; background: #3B94D8; color: #C2DBF6; display: block; border-radius: 100px; box-shadow: 0px 6px 12px rgb(0 0 0 / 6%); font-size: 12px; }
+#subtitle .btn_li .btn a:hover{transition: 0.3s; box-shadow: 0px 6px 20px rgb(0 0 0 / 16%) ; background: #fff; color: #0090E3; }
+#subtitle .btn_li .btn.active a{color:#0090E3; background: #fff; font-weight: 600 }
+
+#subtitle .icon_li{background: #fff; padding: 30px; border-radius: 20px 20px 0 0 ; justify-content: center; } /*230122 수정*/
+#subtitle .icon_li .icon_box{align-items: center; color: #BDCDDF;  font-weight:400; font-size: 16px; padding:0 30px ;  display: flex; align-items: center;}
+#subtitle .icon_li .icon_box p span.pc{display: inline-block;}
+#subtitle .icon_li .icon_box img{width: 70px; margin-right: 10px}
+#subtitle .icon_li .icon_box.last-active{color: #0090E3; font-weight: 600}
+#subtitle .icon_li .icon_box.active p.active{color:#0090E3; font-weight: 700}
+
+
+/* 대출신청 */
+#loan_wrap{width: 100%; max-width: 1200px; padding: 70px 0 184px; margin: 0 auto}
+
+/* 대출신청 - 보이스피싱 예방 */
+#loan_wrap .fraudprevention_check_caution{text-align: center; }
+#loan_wrap .fraudprevention_check_caution img{width: 100px; margin-bottom: 30px;}
+#loan_wrap .fraudprevention_check_caution h1{color:#0090E3; margin-bottom: 10px}
+#loan_wrap .fraudprevention_check_caution h1+p{color:#a4a4a4; font-size: 18px; margin-bottom: 75px}
+#loan_wrap .graybox{background-color: #FCFCFC; border-radius: 10px; padding: 35px}
+#loan_wrap .graybox.voicefishing{width: 840px; margin: 0 auto; padding: 0}
+#loan_wrap .graybox.voicefishing form{ padding: 70px 96px 80px}
+#loan_wrap ul li.check_li{align-items: center; font-weight: 350; margin-bottom: 50px}
+#loan_wrap ul li.check_li:last-child{margin-bottom: 0}
+#loan_wrap ul li.check_li .check_li_txt p:nth-child(1){padding-right: 10px}
+
+#loan_wrap .check_wrap { padding: 15px 10px; padding-top: 0}
+#loan_wrap .check_wrap input[type=radio]{ display: none; }
+#loan_wrap .check_wrap input[type=radio]+label{ cursor: pointer; text-align:left; font-size:16px; display: inline-flex; width: 90px; align-items: center; user-select: none; -webkit-tap-highlight-color: transparent;   transform: translate3d(0, 0, 0);}
+#loan_wrap .check_wrap input[type=radio]+label:before { background-repeat:no-repeat ;content: ''; width: 25px; height: 25px; background-image: url('../images/unchecked.png'); background-size: 100%; margin-right:6px;  display: inline-flex; background-size: 100%; align-content: center; align-items: center; }
+#loan_wrap .check_wrap input[type=radio]+label{ }
+#loan_wrap .check_wrap input[type=radio]:checked+label:before { background-image: url('../images/checked.png'); }
+
+#loan_wrap button { background-color: #0090E3; width: 100%; max-width:330px; margin: 0 auto; text-align: center; display: block; border-radius: 8px; height: 50px; color: #fff; font-size: 18px; margin-top: 80px; font-weight: 700;}
+#loan_wrap button:hover{background-color: #fff; border: 1px solid #0090E3; color:#0090E3; transition: 0.2s; box-shadow: border-box}
+
+/* 대출신청 - 약관동의 */
+#loan_wrap .loan_wrapper { margin: 0 auto; width: 860px; }
+#loan_wrap .agree_terms_tit{text-align: center; padding: 35px 99px;}
+#loan_wrap .agree_terms_tit h5{font-size: 18px ; font-weight: 700; margin-bottom: 16px}
+#loan_wrap .agree_terms_tit p{font-size: 16px}
+#loan_wrap .agree_terms_tit p br{display: none}
+#loan_wrap .marginbt_60{margin-bottom: 60px}
+#loan_wrap .agree_terms_wrap {padding:60px 0; border-bottom: 1px solid #E2E2E2}
+#loan_wrap .agree_terms_wrap.uiprocessing{border-bottom:0}
+#loan_wrap .agree_terms_wrap:last-child{border-bottom: 0px solid #E2E2E2}
+#loan_wrap .agree_terms_wrap .agree_modal1{color:#D2D2D2; font-size: 16px}
+#loan_wrap .agree_terms_wrap .flex{align-items: center}
+#loan_wrap .agree_terms_wrap .flex.terms_text_li{margin-top: 60px}
+#loan_wrap .agree_terms_wrap .flex .agree_terms_input{margin-top: 0}
+#loan_wrap .agree_terms_wrap p.terms_text{font-size: 16px;}
+#loan_wrap .agree_terms_wrap p.terms_text_caption{font-size: 14px; color: #A4A4A4; margin-top: 10px}
+#loan_wrap .agree_terms_wrap .inner_checkbox{ padding-left: 13px; vertical-align: middle;}
+#loan_wrap .agree_terms_wrap .inner_checkbox p {font-size: inherit}
+#loan_wrap .agree_terms_wrap .inner_checkbox label{margin-right: 8px}
+#loan_wrap .agree_terms_wrap .inner_checkbox label.last{margin-right: 0}
+#loan_wrap .agree_terms_wrap .inner_checkbox *{display: inline-flex; vertical-align: middle; align-items: center; color: #B9B9B9}
+#loan_wrap .agree_terms_wrap .inner_checkbox input[type="checkbox"]{margin-left: 4px}
+#loan_wrap .agree_terms_wrap .inner_checkbox input[type="checkbox"]{ user-select: none; border-radius: 0; -webkit-appearance: none; -moz-appearance: none; appearance: none; height: 14px; outline: 0; width: 14px; border: 1px solid #B9B9B9;}
+#loan_wrap .agree_terms_wrap .inner_checkbox input[type="checkbox"]::after { border: solid #0090E3; border-width: 0px 1px 1px 0px; content: ''; display: none; height: 7px; left: 4px; position: relative; top: -1px; transform: rotate(45deg); width: 4px; }
+#loan_wrap .agree_terms_wrap .inner_checkbox input[type="checkbox"]:checked { background: none; }
+#loan_wrap .agree_terms_wrap .inner_checkbox input[type="checkbox"]:checked::after { display: block; }
+
+#loan_wrap .agree_terms_wrap .agree_terms_inner{margin-bottom: 60px;}
+#loan_wrap .agree_terms_wrap .agree_terms_inner:last-child{margin-bottom: 0}
+#loan_wrap .agree_terms_wrap .terms_required_txt { font-size: 14px; padding: 2px 6px; border-radius: 4px; border: 1px solid #0090E3; color: #0090E3; font-weight: 400; margin-right: 8px; line-height: 20px; vertical-align: middle; }
+#loan_wrap .agree_terms_wrap .terms_required_txt.gray {color:#8D8D8D; border : 1px solid #8D8D8D}
+#loan_wrap .agree_terms_input{margin-top: 18px; justify-content: flex-end;}
+#loan_wrap .agree_terms_input input[type=radio]{ display: none; }
+#loan_wrap .agree_terms_input input[type=radio]+label { cursor: pointer; text-align: left; font-size: 14px; display: inline-flex; align-items: center; margin-left: 13px; }
+#loan_wrap .agree_terms_input input[type=radio]+label:before { content: ''; width: 16px; height: 16px; background-image: url('../images/radio_icon_unchecked.png'); background-size: 100%; margin-right:6px;  display: inline-flex; background-size: 100%; align-content: center; align-items: center; }
+#loan_wrap .agree_terms_input input[type=radio]+label{ }
+#loan_wrap .agree_terms_input input[type=radio]:checked+label:before { background-image: url('../images/radio_icon_checked.png'); }
+#loan_wrap .agree_terms_input .agree_rating{gap:10px}
+#loan_wrap .agree_terms_input.rating_txt{justify-content: space-between;}
+#loan_wrap .agree_terms_input .agree_rating span{padding: 4px 8px; color: #A4A4A4; border:1px solid #F1F1F1; background-color: #FBFBFB; border-radius: 4px}
+#loan_wrap .agree_terms_input .agree_rating img{width:280px}
+#loan_wrap .agree_terms_inner+.graytxt{margin-top: 60px}
+#loan_wrap .graytxt {position: relative; color: #A4A4A4; font-size: 16px; padding-left: 16px; line-height: 1.6}
+#loan_wrap .graytxt span{position: absolute; left: 0; top: 0}
+.graybox-wrapper { background-color: #FBFBFB; border-radius: 10px; border: 1px solid #E2E2E2; padding: 25px; }
+.graybox-wrapper .agree_terms_input{margin-top: 0 !important}
+
+/*체크박스 */
+.checkbox-wrapper {background-color: #FCFCFC; border-radius: 10px; border: 1px solid #DBDBDB; padding:25px; display: flex; align-items: center; justify-content: space-between;}
+.checkbox-wrapper .cbx { -webkit-user-select: none; user-select: none; -webkit-tap-highlight-color: transparent; cursor: pointer; }
+.checkbox-wrapper .cbx span { display: inline-block; vertical-align: middle; transform: translate3d(0, 0, 0); font-size: 16px; font-weight: 600; margin-right: 7px}
+.checkbox-wrapper .cbx span:first-child { position: relative; width: 24px; height: 24px; border-radius: 50%; transform: scale(1); vertical-align: middle; border: 1px solid #B9B8C3; transition: all 0.2s ease; }
+.checkbox-wrapper .cbx span:first-child svg { position: absolute; z-index: 1; top: 8px; left: 6px; fill: none; stroke: #B7B7B7; /* 초기에는 체크 색상으로 설정 */ stroke-width: 1; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 16px; stroke-dashoffset: 0; /* 초기에는 체크가 보이도록 설정 */ transition: all 0.3s ease; transition-delay: 0.1s; transform: translate3d(0, 0, 0); }
+.checkbox-wrapper .cbx span:first-child:before { content: ""; width: 100%; height: 100%; background: #0090E3; display: block; transform: scale(0); opacity: 1; border-radius: 50%; transition-delay: 0.2s; }
+.checkbox-wrapper .cbx span:last-child { margin-left: 8px; }
+.checkbox-wrapper .cbx:hover span:first-child { border-color: #0090E3; }
+.checkbox-wrapper .cbx:hover span:first-child svg {stroke: #0090E3; }
+.checkbox-wrapper .inp-cbx:checked + .cbx span:first-child { border-color: #0090E3; background: #0090E3; animation: check-15 0.6s ease; }
+.checkbox-wrapper .inp-cbx:checked + .cbx span:first-child { border-color: #0090E3; background: #0090E3; animation: check-15 0.6s ease; }
+.checkbox-wrapper .inp-cbx:checked + .cbx span:first-child svg { stroke-dashoffset: 0;stroke: #fff; stroke-width: 2; }
+.checkbox-wrapper .inp-cbx:checked + .cbx span:first-child:before { transform: scale(2.2); opacity: 0; transition: all 0.6s ease; }
+.checkbox-wrapper .inp-cbx:checked + .cbx span:last-child { color: #0090E3; transition: all 0.3s ease; }
+.checkbox-wrapper .inp-cbx:checked + .cbx span:last-child:after { transform: scaleX(1); transition: all 0.3s ease; }
+.checkbox-wrapper label + span.redtxt{ font-size: 12px}
+.agree_terms_check.checkbox-wrapper .inp-cbx:checked + .cbx span:last-child{color:#111}
+.agree_terms_check.checkbox-wrapper .cbx span:first-child{margin-right: 16px}
+.agree_terms_check.checkbox-wrapper .cbx{display: flex; align-items: center;}
+#applyBtn:disabled { background-color: #EDEFF3; color: #C6C7C9; cursor: not-allowed; }
+#applyBtn{margin-top: 70px !important; margin-bottom: 184px !important}
+
+@keyframes check-15 {
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+
+
+
+
+
+/* 정보입력 */
+#loan_wrap.credit_info{padding-top: 40px; padding-bottom: 100px}
+#loan_wrap.credit_info h1.margin-bt{margin-bottom: 38px}
+#loan_wrap.credit_info .checkbox-wrapper .cbx span:last-child{margin: 0 !important}
+#loan_wrap.credit_info .graybox{margin: 26px 0 }
+#loan_wrap.credit_info .graybox p{font-size: 16px;line-height: 1.6}
+#loan_wrap.credit_info .round_no{border-radius: 0}
+#loan_wrap.credit_info .round_no p span.shape{padding-left: 14px; display: block;position: relative;}
+#loan_wrap.credit_info .round_no p span.shape::before{content:'※'; position: absolute; left: 0}
+#loan_wrap.credit_info .info_form{margin: 91px 0 }
+#loan_wrap.credit_info .info_form:last-child{margin-bottom: 0px}
+#loan_wrap.credit_info .info_form.bt_verification{margin-top: 94px}
+#loan_wrap.credit_info .form_cont:last-child{margin-bottom: 0px}
+.input-group{align-items: center; gap: 6px }
+#loan_wrap button { margin-top: 60px; }
+#loan_wrap.credit_info .info_form h1{margin-bottom: 24px;}
+#loan_wrap.credit_info .info_form h4{margin-bottom: 20px; font-weight: 400;}
+#loan_wrap.credit_info .info_form .form_sm_txt{font-size: 12px; color: #A4A4A4; margin-bottom: 18px}
+#loan_wrap.credit_info .info_form table{ width: 100% ; border-top: 1px solid #6C6C6C;}
+#loan_wrap.credit_info .info_form table tr{border-bottom: 1px solid #F2F2F2}
+#loan_wrap.credit_info .info_form table tr td{padding: 12px 20px ; font-size: 14px; color:#A4A4A4}
+#loan_wrap.credit_info .info_form table tr td.inputtype_2 select+input{margin-left: 6px;width: 196px;}
+#loan_wrap.credit_info .info_form table tr td.inputtype_2.mail{    word-spacing: 4px;}
+#loan_wrap.credit_info .info_form table tr td:nth-child(1){ background-color: #FCFCFC; width: 180px; color:#111111}
+#loan_wrap.credit_info .info_form table tr td.required:after{content: '*'; color: #E85C53; margin-left: 0px}
+#loan_wrap.credit_info .info_form table tr td span{margin-left: 8px}
+#loan_wrap.credit_info .info_form table tr td span+input{margin-left: 8px}
+#loan_wrap.credit_info .form_cont .checkbox-wrapper-18 .round label span{margin-left: 0}
+#loan_wrap.credit_info .info_form table tr td input,
+#loan_wrap.credit_info .info_form table tr td select{transition: 0.5s ease-in-out; border: 1px solid #D9D9D9; padding: 17px ; border-radius: 8px; color:#a4a4a4; font-size: 14px}
+#loan_wrap.credit_info .info_form table tr td input:focus,
+#loan_wrap.credit_info .info_form table tr td select:focus,
+#loan_wrap.credit_info .info_form table tr td input:hover,
+#loan_wrap.credit_info .info_form table tr td select:hover{outline: none; border: 1px solid #0090E3; color: #111}
+#loan_wrap.credit_info .info_form table tr td input::placeholder{color: #A4A4A4}
+#loan_wrap.credit_info .info_form table tr td input[type=password] { background-image: url('../images/info_icon_01.png'); background-repeat: no-repeat; background-size: 26px 15px; background-position: right 10px center; }
+#loan_wrap.credit_info .info_form table tr td select{-webkit-appearance: none; -moz-appearance: none; appearance: none; background: url('../images/select_icon.svg') no-repeat right 10px center; background-size: 17px 16px; min-width: 150px}
+#loan_wrap.credit_info .info_form table tr td.inputtype_1 input,
+#loan_wrap.credit_info .info_form table tr td.inputtype_1 select {width: 424px;}
+#loan_wrap.credit_info .info_form table tr td.inputtype_1 select{min-width: 460px}
+#loan_wrap.credit_info .info_form table tr td.inputtype_1.txt input { width: 390px; }
+#loan_wrap.credit_info .info_form table tr td.inputtype_1.txt select{width: 420px; min-width: auto;}
+#loan_wrap.credit_info .info_form table tr td.inputtype_2 input,
+#loan_wrap.credit_info .info_form table tr td.inputtype_2 select {width: 220px}
+#loan_wrap.credit_info .info_form table tr td.inputtype_2.mail input{width: 195px;}
+#loan_wrap.credit_info .info_form table tr td.inputtype_2.inputtxt input{width:187px}
+#loan_wrap.credit_info .info_form table tr td.inputtype_2.txt input{width:160px}
+#loan_wrap.credit_info .info_form table tr td.inputtype_2.txt input:last-child{margin-left: 8px}
+#loan_wrap.credit_info .info_form table tr td.inputtype_2.post input{width: 424px; margin-bottom: 8px}
+#loan_wrap.credit_info .info_form table tr td.inputtype_2.post input:last-child{margin-bottom: 0}
+#loan_wrap.credit_info .info_form table tr td.inputtype_2.post input.post1{width:315px}
+#loan_wrap.credit_info .info_form table tr td.inputtype_2.post input[type=button]{margin-left: 5px ;border: 1px solid #0090E3; color:#0090E3; width: 100px; background-color: #fff; padding: 17px 0; cursor: pointer;}
+#loan_wrap.credit_info .info_form table tr td.inputtype_3 input[type=text],
+#loan_wrap.credit_info .info_form table tr td.inputtype_3 select {width: 105px}
+#loan_wrap.credit_info .info_form table tr td.inputtype_2.mail select{ width: 196px;}
+#loan_wrap.credit_info .info_form table tr td.inputtype_3 input[type=text]:disabled, #loan_wrap.credit_info .info_form table tr td.inputtype_3 select:disabled{background-color: #f8f8f8}
+#loan_wrap.credit_info .info_form table tr td.inputtype_2.mail select+input{width: 146px; margin-left: 0}
+#loan_wrap.credit_info .form_cont .checkbox-wrapper-18,
+#loan_wrap.credit_info .form_cont .checkbox-wrapper-19{display: flex; justify-content: flex-start; align-items: center; margin-top: 10px}
+#loan_wrap.credit_info .form_cont .checkbox-wrapper-18 .round { position: relative; }
+.error { border: 1px solid red !important; }
+.checkbox-wrapper .cbx span { display: inline-block; vertical-align: middle; transform: translate3d(0, 0, 0); font-size: 16px; font-weight: 600; margin-right: 7px}
+.checkbox-wrapper .cbx span:first-child { position: relative; width: 24px; height: 24px; border-radius: 50%; transform: scale(1); vertical-align: middle; border: 1px solid #B9B8C3; transition: all 0.2s ease; }
+.checkbox-wrapper .cbx span:first-child svg { position: absolute; z-index: 1; top: 7px; left: 5px; fill: none; stroke: #B7B7B7; /* 초기에는 체크 색상으로 설정 */ stroke-width: 1; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 16px; stroke-dashoffset: 0; /* 초기에는 체크가 보이도록 설정 */ transition: all 0.3s ease; transition-delay: 0.1s; transform: translate3d(0, 0, 0); }
+.checkbox-wrapper .cbx span:first-child:before { content: ""; width: 100%; height: 100%; background: #0090E3; display: block; transform: scale(0); opacity: 1; border-radius: 50%; transition-delay: 0.2s; }
+.checkbox-wrapper .cbx span:last-child { margin-left: 8px; }
+#loan_wrap.credit_info .form_cont .checkbox-wrapper-18.pd-left{    padding: 0 0 0 26px;sss}
+#loan_wrap.credit_info .form_cont .check_wrap.pd-left{    padding: 0 0 0 26px;}
+
+#loan_wrap.credit_info .form_cont .checkbox-wrapper-18 .round label { background-color: #fff; border: 1px solid #ccc; border-radius: 50%; cursor: pointer; height: 16px; width: 16px; display: block; }
+#loan_wrap.credit_info .form_cont .checkbox-wrapper-18 .round label:after { border: 1px solid #939393; border-top: none; border-right: none; content: ""; height: 4px; left: 6px; opacity: 1; position: absolute; top: 5px; left: 5px; transform: rotate(-45deg); width: 6px; }
+#loan_wrap.credit_info .form_cont .checkbox-wrapper-18 .round input[type="checkbox"] { visibility: hidden; display: none; opacity: 1; }
+#loan_wrap.credit_info .form_cont .checkbox-wrapper-18 .round input[type="checkbox"]:checked + label { background-color: #0090E3; border-color: #0090E3; }
+#loan_wrap.credit_info .form_cont .checkbox-wrapper-18 .round input[type="checkbox"]:checked + label:after { opacity: 1; border: 2px solid #fff;  border-top: none; border-right: none;}
+#loan_wrap.credit_info .form_cont .checkbox-wrapper-18 .round label span { position: absolute; left: 25px; width: 40px; top: 50%;     transform: translate(0, -50%); font-weight: 600;font-weight: normal; color: #111;}
+#loan_wrap.credit_info .form_cont .checkbox-wrapper-18 .round.big_check label{ background-color: #fff; border: 1px solid #ccc; border-radius: 50%; cursor: pointer; height: 25px; width:25px; display: block; }
+#loan_wrap.credit_info .form_cont .checkbox-wrapper-18 .round.big_check label:after { border: 1px solid #939393; border-top: none; border-right: none; content: ""; height: 5px;  width: 8px; left: 6px; opacity: 1; position: absolute; top: 9px; left: 9px; transform: rotate(-45deg); }
+#loan_wrap.credit_info .form_cont .checkbox-wrapper-18 .round.big_check label span { position: absolute; left: 33px; width: 40px; top: 50%; transform: translate(0%, -50%); margin-top: 0; font-weight: 600; font-size: 16px; line-height: initial; }
+#loan_wrap.credit_info .form_cont{margin-bottom: 80px}
+#loan_wrap.credit_info .form_cont .graybox{border-radius: 0; border-top: 1px solid #6C6C6C}
+#loan_wrap.credit_info .form_cont .graybox h5{font-size: 18px; margin-bottom: 16px}
+#loan_wrap.credit_info .form_cont .graybox p{font-size: 16px; padding-left: 14px; position: relative; font-weight: 300}
+#loan_wrap.credit_info .form_cont .graybox p::before{content:'※'; position: absolute; left: 0}
+#loan_wrap.credit_info .form_cont .graybox .before_no{padding-left:0 }
+#loan_wrap.credit_info .form_cont .graybox .before_no::before{display: none;}
+#loan_wrap.credit_info .form_cont .check_wrap{justify-content: flex-start; width: 100%}
+/*#loan_wrap.credit_info .form_cont .check_wrap input[type="radio"]+label{width: auto; margin-right: 30px}
+#loan_wrap.credit_info .form_cont table tr td input[name="loan_use_etc"]{}
+#loan_wrap.credit_info .form_cont table tr td input[name="loan_use_etc"]::placeholder{color: #A4A4A4}
+#loan_wrap.credit_info .form_cont table tr td input[name="fix_expends"]{width:420px}
+#loan_wrap.credit_info .form_cont table tr td input[name="pay_method_etc"]{background-color:#F8F8F8;}*/
+#loan_wrap.credit_info .form_cont .graybox.text{margin-bottom: 20px}
+#loan_wrap .form_cont .graybox + .check_wrap{padding-left: 35px}
+#loan_wrap.credit_info .form_cont .graybox + .checkbox-wrapper-18{padding-left: 35px}
+#loan_wrap.credit_info .form_cont .check_wrap input[type=radio]{ display: none; }
+#loan_wrap.credit_info .form_cont .check_wrap input[type=radio]+label{ font-size: 16px; width: auto; margin-left: 0; cursor: pointer; text-align:left; font-weight: 600; display: inline-flex; width: ; align-items: center;margin-right: 30px}
+#loan_wrap.credit_info .form_cont .check_wrap input[type=radio]+label:before { content: ''; width: 25px; height: 25px; background-image: url('../images/unchecked.png'); background-size: 100%; margin-right:6px;  display: inline-flex; background-size: 100%; align-content: center; align-items: center; background-repeat: no-repeat;}
+#loan_wrap.credit_info .form_cont .check_wrap input[type=radio]+label{ }
+#loan_wrap.credit_info .form_cont .check_wrap input[type=radio]:checked+label:before { background-image: url('../images/checked.png'); }
+#loan_wrap.credit_info .form_cont input[type="radio"]{ display: none; }
+#loan_wrap.credit_info .form_cont input[type="radio"]+label { cursor: pointer; text-align: left; font-size: 14px; display: inline-flex; align-items: center; margin-left: 20px; }
+#loan_wrap.credit_info .form_cont input[type="radio"]+label:before { content: ''; width: 16px; height: 16px; background-image: url('../images/radio_icon_unchecked.png'); background-size: 100%; margin-right:6px;  display: inline-flex; background-size: 100%; align-content: center; align-items: center; }
+#loan_wrap.credit_info .form_cont input[type="radio"]+label{ }
+#loan_wrap.credit_info .form_cont input[type="radio"]:checked+label:before { background-image: url('../images/radio_icon_checked.png'); }
+#loan_wrap.credit_info .form_cont .post .radio_cont{margin-bottom: 10px}
+#loan_wrap.credit_info .form_cont .post .radio_cont label[for=post1]{margin-left: 0; }
+#loan_wrap.credit_info .form_cont .post .radio_cont label{color:#111}
+#loan_wrap.credit_info .form_cont .certify_cont {border-top: 1px solid #6C6C6C; padding: 36px 100px 0; justify-content: space-between;}
+#loan_wrap.credit_info .form_cont .certify_cont input[type="radio"]+label{margin-left: 0 ; padding: 0 1em; display: block; text-align: center; user-select: none; -webkit-tap-highlight-color: transparent; transform: translate3d(0, 0, 0);}
+#loan_wrap.credit_info .form_cont .certify_cont input[type="radio"]+label:before {display: none}
+#loan_wrap.credit_info .form_cont .certify_cont input[type="radio"]+label img{ width: 105px; display: block; border: 2px solid #F8FBFC; border-radius: 1000px; box-sizing: border-box; margin-bottom: 10px}
+#loan_wrap.credit_info .form_cont .certify_cont input[type="radio"]:checked+label img{border: 2px solid #0090E3;}
+#loan_wrap.credit_info .form_cont .certify_cont label p{font-size: 14px}
+#loan_wrap.credit_info .form_cont .certify_cont input[type="radio"]:checked+label p{font-weight: 600; color: #0090E3; }
+#loan_wrap.credit_info .credit_info_btnrap{}
+#loan_wrap.credit_info .credit_info_btnrap button.btn_gray{margin-top: 8px; border: 1px solid #E2E2E2; background-color: #fff; color: #B2B2B2}
+#loan_wrap.credit_info .credit_info_btnrap button.btn_gray:hover{ border: 1px solid #797979; background-color: #fff; color: #797979}
+#loan_wrap.credit_info.landing_info .info_form table tr td.inputtype_1 input,
+#loan_wrap.credit_info.landing_info .info_form table tr td.inputtype_1 select{width: inherit; min-width: -webkit-fill-available}
+#loan_wrap.credit_info.landing_info .info_form table tr td.inputtype_2.post input.post1{width: auto}
+#loan_wrap.credit_info .info_form table .row{width: 450px}
+
+#loan_wrap.credit_info .form_cont.check{}
+#loan_wrap.credit_info .form_cont h4.bold{font-weight: 700}
+#loan_wrap.credit_info .form_cont .desired h4{margin-bottom: 25px; padding-bottom: 25px; border-bottom: 1px solid #6C6C6C}
+#loan_wrap.credit_info .form_cont .desired .check_wrap{padding-left: 0}
+#loan_wrap.credit_info .checkbox-wrapper .cbx span:first-child svg{ top: 7px; left: 5px;}
+.form-control.is-invalid, .was-validated .form-control:invalid,
+.form-select.is-invalid, .was-validated .form-select:invalid{ border: 1px solid #dc3545 !important;}
+ .was-validated .form-select:valid:not([multiple]):not([size]){    border: 1px solid #dc3545 !important;}
+.form-control.is-valid, .was-validated .form-control:valid{background-image: none}
+.was-validated .form-control:valid{border: 1px solid #0090E3; outline: none; box-shadow: none}
+
+
+
+#modal .btn_wrap {gap: 10px}
+#modal .btn_wrap button{margin-top: 0}
+#modal .btn_wrap button.btn_gray{border: 1px solid #F7F8FA ; background-color: #F7F8FA;  color: #0090E3; }
+
+
+
+/*대출신청완료*/
+#loan_wrap .results_cont{width: 560px; max-width: 100%; margin: 0 auto; text-align: center;}
+#loan_wrap .results_cont .results_tit{margin: 40px 0 46px; line-height: 1.6}
+#loan_wrap .results_cont .results_tit_img{width:124px}
+#loan_wrap .results_cont .graybox .inner_cont{justify-content: center; gap:12px; align-items: center;}
+#loan_wrap .results_cont .graybox .inner_cont img{width: 34px}
+#loan_wrap .results_cont .graybox .inner_cont .bluetxt{color: #0090E3; font-size: 30px}
+#loan_wrap .results_cont .graybox p{font-size: 16px; margin-top: 13px}
+#loan_wrap .results_cont button{margin-top: 60px}
+#loan_wrap.completed{padding: 70px 0 84px;}
+
+input.form-control:focus {outline: 0px !important;} /* outline 테두리 속성 수정 */
+input.form-control:focus {outline: none !important;} /* outline 테두리 없애기 */
+
+
+/** 대출절차 안내 **/
+
+#loan #subtitle .tit { padding: 50px 0 80px; }
+#loan #subtitle .tit h1 + p{color: #C2DBF6; margin-top: 37px}
+#loan_wrap.process{width: 860px; padding-top: 100px; padding-bottom: 110px}
+#loan_wrap.process h4{margin-bottom: 30px}
+#loan_wrap.process .process_cont{margin-bottom: 90px}
+#loan_wrap.process .process_cont:last-child{margin-bottom: 0}
+#loan_wrap.process .item_wrap{display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px 50px; }
+#loan_wrap.process .item_wrap .item_li{background: #F8FBFC; padding:25px ; border-radius: 10px; align-items: center; justify-content: space-between; position: relative;}
+#loan_wrap.process .item_wrap .item_li:after { content: ''; width: 24px; height: 24px; background-image: url('../images/loan/process_arrow.svg'); display: block; position: absolute; top: 50%; right: -38px; background-size: cover; background-repeat: no-repeat; transform: translate(0, -50%); }
+#loan_wrap.process .item_wrap .item_li:nth-child(3):after,
+#loan_wrap.process .item_wrap .item_li:nth-child(6):after{display: none}
+#loan_wrap.process .item_wrap .item_li .txt{line-height: 1.4}
+#loan_wrap.process .item_wrap .item_li .txt .step_txt{color: #0090E3; font-size: 14px; font-weight: 600; padding: 2px 7px; border-radius: 4px; border: 1px solid #0090E3; display: block; width: fit-content; font-size: 14px; line-height: 1}
+#loan_wrap.process .item_wrap .item_li .txt h5{font-size: 16px; font-weight: 400 /*240201 수정*/ ; margin-top: 14px}
+#loan_wrap.process .item_wrap .item_li .txt h5 + span{opacity: .5; font-size: 16px; display: block}
+#loan_wrap.process .item_wrap .item_li .txt h5 + span.span2{opacity: 1; font-size: 14px;}
+#loan_wrap.process .item_wrap .item_li .icon{ width: 54px;}
+#loan_wrap.process .item_wrap .item_li .icon img{width: 100%; object-fit: contain; height: 48px;}
+
+/* 랜딩페이지 */
+#subtitle .tit + .icon_li{margin-top: 40px;}
+#landing #footer .ft_top{display: block;}
+
+#product{}
+#product #subtitle.product { min-height: 420px; }
+#product #subtitle.product .tit { padding: 50px 0 50px; }
+#product #subtitle.product .tit h3{border-top: 1px solid #ffffff29; padding: 40px 0; margin-top: 40px; font-size: 24px; font-weight: 300}
+#product #subtitle.product .tit p{color: #C2DBF6}
+#product #subtitle.product .btn_li { margin-bottom: 0; margin-top: 20px; justify-content: center; gap: 15px; }
+#product #product_wrap{}
+#product #product_wrap .wrap{width: 860px}
+#product #product_wrap .sec1,
+#product #product_wrap .sec2,
+#product #product_wrap .btn_wrap{padding: 60px 0}
+#product #product_wrap .sec1{}
+#product #product_wrap .sec2{background: #F7F8FA;}
+#product #product_wrap h2{font-size:24px; font-weight: 300; margin-bottom: 20px}
+#product #product_wrap table{width: 100%; border-top: 1px solid #6C6C6C; line-height: 1.5}
+#product #product_wrap table tbody{display: grid; grid-template-columns: 1fr 1fr}
+#product #product_wrap table tr { border-bottom: 1px solid #F2F2F2; display: flex; align-items: stretch; }
+#product #product_wrap table tr td{padding: 16px; display: block}
+#product #product_wrap table tr td.t_tit { font-weight: 700; background: #FCFCFC; width: -webkit-fill-available; max-width: 25%;}
+#product #product_wrap table tr td.t_text{color: #A4A4A4; width: 80%; padding-right:0}
+
+#product #product_wrap ul.textbox{color:#333A44}
+#product #product_wrap ul.textbox li{padding: 20px; line-height: 2; background: #fff; border-radius: 10px; margin-bottom: 12px; padding-left: 30px}
+#product #product_wrap ul.textbox li h5{font-size: 14px ;  font-weight: 700; position:relative; }
+#product #product_wrap ul.textbox li h5::before{content:'·'; display: block; position: absolute; left: -10px; top: 50%; transform: translate(0, -50%);}
+#product #product_wrap ul.textbox li p{font-size: 14px; line-height: 2;}
+#product #product_wrap ul.textbox li p.last{ margin-left: -9px;}
+#product #product_wrap ul.btn_caption{color: #878E9C; margin: 20px 0 }
+#product #product_wrap ul.btn_caption li{position: relative; font-size: 14px; line-height:1.5; padding-left: 14px; margin-bottom :4px }
+#product #product_wrap ul.btn_caption li::before{content:'※'; display: block; position: absolute; left: 0px; top: 0; transform: translate(0, 0);}
+#product #product_wrap .btn_wrap{}
+#product #product_wrap .btn_wrap a.button {line-height: 50px; background-color: #0090E3; width: 100%; max-width:330px; margin: 0 auto; text-align: center; display: block; border-radius: 8px; height: 50px; color: #fff; font-size: 18px;font-weight: 600; }
+#product #product_wrap .btn_wrap a.button:hover{background-color: #fff; border: 1px solid #0090E3; color:#0090E3; transition: 0.2s ease-in-out; box-shadow: border-box}
+
+#landing #loan_wrap .agree_terms_wrap .graybox-wrapper {margin-top:60px}
+
+
+@media screen and (max-width: 1200px){
+  .mo{display: none;}
+  .wrap{width: 95%; max-width: 1200px;}
+  p { font-size: 15px; line-height: 1.4; }
+  #header .hd_wrap .logo{width: 94px}
+  #header .hd_wrap .logo img { padding-left: 20px; }
+  #header .hd_wrap .hd_menu { padding-right: 20px; }
+  #header .hd_top p{text-align: center;}
+  #footer .ft_top .wrap{display: block;}
+  #footer .ft_link{text-align: center; padding: 30px 0px 20px;}
+  #footer .ft_familysite { padding: 0px; padding-bottom: 20px; }
+  #footer .ft_familysite .ft_btn { padding: 15px 12px; width: inherit; }
+  #footer .ft_familysite .ft_btn .siteli { top: 55px; }
+  #footer .ft_link a::after{padding: 0; opacity: .3}
+  #footer .ft_link a:nth-child(3)::after,
+  #footer .ft_link a:nth-child(9)::after,
+  #footer .ft_link a:nth-child(12)::after,
+  #footer .ft_link a:nth-child(14)::after,
+  #footer .ft_link a:last-child::after{ display: none }
+  /*#footer .ft_txt ul{padding: 0}*/
+  /*#footer .ft_txt li { font-size: 14px; }*/
+  #footer .ft_info { padding: 40px 0; }
+  #footer .ft_info .wrap .flex{display: block;}
+  #footer .ft_info .office .office_box { padding-right: 0; padding-bottom: 30px; /* margin-bottom: 0; */ }
+  #footer .ft_info .office .office_box:last-child{ margin-bottom: 30px; border-bottom: 1px solid #ececec}
+  #footer .ft_info .office .office_box p.flex{display: flex}
+  #footer .ft_info .ft_btnwrap { display: grid !important; grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(2, 1fr); grid-auto-rows: 50%; gap: 10px; }
+  #footer .ft_info .ft_btnwrap .btn{ margin: 0; max-height: 50px; min-width: auto; width: auto}
+  #footer .ft_info .ft_btnwrap .btn a{display: flex}
+  #flt_banner{position: fixed; z-index: 9;bottom: 20px; right: 20px; }
+  #subtitle .icon_li .icon_box {padding: 0 15px; }
+  #subtitle .icon_li .icon_box img{ width: 50px;}
+  #loan_wrap .graybox{ margin: 0px 50px;}
+  #loan_wrap .graybox.voicefishing{width: 100%; width: auto; padding: 0;}
+  #loan_wrap .graybox.voicefishing form { padding: 55px 60px; }
+  #loan_wrap .graybox.voicefishing ul li.check_li .flex p br{display: none}
+  #loan_wrap .graybox.voicefishing button{margin-top: 55px}
+  #loan_wrap .marginbt_60 { margin-bottom: 60px; }
+  #loan_wrap .graybox.graybox2 { margin: 0px 0px 20px; padding: 40px; }
+  #loan_wrap .loan_wrapper { width: 700px; }
+}
+
+@media (max-width: 768px){
+  .pc{display: none;}
+  .mo{display: block;}
+  .wrap { width: auto; max-width: 100%; margin: 0 15px }
+  h4 { font-size: 16px; }
+
+  /*#header .hd_top { padding: 10px 0; }
+  #header .hd_wrap { padding: 15px 0; align-items: center;}
+  #header .hd_top p.mo{display: flex; justify-content: space-between; align-items: center; font-size: 13px; text-align: left; gap:4px}
+  #header .hd_top p.mo span:nth-child(1){font-size: 16px; padding-right: 0px; font-weight: 500;}
+  #header .hd_top p.mo span:nth-child(2){}
+  #header .menu-icon { display: block; padding-right: 16px; }
+  #header .menu-container { right: -100%; display: block;}
+  #header .menu-container.active { right: 0;  }
+  #header .hd_wrap .logo{width: 94px;  padding-left: 20px; }
+  #header .hd_wrap .logo a{display:inline-flex;}
+  #header .hd_wrap .logo img {width: 94px ; padding: 0}*/
+
+  #footer .ft_info .office .office_box p { justify-content: flex-start; line-height: 1.5; font-size: 14px; }
+  #footer .ft_info .office .office_box p span:nth-child(1) { min-width: 86px; width: auto;}
+  #footer .ft_link { font-size: 12px; letter-spacing: -0.3px; }
+  #footer .ft_info .ft_btnwrap{gap:4px 5px}
+  #footer .ft_info .ft_btnwrap .btn a::after{top: 12px;}
+  #footer .ft_info .ft_btnwrap .btn a span { width: fit-content; font-size: 12px;line-height: 1.1}
+  #footer .ft_info .ft_btnwrap .btn a img.fine { width: auto; height: 26px; }
+  /*#footer .ft_txt { word-break: keep-all; width: fit-content; padding: 32px 0; }
+  #footer .ft_txt h5{font-size: 16px}
+  #footer .ft_txt ul+h5{font-size: 16px}
+  #footer .ft_txt h5.red{font-size: 16px; padding-top: 16px; border-top: 1px solid #ECECEC;}
+  #footer .ft_txt h5.red + ul{padding-bottom: 32px; border-bottom: 1px solid #ECECEC; margin-bottom: 0}*/
+  .agree_terms_check.checkbox-wrapper .cbx span:first-child{margin-right: 10px; position: absolute; top: 50%; margin-top: -12px }
+  .checkbox-wrapper .cbx span+span{    padding-left: 34px;}
+  /*#footer .ft_txt li:last-child{margin-bottom: 0}*/
+  #flt_banner { position: fixed; z-index: 9; transition: right 0.5s ease-in-out; }
+  #flt_banner.nav-up { right: -80px; }
+  #flt_banner .circle-container{width: 60px; height: 60px}
+  #flt_banner .circle-container a p{font-size: 10px}
+  #footer .ft_info{border:0; }
+  #subtitle{padding: 24px 0 0}
+  #subtitle .tit { padding: 44px 0 20px;}
+  #subtitle .btn_li { gap: 4px; margin-bottom: 40px;  }
+  #subtitle .btn_li .btn { margin: 0 ; }
+  #subtitle .btn_li .btn a { padding: 8px 0; width: 100px; font-size: 12px; }
+  #flt_banner a img { height: 16px; }
+  #subtitle .tit p { font-size: 13px; }
+  #subtitle .icon_li { flex-wrap: wrap;  padding: 15px 15px; border-radius: 10px 10px 0 0}
+  #subtitle .icon_li .icon_box { flex: 1 1 25%;  padding: 0px; align-items: flex-start; justify-content: center;}
+  #subtitle .icon_li .icon_box img{display: none;}
+  #subtitle .icon_li .icon_box p { letter-spacing: -0.2px; font-size: 11px; line-height: 1.1; font-weight: 500 !important; }
+  #subtitle .icon_li .icon_box p span.pc{display:none;}
+  #subtitle .icon_li .icon_box p span.mo { display: block; padding: 0; border-radius: 170px; border: 1px solid #ddd; width: 15px; height: 15px; line-height: 14.5px; text-align: center; margin: 0 auto; margin-bottom: 8px; font-size: 10px; }
+  #subtitle .icon_li .icon_box.active p span.mo{ border: 1px solid #0090E3 }
+  #subtitle .icon_li .icon_box.active{color: #0090E3; font-weight: 600}
+  #subtitle .icon_li .step_bar{background-color: #B7B7B7;  flex: 0 0 100%;    margin-top: 14px; }
+  #subtitle .icon_li .step_bar .bar{position: relative;height: 2px; border-radius: 10px; background: #0090E3; animation: gradientAnimation 1s linear forwards;}
+  #subtitle .icon_li .step_bar .bar.bar2{ animation: gradientAnimation2 1s linear forwards; }
+  #subtitle .icon_li .step_bar .bar.bar3{ animation: gradientAnimation3 1s linear forwards;  }
+  #subtitle .icon_li .step_bar .bar.bar4{ animation: gradientAnimation4 1s linear forwards; }
+  #subtitle .icon_li .step_bar .bar::after{content:''; position: absolute; top: 50%; right: 0; margin-top:-7px; width: 14px; height: 14px; background-image: url('../images/bar_icon.svg'); background-size: cover; display: block;}
+  @keyframes gradientAnimation {
+    0% {
+      width:0;
+    }
+    100% {
+      width:25%
+    }
+  }
+  @keyframes gradientAnimation2 {
+    0% {
+      width:25%;
+    }
+    100% {
+      width:50%
+    }
+  }
+  @keyframes gradientAnimation3 {
+    0% {
+      width:50%;
+    }
+    100% {
+      width:75%
+    }
+  }
+  @keyframes gradientAnimation4 {
+    0% {
+      width:75%;
+    }
+    100% {
+      width:100%
+    }
+  }
+
+  #landing #subtitle .icon_li .step_bar .bar{ animation: landingAnimation 1s linear forwards;}
+  #landing #subtitle .icon_li .step_bar .bar.bar2{ animation: landingAnimation2 1s linear forwards; }
+  #landing #subtitle .icon_li .step_bar .bar.bar3{ animation: landingAnimation3 1s linear forwards;  }
+  @keyframes landingAnimation {
+    0% {
+      width:0;
+    }
+    100% {
+      width:33%
+    }
+  }
+  @keyframes landingAnimation2 {
+    0% {
+      width:33%;
+    }
+    100% {
+      width:66%
+    }
+  }
+  @keyframes landingAnimation3 {
+    0% {
+      width:66%;
+    }
+    100% {
+      width:100%
+    }
+  }
+
+
+  #overlay {height: calc(var(--vh, 1vh) * 100);min-height: 100vh; min-height: -webkit-fill-available;
+    @supports (-webkit-appearance:none) and (stroke-color: transparent) {
+      min-height: -webkit-fill-available;
+    }
+  }
+  #modal .modalContent img{margin-bottom: 18px}
+
+  #loan_wrap{width: 100%; max-width: 100%; padding: 40px 0 55px;}
+  #loan_wrap.voicefishing{ padding: 40px 0 0;}
+  #loan_wrap.completed{padding: 44px 0 86px;}
+  #loan_wrap .loan_wrapper{width: 100%; width: initial;}
+  #loan_wrap .fraudprevention_check_caution h1 { font-size: 28px; }
+  #loan_wrap .fraudprevention_check_caution h1+p {font-size: 14px; margin-bottom: 55px; }
+  #loan_wrap .voicefishing .check_wrap input[type=radio]+label{    width: 74px;}
+  #loan_wrap .graybox { border-radius: 0px; margin: 0; padding: 30px 20px; }
+  #loan_wrap .graybox.voicefishing{padding:0; padding-bottom: 55px}
+  #loan_wrap .graybox.voicefishing form { padding: 0px 18px; }
+  #loan_wrap .graybox.voicefishing ul { padding: 55px 36px 0; word-break: keep-all; }
+  #loan_wrap ul li.check_li{display: block; margin-bottom: 30px}
+  #loan_wrap ul li.check_li .flex{justify-content: flex-start;}
+  #loan_wrap ul li.check_li .flex p{font-size: 14px}
+  #loan_wrap button { font-size: 17px; margin-top: 25px; }
+  #loan_wrap .check_wrap{ padding: 14px 0 0 19px;}
+  #loan_wrap .loan_wrapper { margin: 0 15px; }
+  #loan_wrap .loan_wrapper h4.bold{padding-bottom: 22px; font-size: 24px; margin:0;     font-weight: 700;}
+  #loan_wrap .marginbt_60 { margin-bottom: 0; }
+  #loan_wrap .agree_terms_tit h5 { font-size: 16px; margin-bottom: 10px;}
+  #loan_wrap .agree_terms_tit p { font-size: 13px; }
+  #loan_wrap .agree_terms_tit p br{display: none}
+  #loan_wrap .agree_terms_wrap { padding: 40px 0; }
+  #loan_wrap .agree_terms_wrap .flex{ flex-wrap: wrap; }
+  #loan_wrap .agree_terms_wrap .flex h4.terms_text .terms_required_txt{position: inherit;;}
+  #loan_wrap .agree_terms_wrap .flex p.terms_text { font-size: 12px; padding-left: 37px; position: relative; width: 233px; }
+  #loan_wrap .agree_terms_wrap .flex.terms_text_li { margin-top: 20px; align-items: baseline; }
+  #loan_wrap .loan_wrapper .graybox-wrapper.flex + button{margin-top: 55px}
+  #loan_wrap .loan_wrapper .graybox-wrapper.flex p{margin-bottom: 15px;}
+  #loan_wrap .agree_terms_wrap .inner_checkbox { flex: 1; white-space: nowrap; padding-left: 0; font-size: 12px; letter-spacing: -.2px; text-align: right; margin-top: 10px}
+  #loan_wrap .agree_terms_wrap .inner_checkbox span { padding: 0px; }
+  #loan_wrap .agree_terms_wrap .inner_checkbox label { margin-right: 6px; }
+  #loan_wrap .agree_terms_wrap .inner_checkbox label:last-child{margin-right: 0}
+  #loan_wrap .graytxt {position: relative; color: #A4A4A4; font-size: 13px; padding-left: 14px}
+  #loan_wrap .graytxt span{position: absolute; left: 0; top: 0}
+  #loan_wrap .loan_wrapper .graybox-wrapper.flex { flex-wrap: wrap; padding: 26px 22px; }
+  #loan_wrap .loan_wrapper .graybox-wrapper.flex p{flex: 1; white-space: nowrap; font-weight: 600; min-width: 100%}
+  #loan_wrap .graybox-wrapper.flex .agree_terms_input input[type=radio]+label{margin-left: 0; margin-right: 16px; font-size: 13px; letter-spacing: -0.2px}
+  #loan_wrap .graybox-wrapper.flex .agree_terms_input input[type=radio]+label:last-child{margin-right: 0}
+  #loan_wrap .agree_terms_wrap .agree_modal1 { font-size: 12px; }
+  #loan_wrap .agree_terms_wrap .terms_required_txt { font-size: 10px; line-height: inherit; padding: 2px 4px; position: absolute; left: 0; top: 0; }
+  #loan_wrap .agree_terms_wrap p.terms_text_caption { font-size: 12px; line-height: 1.6; padding-left: 37px}
+  #loan_wrap .agree_terms_input .agree_rating {display: block; text-align: center; background-color: #FCFCFC; padding: 1em;}
+  #loan_wrap .agree_terms_input .agree_rating span{font-size: 12px}
+  #loan_wrap .agree_terms_input .agree_rating img{margin-top:1em; width: 80%}
+  #loan_wrap .agree_terms_input .agree_rating+div{text-align: right; width: 100%;margin-top: 1em;}
+  #loan_wrap .agree_terms_wrap .agree_terms_inner { margin-bottom: 3em; }
+  #loan_wrap .agree_terms_input.rating_txt { justify-content: unset; flex-direction: column; flex: 1; }
+  #loan_wrap .agree_terms_wrap p.terms_text { font-size: 12px; position: relative; padding-left: 37px; word-break: keep-all;}
+  #loan_wrap .agree_terms_wrap.uiprocessing{margin-bottom: 42px; border-bottom:1px solid #E2E2E2; }
+  .checkbox-wrapper { background-color: #fff; position: relative; padding: 20px 15px; }
+  .checkbox-wrapper .agree_modal1 { position: absolute; top: 0; right: 0; margin-top: 23px; margin-right: 18px; font-size: 12px; color: #d2d2d2; }
+  #loan_wrap .agree_terms_input input[type=radio]+label:before{margin-right:6px}
+  #loan_wrap .agree_terms_input input[type=radio]+label{ margin-left: 8px;}
+  #loan_wrap.credit_info .info_form table .row { width: auto; }
+
+  #overlay, #termsModal { align-items: flex-end; justify-content: center; }
+  #modal { width: 100% !important; border-radius: 8px 8px 0 0}
+  #modal .modalContent { padding: 18px; }
+  #modal h5 { font-size: 16px !important; }
+  #modal.agreement_modal h5 { padding-bottom: 0; margin: 0; margin-top: 22px; word-break: keep-all; }
+  #modal.agreement_modal .agreement_box_in { font-size: 14px; line-height: 1.5; opacity: .8; padding: 17px; background-color: #FCFCFC; max-height: 60%; height: auto; min-height: 160px; max-height: 340px ; margin-top: 20px}
+  #zipModal{align-items: flex-end;}
+  #zipModal .modal_wrap, #termsModal .modal_wrap { width: 100% !important; border-radius: 8px 8px 0 0; overflow:hidden; }
+  #zipModal .modal_wrap > #modal { border-radius: 0; }
+  #termsModal .modal_wrap .agreement_box_in{height: 350px;}
+
+
+  #loan_wrap button{ max-width: -webkit-fill-available;}
+  #loan_wrap .results_cont .results_tit{font-size: 18px; margin: 30px 0}
+  #loan_wrap .results_cont { width: 100%; max-width: -webkit-fill-available;margin: 0 16px; }
+  #loan_wrap .results_cont .graybox .inner_cont .bluetxt{font-size: 24px}
+  #loan_wrap .results_cont .graybox p{font-size: 14px}
+  #loan_wrap .results_cont button{margin-top: 80px}
+  #loan_wrap.credit_info{padding-bottom: 50px}
+  #loan_wrap.credit_info .graybox p{font-size: 14px}
+  #loan_wrap.credit_info .agree_terms_check{background: #FBFBFB}
+  #loan_wrap.credit_info .loan_wrapper:nth-child(1) .info_form .form_cont .form_sm_txt{display: none}
+  #loan_wrap.credit_info .info_form table tr td:nth-child(1){ width: 75px; font-size: 13px;letter-spacing: -0.3px; word-break: keep-all;}
+  #loan_wrap.credit_info .info_form table tr td.required:after {  margin-left: 0px;}
+  #loan_wrap.credit_info .info_form table tr td{padding: 12px 12px}
+  #loan_wrap.credit_info .info_form table tr td.inputtype_1 input,
+  #loan_wrap.credit_info .info_form table tr td.inputtype_1 select {width: 100%; min-width: auto; max-width: -webkit-fill-available;}
+  #loan_wrap.credit_info .info_form table tr td.inputtype_2 input,
+  #loan_wrap.credit_info .info_form table tr td.inputtype_2 select {width: 45%; min-width: auto;}
+  #loan_wrap.credit_info .info_form table tr td.inputtype_2.txt input{width:100%}
+  #loan_wrap.credit_info .info_form table tr td.inputtype_2.post input{width: 100%;    max-width: -webkit-fill-available;}
+  #loan_wrap.credit_info .info_form table tr td.inputtype_2.post input.post1{width:49%}
+  #loan_wrap.credit_info .info_form table tr td.inputtype_2.post input[type=button] {    width: 39%;font-size: 12px; margin-left: 2px; }
+  #loan_wrap.credit_info .info_form table tr td.inputtype_3 input[type=text],
+  #loan_wrap.credit_info .info_form table tr td.inputtype_3 select {width: 80px; min-width: auto;}
+  #loan_wrap.credit_info .info_form table tr td.inputtype_2.mail { word-spacing: 0; }
+  #loan_wrap.credit_info .info_form table tr td.inputtype_1.txt select { width: 84%; min-width: auto; }
+  #loan_wrap.credit_info .info_form table tr td span{margin-left: 3px}
+  #loan_wrap.credit_info .info_form table tr td input[type=password]{background-image: none}
+  #loan_wrap.credit_info .info_form table tr td input, #loan_wrap.credit_info .info_form table tr td select { padding: 16px 8px;}
+  #loan_wrap.credit_info .info_form table tr td.inputtype_3 input[type=text],
+  #loan_wrap.credit_info .info_form table tr td.inputtype_3 select { width: 22%; min-width: auto; }
+  #loan_wrap.credit_info .info_form table tr td.inputtype_3 select { width: 26%; min-width: auto; background: url('../images/select_icon.svg') no-repeat right 1px center; }
+  #loan_wrap.credit_info .info_form table tr td.inputtype_2.txt input { width: 84%  }
+  #loan_wrap.credit_info .info_form table tr td.inputtype_2.txt input { width: 27%; }
+  #loan_wrap.credit_info .info_form table tr td.inputtype_1.txt input{ width: 166px !important }
+  #loan_wrap.credit_info .info_form table tr td.inputtype_2.inputtxt input {width: 83px; min-width: 60px;}
+  #loan_wrap.credit_info .info_form table tr td.inputtype_2.txt input:nth-child(1){margin-bottom:8px}
+  #loan_wrap.credit_info .info_form table tr td.inputtype_2 select+input { margin-left: 0; width: 45%; max-width: -webkit-fill-available; margin-top: 8px; }
+  #loan_wrap.credit_info .info_form table tr td select { background: url(../images/select_icon.svg) no-repeat right 12px center; }
+  #loan_wrap.credit_info .info_form table tr td.inputtype_2.mail select { width: 41%; }
+  #loan_wrap.credit_info .info_form table tr td.inputtype_2.mail input{width: 40%}
+  #loan_wrap.credit_info .form_cont .post .radio_cont label:last-child{margin-left: 0}
+  #loan_wrap.credit_info .info_form h1{margin-bottom: 18px;}
+  #loan_wrap.credit_info .info_form h4 { margin-bottom: 18px; font-weight: 300; font-size: 24px}
+  #loan_wrap.credit_info .info_form .form_sm_txt{margin-bottom: 12px}
+  #loan_wrap.credit_info .info_form { margin: 80px 0; }
+  #loan_wrap.credit_info .form_cont .certify_cont{padding: 30px 0}
+  #loan_wrap.credit_info .form_cont .certify_cont + .credit_info_btnrap #applyBtn{margin-bottom: 80px !important}
+  #loan_wrap.credit_info .form_cont .certify_cont + .credit_info_btnrap {margin: 0}
+  #loan_wrap.credit_info .form_cont .certify_cont input[type="radio"]+label img{ width: 100%;}
+  #loan_wrap.credit_info .agree_terms_check.checkbox-wrapper{display: block;}
+  #loan_wrap.credit_info .credit_info_btnrap { margin: auto 18px; }
+  #loan_wrap.credit_info .form_cont .graybox + .checkbox-wrapper-18 { padding-left: 20px; }
+  #loan_wrap.credit_info .checkbox-wrapper .cbx span:last-child{    padding-left: 35px;}
+  .checkbox-wrapper .cbx span:last-child { margin-left: 0; }
+  .checkbox-wrapper label + span.redtxt { font-size: 10px; display: block; padding-left: 36px; }
+  #loan_wrap.credit_info .form_cont .post .radio_cont label { color: #111; font-size: 12px; margin-left: 0px; margin-right: 7px}
+  #loan_wrap.credit_info .form_cont input[type="radio"]+label:before { width: 16px; height: 16px; margin-right: 2px; }
+  #loan_wrap .loan_wrapper h1{font-size: 24px;}
+  #loan_wrap.credit_info .form_cont .graybox.text { margin-bottom: 18px; }
+  #loan_wrap.credit_info .graybox { margin: 10px 0; }
+  #loan_wrap.credit_info .form_cont .graybox .before_no{font-size: 14px}
+  #loan_wrap.credit_info .form_cont .check_wrap{gap:30px}
+  #loan_wrap.credit_info .form_cont .check_wrap input[type="radio"]+label { width: auto; margin-right: 0px; margin-left: 0}
+  #loan_wrap.credit_info .form_cont .check_wrap input[type="radio"]+label:last-child{margin-right: 0}
+  #loan_wrap.credit_info h1.margin-bt{margin-bottom: 22px}
+  #loan_wrap.credit_info .form_cont .graybox p { font-size: 13px; padding-left: 10px; }
+  #loan_wrap .loan_wrapper + .credit_info_btnrap{margin-top: 80px; margin-bottom: 25px}
+  #loan_wrap .loan_wrapper + .credit_info_btnrap button{margin-top: 0; }
+  #loan_wrap .results_cont .graybox .inner_cont img { width: 25px; }
+  #loan_wrap .results_cont .graybox .inner_cont{gap: 6px}
+  #loan_wrap .form_cont .graybox + .check_wrap { padding-left: 20px; width: auto;}
+  #loan_wrap.credit_info .agree_terms_check.checkbox-wrapper + .info_form{margin-top: 80px}
+  #loan_wrap.credit_info.credit_info_re .agree_terms_check.checkbox-wrapper + .info_form{margin-top: 26px}
+
+  #product #subtitle.product { min-height: 400px;  height: 400px;}
+  #product #subtitle.product .tit { padding: 40px 0 40px; }
+  #product #subtitle.product .tit .btn_li+h3{font-size: 18px; padding: 20px 0; margin-top: 20px; line-height: 1.4}
+  #product #subtitle.product .tit h3{padding-bottom: 40px;font-size: 18px; margin-top: 20px; line-height: 1.4}
+  #product #subtitle.product .tit p {margin-top: 0}
+  #product #subtitle.product .btn_li{gap:6px}
+  #product #product_wrap table tbody { display: block;}
+  #product #product_wrap table tr td{font-size: 14px; padding: 25px 15px 25px 15px;}
+  #product #product_wrap .wrap { width: 100%; padding: 0 15px; margin: 0;}
+  #product #product_wrap h2 { margin-bottom: 14px; }
+  #product #product_wrap .sec2 h2{font-size: 16px; font-weight: 700}
+  #product #product_wrap ul.textbox li p { line-height: 1.5; }
+  #product #product_wrap .sec1, #product #product_wrap .btn_wrap { padding: 50px 0; }
+  #product #product_wrap .sec2{    padding: 50px 15px;}
+  #product #product_wrap ul.btn_caption li::before{ top: 0; transform: translate(0,0);}
+  #product #product_wrap .btn_wrap { padding: 64px 0; }
+  #product #product_wrap .btn_wrap a.button{ width: 100%; max-width: -webkit-fill-available; margin: 0 15px;}
+
+  #subtitle .navigation p:nth-child(1):after,
+  #subtitle .navigation p:nth-child(3):before,
+  #subtitle .navigation p:nth-child(4):before { padding: 0px 4px; }
+
+  #loan_wrap.credit_info .info_form table tr .col{padding-right: 0}
+  #loan_wrap.credit_info .info_form table tr td input,
+  #loan_wrap.credit_info .info_form table tr td select { padding: 13px 8px; }
+  #loan_wrap.credit_info .info_form table tr td.inputtype_2.inputtxt input { width: 83px; min-width: 60px; max-width: 45%; }
+  #loan_wrap.credit_info .info_form table tr td:nth-child(1){ width:90px; padding: 7px;}
+  #loan_wrap.credit_info .form_cont .desired .check_wrap {flex-direction: column; padding: 0; gap: 24px;}
+  #loan_wrap.credit_info .form_cont .desired h4 { margin-bottom: 24px; padding-bottom: 12px; font-size: 24px; }
+  #loan_wrap.credit_info .agree_terms_check.checkbox-wrapper + .info_form { margin-top: 26px; }
+  #loan_wrap.credit_info .info_form h4 { margin-bottom: 10px; }
+  #loan_wrap.credit_info .input-group{flex-wrap: nowrap}
+  #loan_wrap.credit_info .info_form table tr td.inputtype_2.post input[type=button]{ padding: 15px 0;}
+  #loan_wrap.credit_info.landing_info .info_form table tr td.inputtype_2.post input.post1 { width: 60%; }
+  #loan_wrap.credit_info .info_form table tr td.inputtype_2 select+input{margin-top: 0}
+  #loan_wrap.credit_info .credit_info_btnrap { margin: 80px auto;}
+
+  #applyBtn { margin-top: 10px !important; margin-bottom: 100px !important; }
+  #footer{padding-bottom: 43px}
+  #footer .ft_link { text-align: center; padding: 30px 0px 20px; }
+  #footer .ft_familysite { padding: 0px; padding-bottom: 20px;  }
+  #footer .ft_info { padding: 0px 0px; }
+
+  #loan_wrap.process { width: 100%; padding: 0 15px;  padding-top: 50px; padding-bottom: 60px}
+  #loan_wrap.process .process_cont { margin-bottom: 80px; }
+  #loan_wrap.process .item_wrap {grid-template-columns: repeat(2, 1fr); gap: 16px 30px; }
+  #loan_wrap.process h4 { margin-bottom: 24px; font-size: 24px; }
+  #loan_wrap.process .item_wrap .item_li { padding: 14px; width: 100%; box-sizing: border-box; align-items: flex-start; display: block; position: relative;}
+  #loan_wrap.process .item_wrap .item_li .icon{}
+  #loan_wrap.process .item_wrap .item_li .icon img{width: 30px; height: 30px; object-fit: contain;}
+  #loan_wrap.process .item_wrap .item_li .txt h5 { font-size: 12px; font-weight: 300; margin-top: 8px; }
+  #loan_wrap.process .item_wrap .item_li:after { width: 15px; height: 15px; top: 50%; right: -23px; }
+  #loan_wrap.process .item_wrap .item_li:nth-child(3):after,
+  #loan_wrap.process .item_wrap .item_li:nth-child(6):after{display: block}
+  #loan_wrap.process .item_wrap .item_li:nth-child(2):after,
+  #loan_wrap.process .item_wrap .item_li:nth-child(4):after,
+  #loan_wrap.process .item_wrap .item_li:nth-child(6):after{display: none}
+  #loan_wrap.process .item_wrap .item_li .txt{line-height: 1.2;}
+  #loan_wrap.process .item_wrap .item_li .txt h5 + span{font-size: 10px}
+  #loan_wrap.process .item_wrap .item_li .txt h5 b{font-weight: 600}
+  #loan_wrap.process .item_wrap .item_li .txt .step_txt { font-size: 10px; padding: 2px 7px; }
+  #loan_wrap.process .item_wrap .item_li .icon { width: fit-content; position: absolute; right: 16px; top: 16px; }
+  #loan_wrap.process .item_wrap .item_li .txt h5 + span.span2{font-size: 12px}
+
+  #loan #subtitle .tit{ padding: 49px 0 60px;}
+}
+
+  @media (max-width: 320px){
+  #header .hd_top p.mo { font-size: 12px; }
+  #header .hd_top p.mo span:nth-child(1) { font-size: 13px; }
+  #footer .ft_link a::after{display: inline-block !important;}
+  #footer .ft_link a+br{display: none}
+
+
+  #subtitle .btn_li .btn a { padding: 12px 0; width: 90px; font-size: 12px; }
+  #loan_wrap.process .item_wrap { grid-template-columns: repeat(2, 1fr); gap: 10px 10px; }
+  #loan_wrap.process .item_wrap .item_li .txt { line-height: 1.2; }
+  #loan_wrap.process .item_wrap .item_li:after { width: 17px; height: 17px; top: 50%; right: -13px; z-index: 2; }
+  #loan_wrap.process .item_wrap .item_li .icon img { width: 19px; height: 19px; object-fit: contain; }
+
+  #loan_wrap .loan_wrapper .graybox-wrapper.flex .agree_terms_input.flex{display: block; line-height: 2}
+  #loan_wrap .agree_terms_wrap .inner_checkbox label { margin-right: 0; }
+  #loan_wrap.credit_info .info_form table tr td:nth-child(1){    width: 72px;}
+  #loan_wrap.credit_info .info_form table tr td input, #loan_wrap.credit_info .info_form table tr td select { padding: 14px 8px; font-size: 13px; }
+  #loan_wrap.credit_info .info_form table tr td.inputtype_2.inputtxt input { width: 60px; }
+  #loan_wrap.credit_info .info_form table tr td.inputtype_2.txt input { width: 25%; }
+  #loan_wrap.credit_info .info_form table tr td.inputtype_2.mail select { width: 39%; }
+  #loan_wrap.credit_info .info_form table tr td.inputtype_2.post input.post1{width: 48%}
+  #loan_wrap.credit_info .info_form table tr td.inputtype_1.txt input { width: 146px !important; }
+  #loan_wrap.credit_info .info_form table tr td.inputtype_3 input[type=text], #loan_wrap.credit_info .info_form table tr td.inputtype_3 select { width: 17%; min-width: auto; }
+  #loan_wrap.credit_info .form_cont .check_wrap.pd-left { padding: 0 0 0 20px; }
+  #loan_wrap.credit_info .form_cont .check_wrap input[type=radio]+label{font-size: 14px}
+  #loan_wrap.credit_info .form_cont .check_wrap input[type=radio]+label:before{width: 20px ; height: 20px}
+  #loan_wrap.credit_info .form_cont .checkbox-wrapper-18 .round.big_check label span {  font-size: 14px; }
+  #loan_wrap.credit_info .form_cont .checkbox-wrapper-18 .round.big_check label{width: 20px; height: 20px}
+  #loan_wrap.credit_info .form_cont .checkbox-wrapper-18 .round.big_check label:after { top: 6px; left: 7px; }
+  #loan_wrap.credit_info .form_cont .checkbox-wrapper-18.pd-left { padding: 0 0 0 20px; }
+  #loan_wrap.credit_info .info_form table tr td.inputtype_2.mail { word-spacing: 0; }
+  #loan_wrap.credit_info .form_cont .post .radio_cont label:last-child{margin-left: 0}
+  #loan_wrap.credit_info .info_form table tr td.inputtype_3 select { width: 50px !important; }
+  #loan_wrap.credit_info .info_form table tr td.inputtype_2.post input[type=button]{width: 38%}
+  #loan_wrap.credit_info .info_form table tr td { padding: 8px; }
+  #loan_wrap.credit_info .info_form table tr td.inputtype_2 select+input{width: 43%;}
+  #loan_wrap.credit_info .form_cont .check_wrap{gap:20px}
+  #loan_wrap.credit_info .checkbox-wrapper .cbx span:last-child { padding-left: 35px; font-size: 15px; }
+  .checkbox-wrapper .cbx span:last-child { margin-left: 0; font-size: 14px; }
+  #product #product_wrap table tr td { font-size: 13px; }
+
+
+
+
+}

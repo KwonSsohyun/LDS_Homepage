@@ -1,0 +1,22 @@
+#loan_wrap.landing_info .loan_wrapper h4.bold{margin-bottom: 40px}
+#loan_wrap.landing_info .input-group{display: flex;}
+#loan_wrap.landing_info .input-group .select-selected{ min-width: 140px; max-width: -webkit-fill-available;}
+#loan_wrap.landing_info .info_form table tr td.inputtype_2.post input{width: 100%}
+#loan_wrap.landing_info .info_form table tr td.inputtype_3 input[type=text],
+#loan_wrap.landing_info .info_form table tr td.inputtype_3 .custom-select{ width: 33%;}
+#loan_wrap.landing_info .info_form table tr td.inputtype_2.post input.post1{ width: -webkit-fill-available !important}
+#loan_wrap.landing_info .info_form table tr td.inputtype_2.post input[type=button] { margin-left: 5px; border: 1px solid #0090E3; color: #0090E3; width: 120px; background-color: #fff; padding: 17px 0; cursor: pointer; max-width: none; }
+#loan_wrap.landing_info .info_form table tr td.inputtype_2.txt input { width: 90%; }
+#loan_wrap.landing_info .info_form .custom-select{  width: -webkit-fill-available;}
+#loan_wrap.landing_info .info_form table tr td.inputtype_2.inputtxt input{width: -webkit-fill-available;}
+#loan_wrap.landing_info .form_cont .checkbox-wrapper-18 .round label span{top: 100%;}
+#loan_wrap.landing_info .form_cont .checkbox-wrapper-18 .round.big_check label:after{ top: 8px; left: 8px; }
+#loan_wrap.landing_info .info_form table tr td.inputtype_2.txt .custom-select{width: 90%;}
+
+
+
+@media screen and (max-width: 768px){
+  #loan_wrap.landing_info .input-group .select-selected{min-width: auto}
+
+
+}
