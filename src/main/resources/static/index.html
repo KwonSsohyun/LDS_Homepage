@@ -125,28 +125,10 @@
 
 	<script>
     document.addEventListener('DOMContentLoaded', function() {
-        // 폼 제출 이벤트 리스너 등록
-        document.getElementById('submitForm').addEventListener('submit', function(event) {
-            // 이메일 조합
-            var custEmailNo1 = document.getElementById('custEmailNo1').value;
-            var custEmailNo2 = document.getElementById('custEmailNo2').value;
-            var custEmailNo3 = document.getElementById('custEmailNo3').value;
-            var custEmail = custEmailNo1 + '@' + (custEmailNo2.trim() !== '' ? custEmailNo2 : custEmailNo3);
-
-            // 연락처 조합
-            var custTelNo1 = document.getElementById('custTelNo1').value;
-            var custTelNo2 = document.getElementById('custTelNo2').value;
-            var custTelNo3 = document.getElementById('custTelNo3').value;
-            var custTel = custTelNo1 + '-' + custTelNo2 + '-' + custTelNo3;
-
-            // 이메일과 연락처 값을 숨겨진 필드에 설정
-            document.getElementById('custEmail').value = custEmail;
-            document.getElementById('custHp').value = custTel;
-        });
-
         var selectElement = document.getElementById('custTelNo1');
         var inputElement = document.getElementById('custTelNo1_input');
         
+        // select 변환 이벤트 리스너 등록
         selectElement.addEventListener('change', function () {
             if (selectElement.value === ' ') {
                 // '직접입력'이 선택된 경우
@@ -162,6 +144,12 @@
 
         // 폼 제출 이벤트 리스너 등록
         document.getElementById('submitForm').addEventListener('submit', function(event) {
+            // 이메일 조합
+            var custEmailNo1 = document.getElementById('custEmailNo1').value;
+            var custEmailNo2 = document.getElementById('custEmailNo2').value;
+            var custEmailNo3 = document.getElementById('custEmailNo3').value;
+            var custEmail = custEmailNo1 + '@' + (custEmailNo2.trim() !== '' ? custEmailNo2 : custEmailNo3);
+
             // 직접 입력인지 확인하여 값을 가져옴
             var custTelNo1;
             if (selectElement.value === ' ') {
@@ -176,7 +164,8 @@
             // 전화번호 조합
             var custTel = custTelNo1 + '-' + custTelNo2 + '-' + custTelNo3;
 
-            // 숨겨진 필드에 값 설정
+            // 이메일과 전화번호 값을 숨겨진 필드에 설정
+            document.getElementById('custEmail').value = custEmail;
             document.getElementById('custHp').value = custTel;
         });
     });

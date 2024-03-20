@@ -96,7 +96,7 @@ $(document).ready(function(){
 	}
 	
 	
-	// select 변환
+	// select 직접입력 변경
     var selectElement = document.getElementById('custTelNo1');
     var inputElement = document.getElementById('custTelNo1_input');
     
