@@ -124,26 +124,62 @@
 	</main>
 
 	<script>
-		document.addEventListener('DOMContentLoaded', function() {
-		    // 폼 제출 이벤트 리스너 등록
-		    document.getElementById('submitForm').addEventListener('submit', function(event) {
-		        // 이메일 조합
-		        var custEmailNo1 = document.getElementById('custEmailNo1').value;
-		        var custEmailNo2 = document.getElementById('custEmailNo2').value;
-		        var custEmailNo3 = document.getElementById('custEmailNo3').value;
-		        var custEmail = custEmailNo1 + '@' + (custEmailNo2.trim() !== '' ? custEmailNo2 : custEmailNo3);
-		
-		        // 연락처 조합
-		        var custTelNo1 = document.getElementById('custTelNo1').value;
-		        var custTelNo2 = document.getElementById('custTelNo2').value;
-		        var custTelNo3 = document.getElementById('custTelNo3').value;
-		        var custTel = custTelNo1 + '-' + custTelNo2 + '-' + custTelNo3;
-		
-		        // 이메일과 연락처 값을 숨겨진 필드에 설정
-		        document.getElementById('custEmail').value = custEmail;
-		        document.getElementById('custHp').value = custTel;
-		    });
-		});
+    document.addEventListener('DOMContentLoaded', function() {
+        // 폼 제출 이벤트 리스너 등록
+        document.getElementById('submitForm').addEventListener('submit', function(event) {
+            // 이메일 조합
+            var custEmailNo1 = document.getElementById('custEmailNo1').value;
+            var custEmailNo2 = document.getElementById('custEmailNo2').value;
+            var custEmailNo3 = document.getElementById('custEmailNo3').value;
+            var custEmail = custEmailNo1 + '@' + (custEmailNo2.trim() !== '' ? custEmailNo2 : custEmailNo3);
+
+            // 연락처 조합
+            var custTelNo1 = document.getElementById('custTelNo1').value;
+            var custTelNo2 = document.getElementById('custTelNo2').value;
+            var custTelNo3 = document.getElementById('custTelNo3').value;
+            var custTel = custTelNo1 + '-' + custTelNo2 + '-' + custTelNo3;
+
+            // 이메일과 연락처 값을 숨겨진 필드에 설정
+            document.getElementById('custEmail').value = custEmail;
+            document.getElementById('custHp').value = custTel;
+        });
+
+        var selectElement = document.getElementById('custTelNo1');
+        var inputElement = document.getElementById('custTelNo1_input');
+        
+        selectElement.addEventListener('change', function () {
+            if (selectElement.value === ' ') {
+                // '직접입력'이 선택된 경우
+                inputElement.style.display = 'inline';
+                inputElement.focus();
+                selectElement.style.display = 'none';
+            } else {
+                // 다른 옵션이 선택된 경우
+                inputElement.style.display = 'none';
+                selectElement.style.display = 'inline';
+            }
+        });
+
+        // 폼 제출 이벤트 리스너 등록
+        document.getElementById('submitForm').addEventListener('submit', function(event) {
+            // 직접 입력인지 확인하여 값을 가져옴
+            var custTelNo1;
+            if (selectElement.value === ' ') {
+                custTelNo1 = inputElement.value;
+            } else {
+                custTelNo1 = selectElement.value;
+            }
+
+            var custTelNo2 = document.getElementById('custTelNo2').value;
+            var custTelNo3 = document.getElementById('custTelNo3').value;
+
+            // 전화번호 조합
+            var custTel = custTelNo1 + '-' + custTelNo2 + '-' + custTelNo3;
+
+            // 숨겨진 필드에 값 설정
+            document.getElementById('custHp').value = custTel;
+        });
+    });
 	</script>
 
 	<main id="main03">
@@ -206,15 +242,16 @@
 										        <div class="row">
 										            <div class="col">
 										                <div class="input-group">
+															<input type="text" name="custTelNo1" id="custTelNo1_input" class="form-control" style="display:none;">
 										                    <div class="custom-select">
 										                        <select name="custTelNo1" id="custTelNo1" aria-invalid="false" class="valid form-select" required>
-										                            <option value=" ">선택</option>
 										                            <option value="010">010</option>
 										                            <option value="011">011</option>
 										                            <option value="016">016</option>
 										                            <option value="017">017</option>
 										                            <option value="018">018</option>
 										                            <option value="019">019</option>
+										                            <option value=" ">직접입력</option>
 										                        </select>
 										                    </div> -
 										                    <input type="text" name="custTelNo2" id="custTelNo2" maxlength="4" class="form-control" required> -

@@ -94,6 +94,20 @@ $(document).ready(function(){
 		});
   
 	}
+	
+	
+	// select 변환
+    var selectElement = document.getElementById('custTelNo1');
+    var inputElement = document.getElementById('custTelNo1_input');
+    
+    selectElement.addEventListener('change', function () {
+        if (selectElement.value === ' ') {
+            // '직접입력'이 선택된 경우
+            inputElement.style.display = 'inline';
+            inputElement.focus();
+            selectElement.style.display = 'none';
+        }
+    });
       
 
 });
