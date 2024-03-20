@@ -101,7 +101,15 @@ $(document).ready(function(){
           });
   
       }
-      
-      
+});
+
+// 토글(toggle) 이벤트
+document.addEventListener("DOMContentLoaded", function() {
+     var dropdownBtn = document.getElementById("dropdownBtn");
+     var siteli = dropdownBtn.querySelector(".siteli");
+
+     dropdownBtn.addEventListener("click", function() {
+          siteli.classList.toggle("active");
+     });
 });
 

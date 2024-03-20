@@ -758,6 +758,7 @@ textarea::placeholder {
     width: 200px;
     height: 30px;
     line-height: 30px;
+    z-index: 1; /* z-index 설정 */
 }
 #footer .ft_familysite .ft_btn p {
     margin: 0; /* 기본 마진 제거 */
@@ -780,6 +781,8 @@ textarea::placeholder {
     font-weight: 300;
     left: 0;
     position: absolute;
+    /* 상단에 배치 */
+    /* top: -160px; */
     top: 70px;
     width: 100%;
 }
@@ -787,7 +790,6 @@ textarea::placeholder {
 #footer .ft_familysite .ft_btn .siteli li {
     padding: 17px 15px;
 }
-
 
 #footer .ft_familysite .ft_btn p:after {
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAARzQklUCAgICHwIZIgAAADDSURBVEhL7dRhDYMwEAVgcIAEJEwCDggKyJxMwiQgAQfDAUhBwt4lbUIWwt07Evixa3K/6PVLX1vK4qZR3uQWAV+WfEQdUWsJPDBBatAm/n4/c7kE/KAq1JPFvXBGpX9CtSzugbdoA3BJu+0ZnIX30Hx8cs5mnIGPUBq3whaUwi0wg5pxDfagJvwIrrHCjJI5+fay/4l84To0jttmbcfv9FTkyXjHC42yzsrAXkzt03asLuCdELA3ObovoqYj8zb8X9Rfs7YmH/hNC3UAAAAASUVORK5CYII=);
