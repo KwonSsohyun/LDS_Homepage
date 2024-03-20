@@ -551,13 +551,13 @@ textarea::placeholder {
     height: 650px; /* 표의 세로 크기 */
 }
 
-#map {
+#maps {
     width: 876px; /* 지도 영역의 가로 크기 */
     height: 650px; /* 지도 영역의 세로 크기 */
     margin-left: 70px; /* 표와 지도 영역 간격 */
 }
 
-#map img {
+#map {
     max-width: 100%;
     height: auto;
 }
@@ -581,15 +581,15 @@ textarea::placeholder {
 }
 
 
-#map {
+#maps {
     position: relative; /* 부모 요소를 기준으로 자식 요소의 위치 조정 */
     display: inline-block; /* 요소를 인라인 블록으로 설정하여 다른 인라인 요소와 함께 나타날 수 있게 함 */
 }
-#map img {
+#map {
     display: block; /* 이미지를 블록 레벨 요소로 설정하여 텍스트와 이미지를 위아래로 정렬할 수 있게 함 */
     /* margin-bottom: 5px; 이미지 아래 여백 추가 */
 }
-#map span {
+#maps span {
     position: absolute; /* 절대 위치 */
     bottom: 0; /* 부모 요소의 하단에 텍스트를 배치 */
     left: 0; /* 왼쪽 정렬 */

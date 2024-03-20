@@ -24,7 +24,17 @@
 
     <!-- swiper -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=ad53cee09615517f945255f3071d244e"
+    ></script>
+
+
+	<!-- kakao API -->
+    <script
+      type="text/javascript"
+      src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=ad53cee09615517f945255f3071d244e"
+    ></script>
 
 
 	<script src="./js/script.js"></script>
@@ -248,14 +258,33 @@
 						</div>
 					</form>
 				</div>
-				<div id="map">
-					<img src="./img/map.jpg" alt="지도">
+				<div id="maps">
+					<!-- <img src="./img/map.jpg" alt="지도"> -->
+					<div id="map" style="background: beige; height: 550px; width: 876px;"></div>
 					<span>주소 : 04525 서울특별시 중구 소공로 109 한화빌딩 13층</span>
 				</div>
 			</div>
 		</section>
 	</main>
+	
+	
+	<!-- 지도 API -->
+    <script>
+		var container = document.getElementById('map');
+		var options = { 
+			center: new kakao.maps.LatLng(37.564220303596684, 126.97853981524808),  // 서울 중구 소공로 109 - 위도,경도
+			level: 3 //지도의 레벨(확대, 축소 정도)
+		};
+	
+		var map = new kakao.maps.Map(container, options); 
+		var markerPosition  = new kakao.maps.LatLng(37.564220303596684, 126.97853981524808);  // 서울 중구 소공로 109 - 위도,경도
+		var marker = new kakao.maps.Marker({ 
+		    position: markerPosition
+		});
 
+		marker.setMap(map);
+    </script>
+	
 	
 	<!-- <main id="main04"> -->
 		<!-- <section id="contents04"> -->

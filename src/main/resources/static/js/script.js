@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	
 
      // 도메인 직접 입력 or domain option 선택
      const domainListEl = document.querySelector('.domain-list')
@@ -100,16 +101,7 @@ $(document).ready(function(){
           });
   
       }
-
-
-});
-
-document.addEventListener("DOMContentLoaded", function() {
-     var dropdownBtn = document.getElementById("dropdownBtn");
-     var siteli = dropdownBtn.querySelector(".siteli");
-
-     dropdownBtn.addEventListener("click", function() {
-          siteli.classList.toggle("active");
-     });
+      
+      
 });
 
