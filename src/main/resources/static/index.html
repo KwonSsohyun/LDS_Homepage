@@ -229,7 +229,7 @@
 											<td class="inputtype_3">
 												<div class="row">
 													<div class="col">
-														<textarea name="custQuestion" rows="8" cols="80" placeholder="내용을 입력해 주세요."></textarea>
+														<textarea name="custQuestion" rows="8" cols="80" placeholder="내용을 입력해 주세요." required></textarea>
 													</div>
 												</div>
 											</td>
@@ -239,7 +239,7 @@
 							</div>
 							<div class="content_wrapper">
 								<div class="agree_terms_check checkbox-wrapper loan_wrapper" style="margin-top: -135px;">
-									<input class="inp-cbx" id="cbx-15" type="checkbox" style="display: none;" />
+									<input class="inp-cbx" id="cbx-15" type="checkbox" style="display: none;" onchange="agreeCheck()"/>
 									<label class="cbx agree-terms-check-label" for="cbx-15" id="agree_terms_check">
 										<span>
 											<svg width="12px" height="9px" viewbox="0 0 12 9">
@@ -252,12 +252,27 @@
 							</div>
 							<div class="loan_wrapper agree_terms_check ">
 								<div class="credit_info_btnrap ">
-									<button type="submit" name="button" style="margin-top: -130px;">문의하기</button>
+									<button type="submit" name="button" style="margin-top: -130px;" disabled>문의하기</button>
 								</div>
 							</div>
 						</div>
 					</form>
 				</div>
+				
+				
+				<script>
+				// 문의하기 버튼 비활성화·활성화
+			    function agreeCheck() {
+			        var submitButton = document.querySelector('#submitForm button[type="submit"]');
+			        var checkbox = document.getElementById('cbx-15');
+			        if (checkbox.checked) {
+			            submitButton.disabled = false; // 체크되어 있으면 버튼 활성화
+			        } else {
+			            submitButton.disabled = true; // 체크되어 있지 않으면 버튼 비활성화
+			        }
+			    }
+				</script>				
+				
 				<div id="maps">
 					<!-- <img src="./img/map.jpg" alt="지도"> -->
 					<div id="map" style="background: beige; height: 550px; width: 876px;"></div>

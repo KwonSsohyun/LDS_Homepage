@@ -493,6 +493,22 @@ main .container04 h6 {
 .was-validated .form-control:valid{border: 1px solid #0044B1; outline: none; box-shadow: none}
 
 
+#loan_wrap button:disabled {
+    background-color: #ccc;
+    border-color: #ccc;
+    cursor: not-allowed; /* 클릭을 비활성화하고 기본 커서 대신 'not-allowed' 커서로 변경 */
+}
+
+#loan_wrap button:disabled:hover {
+    background-color: inherit;
+    background-color: #ccc;
+    border-color: #ccc;
+    color: white;
+    transition: none;
+    box-shadow: none;
+    cursor: not-allowed;
+}
+
 #loan_wrap button { 
     border: 1px solid #0044B1; 
     background-color: #0044B1; 
