@@ -136,3 +136,15 @@ document.addEventListener("DOMContentLoaded", function() {
      });
 });
 
+
+// 레이어 팝업 이벤트
+//팝업 띄우기
+function openPop() {
+    document.getElementById("popup_layer").style.display = "block";
+
+}
+
+//팝업 닫기
+function closePop() {
+    document.getElementById("popup_layer").style.display = "none";
+}
