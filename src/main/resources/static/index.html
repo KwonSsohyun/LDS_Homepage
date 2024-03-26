@@ -15,6 +15,10 @@
 	<link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
+    
+    <!-- 반응형 미디어쿼리 -->
+	<link rel="stylesheet" media="all and (min-width:768px) and (max-width:1199px)" href="./css/laptop.css" >
+	<link rel="stylesheet" media="all and (max-width:767px)" href="./css/mobile_portrait.css" >
 
 	<link rel="stylesheet" type="text/css" href='https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css'>
     
@@ -53,7 +57,7 @@
 			<h1>금융 디지털 기술, 운영까지<br> 리드데이터시스템즈</h1>
 		</div>
 		<div id="visual">
-			<img src="./img/BG.jpg" alt="배경 이미지">
+			<img src="./img/BG.jpg" data-mobile-src="./img/BG_mo.png" alt="배경 이미지" id="bgimg">
 		</div>
 	</header>
 	
@@ -179,110 +183,112 @@
 			</div>
 			<div class="content_wrapper">
 				<div id="loan_wrap" class="credit_info landing_info">
-					<form id="submitForm" action="/submitForm" method="post">
-						<div class="loan_wrapper" style="margin-top: -76px;">
-							<div class="info_form">
-								<div class="form_cont">
-									<table style="width: 654px; height: 570px;">
-										<tr>
-											<td class="required">회사명/이름</td>
-											<td class="inputtype_1">
-												<div class="row">
-													<div class="col">
-														<input type="text" name="custName" placeholder="" id="name" required class="form-control" >
+					<div class="table-wrapper" style="zoom: 1;">
+						<form id="submitForm" action="/submitForm" method="post">
+							<div class="loan_wrapper">
+								<div class="info_form">
+									<div class="form_cont">
+										<table style="width: 654px; height: 570px;">
+											<tr>
+												<td class="required">회사명/이름</td>
+												<td class="inputtype_1">
+													<div class="row">
+														<div class="col">
+															<input type="text" name="custName" placeholder="" id="name" required class="form-control" >
+														</div>
 													</div>
-												</div>
-											</td>
-										</tr>
-										<td class="required">이메일</td>
-										<input type="hidden" id="custEmail" name="custEmail" />
-										<td class="inputtype_3">
-										    <div class="row">
-										        <div class="col">
-										            <div class="input-group">
-										                <input type="text" id="custEmailNo1" name="custEmailNo1" class="form-control" required> @
-										                <input type="text" id="custEmailNo2" name="custEmailNo2" class="domain-txt form-control" required>
-										                <div class="custom-select">
-										                    <select name="custEmailNo3" aria-invalid="false" id="custEmailNo3" class="domain-list valid form-select" required>
-										                        <option value="type">직접 입력</option>
-										                        <option value="naver.com">naver.com</option>
-										                        <option value="hanmail.net">hanmail.net</option>
-										                        <option value="hotmail.com">hotmail.com</option>
-										                        <option value="nate.com">nate.com</option>
-										                        <option value="yahoo.co.kr">yahoo.co.kr</option>
-										                        <option value="empas.com">empas.com</option>
-										                        <option value="dreamwiz.com">dreamwiz.com</option>
-										                        <option value="freechal.com">freechal.com</option>
-										                        <option value="lycos.co.kr">lycos.co.kr</option>
-										                        <option value="korea.com">korea.com</option>
-										                        <option value="gmail.com">gmail.com</option>
-										                        <option value="hanmir.com">hanmir.com</option>
-										                        <option value="paran.com">paran.com</option>
-										                    </select>
-										                </div>
-										            </div>
-										        </div>
-										    </div>
-										</td>
-										<tr>
-										    <td class="required">연락처</td>
-										    <input type="hidden" id="custHp" name="custHp" />
-										    <td class="inputtype_3">
-										        <div class="row">
-										            <div class="col">
-										                <div class="input-group">
-															<input type="text" name="custTelNo1" id="custTelNo1_input" class="form-control" style="display:none;">
-										                    <div class="custom-select">
-										                        <select name="custTelNo1" id="custTelNo1" aria-invalid="false" class="valid form-select" required>
-										                            <option value="010">010</option>
-										                            <option value="011">011</option>
-										                            <option value="016">016</option>
-										                            <option value="017">017</option>
-										                            <option value="018">018</option>
-										                            <option value="019">019</option>
-										                            <option value=" ">직접입력</option>
-										                        </select>
-										                    </div> -
-										                    <input type="text" name="custTelNo2" id="custTelNo2" maxlength="4" class="form-control" required> -
-										                    <input type="text" name="custTelNo3" id="custTelNo3" maxlength="4" class="form-control" required>
-										                </div>
-										            </div>
-										        </div>
-										    </td>
-										</tr>
-										<tr>
-											<td class="required">문의 내용</td>
+												</td>
+											</tr>
+											<td class="required">이메일</td>
+											<input type="hidden" id="custEmail" name="custEmail" />
 											<td class="inputtype_3">
-												<div class="row">
-													<div class="col">
-														<textarea name="custQuestion" rows="8" cols="80" placeholder="내용을 입력해 주세요." required></textarea>
-													</div>
-												</div>
+											    <div class="row">
+											        <div class="col">
+											            <div class="input-group">
+											                <input type="text" id="custEmailNo1" name="custEmailNo1" class="form-control" required> @
+											                <input type="text" id="custEmailNo2" name="custEmailNo2" class="domain-txt form-control" required>
+											                <div class="custom-select">
+											                    <select name="custEmailNo3" aria-invalid="false" id="custEmailNo3" class="domain-list valid form-select" required>
+											                        <option value="type">직접 입력</option>
+											                        <option value="naver.com">naver.com</option>
+											                        <option value="hanmail.net">hanmail.net</option>
+											                        <option value="hotmail.com">hotmail.com</option>
+											                        <option value="nate.com">nate.com</option>
+											                        <option value="yahoo.co.kr">yahoo.co.kr</option>
+											                        <option value="empas.com">empas.com</option>
+											                        <option value="dreamwiz.com">dreamwiz.com</option>
+											                        <option value="freechal.com">freechal.com</option>
+											                        <option value="lycos.co.kr">lycos.co.kr</option>
+											                        <option value="korea.com">korea.com</option>
+											                        <option value="gmail.com">gmail.com</option>
+											                        <option value="hanmir.com">hanmir.com</option>
+											                        <option value="paran.com">paran.com</option>
+											                    </select>
+											                </div>
+											            </div>
+											        </div>
+											    </div>
 											</td>
-										</tr>
-									</table>
+											<tr>
+											    <td class="required">연락처</td>
+											    <input type="hidden" id="custHp" name="custHp" />
+											    <td class="inputtype_3">
+											        <div class="row">
+											            <div class="col">
+											                <div class="input-group">
+																<input type="text" name="custTelNo1" id="custTelNo1_input" class="form-control" style="display:none;">
+											                    <div class="custom-select">
+											                        <select name="custTelNo1" id="custTelNo1" aria-invalid="false" class="valid form-select" required>
+											                            <option value="010">010</option>
+											                            <option value="011">011</option>
+											                            <option value="016">016</option>
+											                            <option value="017">017</option>
+											                            <option value="018">018</option>
+											                            <option value="019">019</option>
+											                            <option value=" ">직접입력</option>
+											                        </select>
+											                    </div> -
+											                    <input type="text" name="custTelNo2" id="custTelNo2" maxlength="4" class="form-control" required> -
+											                    <input type="text" name="custTelNo3" id="custTelNo3" maxlength="4" class="form-control" required>
+											                </div>
+											            </div>
+											        </div>
+											    </td>
+											</tr>
+											<tr>
+												<td class="required">문의 내용</td>
+												<td class="inputtype_3">
+													<div class="row">
+														<div class="col">
+															<textarea name="custQuestion" rows="8" cols="80" placeholder="내용을 입력해 주세요." required></textarea>
+														</div>
+													</div>
+												</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+								<div class="content_wrapper">
+									<div class="agree_terms_check checkbox-wrapper loan_wrapper">
+										<input class="inp-cbx" id="cbx-15" type="checkbox" style="display: none;" onchange="agreeCheck()"/>
+										<label class="cbx agree-terms-check-label" for="cbx-15" id="agree_terms_check">
+											<span>
+												<svg width="12px" height="9px" viewbox="0 0 12 9">
+													<polyline points="1 5 4 8 11 1"></polyline>
+												</svg>
+											</span>
+											<span>(필수) 개인정보 수집·이용 동의</span>
+										</label>
+									</div>
+								</div>
+								<div class="loan_wrapper agree_terms_check ">
+									<div class="credit_info_btnrap ">
+										<button type="submit" name="button" style="margin-top: -130px;" disabled>문의하기</button>
+									</div>
 								</div>
 							</div>
-							<div class="content_wrapper">
-								<div class="agree_terms_check checkbox-wrapper loan_wrapper" style="margin-top: -135px;">
-									<input class="inp-cbx" id="cbx-15" type="checkbox" style="display: none;" onchange="agreeCheck()"/>
-									<label class="cbx agree-terms-check-label" for="cbx-15" id="agree_terms_check">
-										<span>
-											<svg width="12px" height="9px" viewbox="0 0 12 9">
-												<polyline points="1 5 4 8 11 1"></polyline>
-											</svg>
-										</span>
-										<span>(필수) 개인정보 수집·이용 동의</span>
-									</label>
-								</div>
-							</div>
-							<div class="loan_wrapper agree_terms_check ">
-								<div class="credit_info_btnrap ">
-									<button type="submit" name="button" style="margin-top: -130px;" disabled>문의하기</button>
-								</div>
-							</div>
-						</div>
-					</form>
+						</form>
+					</div>
 				</div>
 				
 				
@@ -301,8 +307,8 @@
 				
 				<div id="maps">
 					<!-- <img src="./img/map.jpg" alt="지도"> -->
-					<div id="map" style="background: beige; height: 550px; width: 876px;"></div>
-					<span>주소 : 04525 서울특별시 중구 소공로 109 한화빌딩 13층</span>
+					<div id="map" style="height: 550px; width: 876px;"></div>
+					<span style="word-break: keep-all;">주소 : 04525 서울특별시 중구 소공로 109 한화빌딩 13층</span>
 				</div>
 			</div>
 		</section>
@@ -347,7 +353,7 @@
 	<!-- <main id="main04"> -->
 		<!-- <section id="contents04"> -->
 			<!-- <div class="container04"> -->
-	<hr style="margin: 30px 0px 0px 0px;">
+	<hr class="hrc_1" style="margin: 30px 0px 0px 0px;">
 	<main>
 		<section>
 			<div>
@@ -391,7 +397,7 @@
 			</div>
 		</section>
 	</main>
-	<hr style="margin: 0;">
+	<hr class="hrc_2">
 
 
 	<footer id="footer">

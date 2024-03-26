@@ -1,5 +1,18 @@
 $(document).ready(function(){
 	
+	// 브라우저 크기가 변할때 마다 자동으로 새로고침
+	if(matchMedia("screen and (max-width: 767px)").matches){
+		console.log("mobile");
+	}else if(matchMedia("screen and (max-width: 1199px)").matches){
+		console.log("tablet");
+	}else if(matchMedia("screen and (min-width: 1024px)").matches){
+		console.log("desktop");
+	}
+
+	window.onresize = function(){
+  		document.location.reload();
+	};
+
 
 	// 도메인 직접 입력 or domain option 선택
 	const domainListEl = document.querySelector('.domain-list')

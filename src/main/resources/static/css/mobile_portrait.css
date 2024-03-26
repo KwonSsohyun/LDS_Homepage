@@ -1,0 +1,520 @@
+/* mobile_portrait.css */
+/* 모바일 세로 버전 - 화면의 최대 너비가 767px 이하일 때 해당 스타일이 적용 */
+
+::-webkit-scrollbar { width: 3px; } /* 스크롤 바 */
+::-webkit-scrollbar-track { background-color:#fff; } /* 스크롤 바 밑의 배경 */
+::-webkit-scrollbar-thumb { background: #ddd; border-radius: 10px; } /* 실질적 스크롤 바 */
+::-webkit-scrollbar-thumb:hover { background: #0044B1; } /* 실질적 스크롤 바 위에 마우스를 올려다 둘 때 */
+::-webkit-scrollbar-thumb:active { background: #0044B1; }
+::-webkit-scrollbar-button { display: none; }
+
+* {font-family: 'Pretendard', Noto Sans KR , Apple SD Gothic Neo, arial, sans-serif;}
+
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow-x: hidden; overflow-y: auto;
+    font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+}
+
+
+/* 메인 영역 *************************************************** */
+#visual {
+    position: absolute;
+    width: 100%; /* 부모 요소인 header의 너비에 맞춤 */
+    height: 700px; /* 화면 전체 높이에 맞춤 */
+    overflow: hidden; /* 내용이 넘칠 경우 숨김 처리 */
+}
+
+#bgimg {
+
+    position: relative;
+    top: 0; /* 상단 정렬 */
+    left: 0; /* 왼쪽 정렬 */
+    width: 100%; /* 부모 요소인 #visual의 너비에 맞춤 */
+    height: 100%; /* 부모 요소인 #visual의 높이에 맞춤 */
+    object-fit: cover; /* 이미지가 요소에 맞추어 확대 또는 축소되도록 설정 */
+}
+
+
+
+#logo {
+    position: absolute;
+    top: 0;
+    left: 0%;
+    z-index: 2; /* 로고를 가장 위에 표시합니다. */
+    width: 50px; 
+    height: 50px; 
+}
+
+
+#logo img {
+    width: 200px;
+    height: auto;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+h1, h6 {
+    margin: 0;
+    padding: 0;
+    z-index: 1; /* 텍스트를 로고 아래로 내립니다. */
+}
+
+header .title {
+    margin-top: 120px;
+}
+
+header .title h6 {
+    font-size: 22px; /* 원하는 크기로 조절합니다. */
+    position: relative; /* 상대적 위치로 설정하여 다른 요소와의 관계를 고려합니다. */
+    margin-left: 50px;
+}
+
+header .title h1 {
+    font-size: 60px; /* 원하는 크기로 조절합니다. */
+    font-weight: bold; /* 텍스트를 굵게 표시합니다. */
+    line-height: 80px;
+    position: relative; /* 상대적 위치로 설정하여 다른 요소와의 관계를 고려합니다. */
+    padding-top: 20px; /* 로고와 가운데 정렬을 위한 여백 추가 */
+    margin-left: 50px;
+}
+
+.title h1 {
+    word-break: keep-all;
+}
+
+hr {
+    position: relative;
+    z-index: 1;
+    border: none;
+    border-top: 1px solid #E8E8E8; /* 가로선의 스타일을 설정합니다. */
+    width: 100%; /* 가로선의 폭을 100%로 설정하여 가로 전체를 채우도록 합니다. */
+    margin: 50px 0; /* 위아래 여백을 조절합니다. */
+}
+
+/* ★ 컨텐츠 영역 (공통) *************************************************** */
+#main01,
+#main02,
+#main03,
+#main04 {
+    position: relative;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+#contents01,
+#contents02,
+#contents03,
+#contents04 {
+    z-index: 2; /* 로고를 가장 위에 표시합니다. */
+}
+
+.container01,
+.container02,
+.container03,
+.container04 {
+    margin: auto; /* 내부 요소를 수직으로 가운데 정렬합니다. */
+    text-align: center; /* 내부 요소의 텍스트를 가운데 정렬합니다. */
+}
+
+
+main .container01 h2,
+main .container02 h2,
+main .container03 h2,
+main .container04 h2 {
+    font-size: 50px; /* 원하는 크기로 조절합니다. */
+    font-weight: bold; /* 텍스트를 굵게 표시합니다. */
+    position: relative; /* 상대적 위치로 설정하여 다른 요소와의 관계를 고려합니다. */
+    margin: 0;
+}
+
+main .container01 h6,
+main .container02 h6,
+main .container03 h6,
+main .container04 h6 {
+	word-break: keep-all;
+    font-size: 20px; /* 원하는 크기로 조절합니다. */
+    font-weight: normal; /* 텍스트를 굵게 표시합니다. */
+    line-height: 30px;
+    position: relative; /* 상대적 위치로 설정하여 다른 요소와의 관계를 고려합니다. */
+    margin-top: 30px;
+}
+
+
+/* 컨텐츠 영역 02 - BUSINESS *************************************************** */
+#main02 {
+    /* background-color: #F8F8F8; */
+    height: 600px;
+    margin-top: -50px;
+    margin-bottom: 20px;
+}
+
+.pr_parent {
+    display: flex;
+    flex-wrap: wrap; /* 요소들이 넘칠 경우 다음 줄로 넘어갈 수 있도록 설정 */
+    justify-content: center;
+    gap: 50px;
+    margin-top: 60px;
+}
+
+.container02 {
+    margin-top: 100px;
+}
+
+.v-line{
+	display: none; /* 수직 선을 제거합니다. */
+}
+
+.pr_child .txt{
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: normal;
+    font-weight: 500;
+    margin-top: 26px;
+}
+
+.pr_child {
+    display: block; /* 각 요소를 블록 요소로 설정하여 개당 한 줄씩 보이도록 함 */
+    margin-bottom: 20px; /* 각 요소 사이에 간격을 추가 */
+    text-align: center; /* 텍스트를 가운데 정렬 */
+    width: 100%; /* 요소의 가로 폭을 100%로 설정하여 한 줄에 하나의 요소만 보이도록 함 */
+    line-height: 25px;
+}
+
+.pr_child .txt_t{
+    color: #7B7B7B;
+}
+
+
+/* 컨텐츠 영역 01 - SERVICE *************************************************** */
+#main01 {
+    height: 2050px;
+    margin-top: 850px;
+}
+
+.container01 {
+    background-color: #F8F8F8; /* 요소의 배경색을 설정합니다. */
+    padding: 20px; /* 내용과의 간격을 조절합니다. */
+}
+
+.parent {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 50px;
+    justify-content: center; /* 요소를 가로 방향으로 중앙에 배치합니다. */
+    align-items: center; /* 요소를 세로 방향으로 중앙에 배치합니다. */
+}
+
+.child {
+    width: 363px;
+    height: 380px;
+    background-color: white;
+    border: 1px solid #E8E8E8;
+    border-radius: 20px;
+    display: flex; /* flexbox를 사용하기 위해 추가 */
+    flex-direction: column;
+    justify-content: center; /* 요소를 세로 방향으로 중앙에 배치합니다. */
+    align-items: center; /* 요소를 가로 방향으로 중앙에 배치합니다. */
+}
+
+.child .img {
+	margin-top: 0px; /* 이미지 위쪽 여백을 조정 */
+	margin-left: 0px;
+}
+
+.child .txt {
+	margin-top: 20px; /* 텍스트 위쪽 여백을 조정 */
+	margin-left: 0px;
+	font-size: 34px;
+	font-weight: 500;
+}
+
+.child .txc {
+	font-size: 17px;
+	margin-left: 0px;
+	font-weight: normal;
+	color: #7F7F7F;
+	line-height: 25px;
+	margin-top: 20px; /* 텍스트 위쪽 여백을 조정 */
+	text-align: center; /* 텍스트를 가운데 정렬합니다. */
+}
+
+
+
+/* 컨텐츠 영역 03 - CONTACT *************************************************** */
+/* 모바일 기기에서 수평 스크롤 없애기 */
+html, body {
+max-width: 100%;
+overflow-x: hidden;
+}
+
+#main03 {
+	margin: 100px 0px;
+    box-sizing: border-box; /* padding과 border가 요소의 크기에 포함되도록 box-sizing을 변경 */
+}
+
+.container03 h2,
+.container03 h6 {
+    position: static; /* h2와 h6 요소의 위치를 static으로 설정 */
+}
+
+.content_wrapper {
+    display: flex; /* Flexbox를 사용하여 내부 요소를 가로로 정렬 */
+    flex-wrap: wrap; /* 요소들이 한 줄을 넘어가면 다음 줄로 이동하도록 설정 */
+    justify-content: space-between; /* 요소들을 가로로 균등하게 분할하여 배치 */
+    margin: 0 20px; /* 좌우 여백을 20px로 설정 */
+}
+
+#loan_wrap {
+    width: calc(50% - 10px); /* 표의 가로 크기를 화면의 절반으로 설정하고, 좌우 여백을 10px로 설정 */
+    height: auto; /* 표의 높이를 자동으로 설정 */
+    margin-right: 0; /* 오른쪽 여백 제거 */
+}
+
+#maps {
+    width: calc(50% - 10px); /* 지도 영역의 가로 크기를 화면의 절반으로 설정하고, 좌우 여백을 10px로 설정 */
+    height: auto; /* 지도 영역의 높이를 자동으로 설정 */
+    margin-top: 20px; /* 위쪽 여백을 20px로 설정 */
+    text-align: center; /* 텍스트를 가운데 정렬 */
+    margin-right: 0; /* 오른쪽 여백 제거 */
+}
+
+#map {
+    width: 100%; /* 지도의 가로 크기를 100%로 설정 */
+    height: auto; /* 지도의 높이를 자동으로 설정 */
+}
+.content_wrapper {
+    overflow: auto; /* 부모 요소에 float 속성이 적용된 자식 요소를 감쌀 수 있도록 설정 */
+	border: none; /* 테두리를 없앱니다. */
+}
+
+.agree_terms_check {
+    margin-top: 10px; /* 현재 설정된 값보다 작은 값으로 변경하여 내부 요소를 보이도록 조정합니다. */
+}
+
+
+.content_wrapper {
+    -ms-overflow-style: none; /* 인터넷 익스플로러 */
+    scrollbar-width: none; /* 파이어폭스 */
+}
+
+
+.content_wrapper::-webkit-scrollbar {
+    display: none; /* 크롬, 사파리, 오페라, 엣지 */
+}
+
+.content_wrapper table {
+    width: 100%; /* 테이블이 부모 요소에 꽉 차도록 설정합니다. */
+}
+
+/* table을 감싸는 추가적인 태그에 zoom 속성을 적용합니다. */
+.wrapper-around-table {
+    zoom: 1; /* IE7에서 table의 너비가 부모 요소를 벗어나는 문제를 해결합니다. */
+}
+#loan_wrap {
+    float: left; /* 왼쪽으로 부유시킵니다. */
+    width: calc(50% - 10px); /* 표의 가로 크기를 화면의 절반으로 설정하고, 좌우 여백을 10px로 설정 */
+    margin-right: 20px; /* 요소 간 간격을 조절합니다. */
+}
+
+#maps {
+    float: left; /* 왼쪽으로 부유시킵니다. */
+    width: calc(50% - 10px); /* 지도 영역의 가로 크기를 화면의 절반으로 설정하고, 좌우 여백을 10px로 설정 */
+    margin-top: 20px; /* 위쪽 여백을 20px로 설정 */
+    text-align: center; /* 텍스트를 가운데 정렬합니다. */
+    margin-left: 0px; /* 표와 지도 영역 간격 */
+}
+
+.content_wrapper {
+    display: grid; /* 그리드 컨테이너로 설정합니다. */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 반응형 그리드를 생성합니다. */
+    gap: 20px; /* 요소들 사이의 간격을 설정합니다. */
+    justify-content: center; /* 가로 중앙 정렬을 수행합니다. */
+}
+
+#loan_wrap,
+#maps {
+    width: 100%; /* 요소의 너비를 100%로 설정합니다. */
+}
+
+#loan_wrap.credit_info .info_form table tr td {
+	padding: 0;
+}
+
+
+#maps span {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px;
+    margin-top: 20px;
+    box-sizing: border-box;
+}
+
+
+/*체크박스 */
+.agree_terms_check{
+	margin-top: 0px;
+	margin-bottom: 30px;
+}
+
+
+#loan_wrap.credit_info .info_form {
+    margin: 80px 0px 0px 0px;
+}
+
+
+#loan_wrap.credit_info {
+    padding-top: 0px;
+}
+
+main .container03 h6 {
+    margin-bottom: 30px;
+}
+
+
+#loan_wrap.credit_info {
+	padding-bottom: 0px;
+}
+
+.loan_wrapper, .agree_terms_check {
+    margin-bottom: -10px;
+}
+
+#map {
+    display: block; /* 이미지를 블록 레벨 요소로 설정하여 텍스트와 이미지를 위아래로 정렬할 수 있게 함 */
+    margin-bottom: 20px;
+}
+
+
+.agree_terms_check{
+	margin-top: -15px !important; 
+	margin-bottom: 30px;
+}
+
+
+/* 푸터 *************************************************** */
+.page-wrapper{
+	display: none;
+}
+
+.hrc_1 {
+	display: none;
+}
+
+.hrc_2 {
+    position: relative; /* hr 요소를 상대적으로 위치 지정합니다. */
+    top: 650px; /* 위로 20px 이동시킵니다. */
+    margin-bottom: 20px;
+}
+
+
+#footer {
+    position: relative; /* hr 요소를 상대적으로 위치 지정합니다. */
+    top: 650px; /* 위로 20px 이동시킵니다. */
+    margin-bottom: 20px;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center; /* 요소들을 가로로 중앙 정렬합니다. */
+    align-items: center; /* 요소들을 세로로 중앙 정렬합니다. */
+    flex-direction: column; /* 요소들을 세로로 배치합니다. */
+}
+
+#footer .container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    align-items: stretch;
+}
+
+
+.ft_logo {
+    display: flex;
+    align-content: stretch;
+    justify-content: space-evenly;
+    top: 20px;
+    flex-wrap: wrap;
+}
+
+
+#footer {
+    max-width: calc(100% - 40px); /* 화면 너비에서 20px씩 여백을 뺍니다. */
+    margin: 0 auto;
+    padding: 80px 20px; /* 상하 80px, 좌우 20px 여백 설정 */
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ft_logo {
+    margin-bottom: 20px;
+}
+
+.ft_logo img {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.ft_familysite {
+    margin-top: 20px;
+}
+
+.row {
+    color: #919197;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+.ft_familysite {
+    margin-top: 0px;
+    position: absolute;
+    left: 50%; /* 왼쪽에서 50% 위치로 이동합니다. */
+    transform: translateX(-50%); /* 요소의 너비의 절반만큼 왼쪽으로 이동합니다. */
+}
+
+#footer .ft_familysite {
+    padding: 0px;
+    padding-bottom: 0px;
+}
+
+#footer .ft_familysite {
+    padding: 0 0 0px;
+}
+
+.ft_familysite{
+	display: none;
+	top: 90px;
+}
+#footer .ft_logo > div:nth-child(2), #footer .ft_familysite {
+    margin-left: 0px;
+}
+
+.ft_logo > div:nth-child(2) {
+    margin-right: 0px;
+}
+
+.ft_logo img {
+    margin-right: 0px;
+}
