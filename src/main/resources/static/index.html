@@ -16,6 +16,9 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
     
+    <!-- jQuery 라이브러리 로드 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
     <!-- 반응형 미디어쿼리 -->
 	<link rel="stylesheet" media="all and (min-width:768px) and (max-width:1199px)" href="./css/laptop.css" >
 	<link rel="stylesheet" media="all and (max-width:767px)" href="./css/mobile_portrait.css" >
@@ -465,54 +468,95 @@
 	
 	
 	<!-- 레이어 팝업 -->
-	<a href="javascript:openPop()">
-	    <div>
-	        팝업오픈!
-	    </div>
-	</a>
 	<div class="popup_layer" id="popup_layer" style="display: none;">
-	  <div class="popup_box">
-	      <div style="height: 10px; width: 375px; float: top;">
-	        <a href="javascript:closePop();"><img src="./img/ic_close.svg" class="m_header-banner-close" width="50px" height="50px"></a>
-	      </div>
-	      <!--팝업 컨텐츠 영역-->
-	      <div class="popup_cont">
-	          <h5> POPUP TILTE</h5>
-	          <p>
-	          !!!!!!!!!!!!!!!!!!!!<br>
-	              ~~~~~~~~~~~~~~~~~
-	              @@@@@@@@@@@@@@@@@@@
-	              %%%%%%%%%%%%%%%%
-	              ^^^^^^^^^^^^^^^^
-	              &&&&&&&&&&&&&&
-	              *************
-	              ((((((((((((((((
+	    <div class="popup_box">
+	        <div style="height: 10px; width: 375px; float: top;">
+	            <a href="javascript:closePop();"><img src="./img/ic_close.svg" class="m_header-banner-close" width="50px" height="50px"></a>
+	        </div>
+	        <!--팝업 컨텐츠 영역-->
+	        <div class="popup_cont">
+	            <h2>법인설립공고</h2>
+	            <p>
+	                (주)리드데이터시스템즈 법인설립을 다음과 같이 공고합니다.<br><br>
 	
-	          </p>
+	                ■ 회 사 명 : 주식회사 리드데이터시스템즈<br>
+	                ■ 대 표 자 : 사내이사 이재중<br>
+	                ■ 본점주소 : 서울특별시 중구 소공로 109, 13층(소공동, 소공동한화빌딩)<br>
+	                ■ 자 본 금 : 700,000,000원<br>
+	                ■ 사업목적 : <br>
+	                컴퓨터 시스템통합 자문 및 구축 서비스업<br>
+	                컴퓨터 시설 관리업<br>
+	                응용소프트웨어 개발 및 공급업<br>
+	                시스템 소프트웨어 개발 및 공급업 등<br>          
+	                ■ 설 립 일 : 2024년 2월 15일<br><br>
 	
-	      </div>
-	      <!--팝업 버튼 영역-->
-	      <div class="popup_btn" style="float: bottom; margin-top: 200px;">
-	          <a href="javascript:closePop();">닫기</a>
-	      </div>
-	  </div>
+	                2024. 3. 28<br><br>
+	
+	                주식회사 리드데이터시스템즈<br>
+	                사내이사 이 재 중<br>
+	            </p>
+	
+	        </div>
+	        <!--팝업 버튼 영역-->
+	        <div class="popup_btn">
+	            <!--하루동안 보지않기-->
+	            <a id="chk_today" href="javascript:closeToday();" class="close_day">오늘 하루동안 보지 않기</a> 
+	            <a href="javascript:closePop();">닫기</a>
+	        </div>
+	    </div>
 	</div>
 	
 	<script>
 	// 페이지가 로드될 때 팝업 자동 열림
-    window.onload = function() {
-        openPop();
-    };
-
-    //팝업 띄우기
-    function openPop() {
-        document.getElementById("popup_layer").style.display = "block";
-    }
-
-    //팝업 닫기
-    function closePop() {
-        document.getElementById("popup_layer").style.display = "none";
-    }
+	window.onload = function() {
+	    openPop();
+	};
+	
+	// 팝업 띄우기
+	function openPop() {
+	    if(getCookie("popToday") !== "close") {
+	        document.getElementById("popup_layer").style.display = "block";
+	    }
+	}
+	
+	// 팝업 닫기
+	function closePop() {
+	    document.getElementById("popup_layer").style.display = "none";
+	}
+	
+	// 쿠키 가져오기
+	function getCookie(name) {
+	    var cookieName = name + "=";
+	    var decodedCookie = decodeURIComponent(document.cookie);
+	    var cookieArray = decodedCookie.split(';');
+	    for(var i = 0; i < cookieArray.length; i++) {
+	        var cookie = cookieArray[i];
+	        while (cookie.charAt(0) == ' ') {
+	            cookie = cookie.substring(1);
+	        }
+	        if (cookie.indexOf(cookieName) == 0) {
+	            return cookie.substring(cookieName.length, cookie.length);
+	        }
+	    }
+	    return "";
+	}
+	
+	// 쿠키 설정
+	function setCookie(name, value, days) {
+	    var expires = "";
+	    if (days) {
+	        var date = new Date();
+	        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+	        expires = "; expires=" + date.toUTCString();
+	    }
+	    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+	}
+	
+	// 오늘하루만보기 닫기버튼 스크립트
+	function closeToday() { 
+	    setCookie("popToday", "close", 1); 
+	    $("#popup_layer").hide(); // jQuery를 이용하여 팝업 숨기기
+	}
 	</script>
 </body>
 </html>
