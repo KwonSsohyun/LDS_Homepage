@@ -5,7 +5,7 @@
 **리드데이터시스템즈 - 브랜드 홈페이지 신규 구축 프로젝트**
 <br>
 > **🌐 배포 URL**   
-> <a href="http://www.leadds.co.kr" target="_blank">www.leadds.co.kr</a>
+> [www.leadds.co.kr](http://www.leadds.co.kr)
 
 <br/>
 
