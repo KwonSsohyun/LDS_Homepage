@@ -17,3 +17,5 @@
 - **Database** : MariaDB 10.11
 - **Dependency** : JDBC
 - **Build Tool** : Gradle 8.6
+
+<br/>
