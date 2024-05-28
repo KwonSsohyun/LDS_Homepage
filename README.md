@@ -1,5 +1,5 @@
 <img src="https://github.com/KwonSsohyun/LDS_Homepage/assets/90014589/5e48f177-ed83-4ddb-a8e9-674ff2d422da" width="300"/>
-<br/>
+<br/><br/>
 
 ## 🖥️ 프로젝트 소개
 **리드데이터시스템즈 - 브랜드 홈페이지 신규 구축 프로젝트**
